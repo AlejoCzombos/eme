@@ -1,0 +1,61 @@
+---
+
+const images = await Astro.glob('/public/images/home/carousel/*')
+---
+
+<script>
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
+
+const swiper = new Swiper('.swiper', {
+  modules: [Navigation],
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  autoplay: true,
+  speed: 700,
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 1,
+  //     spaceBetween: 0,
+  //   },
+  //   1024: {
+  //     slidesPerView: 1,
+  //     spaceBetween: 0,
+  //   },
+  // },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+});
+</script>
+
+
+<section class="swiper w-full xl:max-h-[460px] xl:h-auto mt-[135px] relative">
+  <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent z-10"></div>
+  <div class="swiper-wrapper" id="my-slider">
+    {
+      images.map(image => (
+      <div class="swiper-slide h-auto rounded overflow-hidden">
+        <img src={image.default.src} alt="" class="w-full h-full object-cover">
+      </div>
+      ))
+    }
+  </div>
+  <div class="swiper-button-prev rounded flex justify-center items-center ml-8 xl:ml-16 transform rotate-180">
+    <img src="/icons/swiperIcon.svg" alt="Icono siguiente imagen">
+  </div>
+  <div class="swiper-button-next rounded flex justify-center items-center mr-8 xl:mr-16 ">
+    <img src="/icons/swiperIcon.svg" alt="Icono anterior imagen">
+  </div>
+</section>
+
+<style>
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: '';
+  }
+</style>

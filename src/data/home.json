@@ -1,0 +1,135 @@
+{
+    "hero": {
+        "title": "Afiliate",
+        "subtitle": "3624 902834",
+        "paragraph": "Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación, adaptado a tus necesidades.",
+        "button":{
+            "text": "Quiero afiliarme",
+            "message": "Hola, quiero afiliarme a EME."
+        },
+        "image": {
+            "src": "/images/imagen-hero.webp",
+            "alt": "Hero"
+        }
+    },
+    "plans":[
+        {
+            "title": "Servicios familiares",
+            "image": {
+                "src": "/images/home/plans/servicios-familiares.png",
+                "alt": "Servicios<br>familiares"
+            },
+            "href": "/familias"
+        },
+        {
+            "title": "Servicios empresariales",
+            "image": {
+                "src": "/images/home/plans/servicios-empresariales.png",
+                "alt": "Servicios<br>empresariales"
+            },
+            "href": "/empresas"
+        },
+        {
+            "title": "Servicios corporativos",
+            "image": {
+                "src": "/images/home/plans/servicios-corporativos.png",
+                "alt": "Servicios<br>corporativos"
+            },
+            "href": "/corporativos"
+        },
+        {
+            "title": "Policonsultorios",
+            "image": {
+                "src": "/images/home/plans/servicios-policonsultorios.png",
+                "alt": "Policonsultorios"
+            },
+            "href": "/policonsultorios"
+        }
+    ],
+    "membership": [
+        {
+            "title": "Beneficios",
+            "image": {
+                "src": "/images/home/beneficios.webp",
+                "alt": "Beneficios"
+            }
+        },
+        {
+            "title": "EME club",
+            "image": {
+                "src": "/images/home/eme-club.webp",
+                "alt": "EME club"
+            }
+        },
+        {
+            "title": "EME salud",
+            "image": {
+                "src": "/images/home/eme-salud.webp",
+                "alt": "EME salud"
+            }
+        },
+        {
+            "title": "Afiliate",
+            "image": {
+                "src": "/images/home/afiliate.webp",
+                "alt": "afiliate"
+            }
+        }
+    ],
+    "stats": [
+        {
+            "title": "Obras finalizadas",
+            "number": 235
+        },
+        {
+            "title": "Obras en proceso",
+            "number": 300
+        },
+        {
+            "title": "Obras proyectadas",
+            "number": 150
+        },
+        {
+            "title": "Localidades",
+            "number": 4
+        }
+    ],
+    "benefits": [
+        {
+            "image": {
+                "src": "/images/home/beneficio-1.webp",
+                "alt": "Beneficio 1"
+            }
+        },
+        {
+            "image": {
+                "src": "/images/home/beneficio-2.webp",
+                "alt": "Beneficio 2"
+            }
+        },
+        {
+            "image": {
+                "src": "/images/home/beneficio-3.webp",
+                "alt": "Beneficio 3"
+            }
+        },
+        {
+            "image": {
+                "src": "/images/home/beneficio-4.webp",
+                "alt": "Beneficio 4"
+            }
+        },
+        {
+            "image": {
+                "src": "/images/home/beneficio-5.webp",
+                "alt": "Beneficio 5"
+            }
+        },
+        {
+            "image": {
+                "src": "/images/home/beneficio-6.webp",
+                "alt": "Beneficio 6"
+            }
+        }
+    ]
+}

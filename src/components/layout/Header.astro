@@ -1,0 +1,51 @@
+---
+import Navigation from "./Navigation.astro";
+import PrimaryButton from "../UI/PrimaryButton.astro";
+
+import data from "../../data/header.json";
+const {buttons} = data
+---
+
+<nav class="fixed top-0 left-0 shadow-lg w-full z-50 bg-slate-700 bg-opacity-20 backdrop-blur-lg drop-shadow-xl p-9">
+    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto">
+        <a href="/">
+            <img src="/logo.png" alt="Logo EME" class="h-16 max-h-16">
+        </a>
+
+        <div class="flex lg:order-2 space-x-2 lg:space-x-0 rtl:space-x-reverse">
+            <div class="hidden lg:flex justify-center items-center gap-3 w-[300px]">
+                {
+                    buttons.map((button, index) => (
+                        <PrimaryButton target='_blank' text={button.text.toLocaleUpperCase()} href={button.link} key={index}/>
+                    ))
+                }
+            </div>
+            <a class="inline-flex items-center p-2 size-16 justify-center text-sm text-gray-100 rounded-lg lg:hidden hover:bg-primary-600"  id="menu-button" data-collapse-toggle="navbar-sticky" data-nav-toggle="#navbar-sticky" href="#" aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Abrir menu navegación</span>
+                <svg class="size-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+                </svg>
+            </a>
+        </div>
+
+        <div id="menu-open" class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1 navbar"  id="navbar-sticky">
+            <Navigation />
+            <div class="flex lg:hidden justify-center items-center gap-3 w-[350px] mx-auto">
+                {
+                    buttons.map((button) => (
+                        <PrimaryButton class="text-2xl lg:text-base" text={button.text.toLocaleUpperCase()} href={button.link}/>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+  const button = document.querySelector('#menu-button') as Element;
+  const menuOpen = document.querySelector("#menu-open") as Element;
+
+button?.addEventListener("click", () => {
+  menuOpen.classList.toggle("hidden");
+});
+</script>

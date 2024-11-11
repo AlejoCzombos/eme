@@ -1,0 +1,18 @@
+{
+    "buttons": [
+        {
+            "url": "#",
+            "image": {
+                "src": "/icons/whatsapp.svg",
+                "alt": "Enlace a WhatsApp"
+            }
+        },
+        {
+            "url": "#",
+            "image": {
+                "src": "/icons/headphones.svg",
+                "alt": "Enlace a soporte técnico"
+            }
+        }
+    ]
+}

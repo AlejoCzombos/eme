@@ -1,0 +1,28 @@
+---
+import NavigationItem from "../UI/NavigationItem.astro";
+
+import data from "../../data/header.json"
+const {navigation} = data
+---
+
+<ul class="flex flex-col justify-center gap-5 lg:gap-7 p-4 lg:p-0 rtl:space-x-reverse lg:flex-row text-center">
+    {
+        navigation.map((item) => (
+            <NavigationItem class={`font-semibold text-black text-2xl lg:text-base`} href={item.href} text={item.text} />
+        ))
+    }
+</div>
+
+<script>
+const currentPath = window.location.pathname;
+
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+  if (link.getAttribute('href') === currentPath) {
+    link.classList.add('text-secondary-800');
+  } else {
+    link.classList.remove('text-secondary-800');
+  }
+});
+</script>

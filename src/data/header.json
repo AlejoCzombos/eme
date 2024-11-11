@@ -1,0 +1,46 @@
+{
+    "logo": {
+        "src": "https://via.placeholder.com/150",
+        "alt": "Logo"
+    },
+    "buttons": [
+        {
+            "text": "Afiliate",
+            "link": "#"
+        },
+        {
+            "text": "Emergencias",
+            "link": "#"
+        }
+    ],
+    "navigation": [
+        {
+            "text": "inicio",
+            "href": "/"
+        },
+        {
+            "text": "servicios",
+            "href": "/a"
+        },
+        {
+            "text": "beneficios",
+            "href": "/a"
+        },
+        {
+            "text": "RSE",
+            "href": "/a"
+        },
+        {
+            "text": "franquicias",
+            "href": "/a"
+        },
+        {
+            "text": "empresa",
+            "href": "/a"
+        },
+        {
+            "text": "contacto",
+            "href": "/a"
+        }
+    ]
+}
