@@ -16,5 +16,19 @@
                 "corrientes": "3794420251"
             }
         }
-    }
+    },
+    "branches": [
+        {
+            "id": 1,
+            "name": "Sucursal Resistencia",
+            "location": "Resistencia",
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.1891044896865!2d-58.975061623663095!3d-27.463371516438286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450ce74a5cf8af%3A0x93c058ed93baeca9!2sEME%20-%20Equipo%20M%C3%A9dico%20de%20Emergencias%20Chaco%20S.A.!5e0!3m2!1ses!2sar!4v1731449653112!5m2!1ses!2sar"
+        },
+        {
+            "id": 2,
+            "name": "Sucursal Corrientes",
+            "location": "Corrientes",
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.5248149368217!2d-58.82744532366243!3d-27.48404931731929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b970c2937c9%3A0x7a289c5a7ea2966!2sEME%20-%20Equipo%20M%C3%A9dico%20de%20Emergencias%20Corrientes%20S.A.!5e0!3m2!1ses!2sar!4v1731450072206!5m2!1ses!2sar"
+        }
+    ]
 }

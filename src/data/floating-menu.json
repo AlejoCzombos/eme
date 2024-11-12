@@ -2,6 +2,7 @@
     "buttons": [
         {
             "url": "#",
+            "tooltip": "Chat en línea",
             "image": {
                 "src": "/icons/whatsapp.svg",
                 "alt": "Enlace a WhatsApp"
@@ -9,9 +10,18 @@
         },
         {
             "url": "#",
+            "tooltip": "Llámanos",
             "image": {
-                "src": "/icons/headphones.svg",
+                "src": "/icons/phonecall.svg",
                 "alt": "Enlace a soporte técnico"
+            }
+        },
+        {
+            "url": "#",
+            "tooltip": "Videollamada",
+            "image": {
+                "src": "/icons/videocall.svg",
+                "alt": "Enlace a videollamada"
             }
         }
     ]

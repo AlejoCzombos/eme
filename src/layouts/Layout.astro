@@ -3,6 +3,7 @@ import '@fontsource-variable/open-sans'
 
 import FloatingMenu from '../components/layout/FloatingMenu.astro';
 import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
 
 interface Props {
 	title: string;
@@ -27,6 +28,7 @@ const { title, description } = Astro.props;
 		<Header/>
 		<FloatingMenu/>
 		<slot />
+		<Footer />
 	</body>
 </html>
 

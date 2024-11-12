@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper-beneficts', {
   breakpoints: {
     1024: {
       slidesPerView: 5,
-      spaceBetween: 120,
+      spaceBetween: 180,
     },
   },
   pagination: {
@@ -45,26 +45,34 @@ const swiper = new Swiper('.swiper-beneficts', {
 });
 </script>
 
-<section class="swiper-beneficts w-full px-10 py-5 lg:px-0 lg:py-16 max-w-6xl m-auto relative overflow-hidden">
-  <div class="swiper-wrapper" id="my-slider">
-    {
-      images.map(image => (
-        <div class="swiper-slide flex justify-center items-center">
-          <img src={image.default.src} alt="" class="w-full h-full object-cover">
-        </div>
-      ))
-    }
-  </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev rounded flex justify-center items-center transform rotate-180">
-    <img src="/icons/swiperBenefits.svg" alt="Icono siguiente imagen">
-  </div>
-  <div class="swiper-button-next rounded flex justify-center items-center">
-    <img src="/icons/swiperBenefits.svg" alt="Icono anterior imagen">
+<section class="w-full px-10 py-5 lg:px-0 lg:pt-14 lg:pb-24 max-w-6xl m-auto relative overflow-hidden">
+  <h2 class="p-2 mb-16 text-2xl">{benefits.title.toLocaleUpperCase()}</h2>
+  <div class="swiper-beneficts relative">
+    <div class="swiper-wrapper" id="my-slider">
+      {
+        images.map(image => (
+          <div class="swiper-slide flex justify-center items-center">
+            <img src={image.default.src} alt="" class="w-full h-full object-cover">
+          </div>
+        ))
+      }
+    </div>
+    <div class="swiper-button-prev transform rotate-180 hover:scale-125 transition-transform duration-300 ease-in-out">
+      <img src="/icons/swiperBenefits.svg" alt="Icono siguiente imagen">
+    </div>
+    <div class="swiper-button-next hover:scale-125 transition-transform duration-200 ease-in-out">
+      <img src="/icons/swiperBenefits.svg" alt="Icono anterior imagen">
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
 <style is:global>
+
+.swiper-pagination {
+  bottom: -3.5rem !important;
+
+}
 
 .swiper-pagination-bullet{
   width: 16px !important;

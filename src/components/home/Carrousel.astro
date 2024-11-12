@@ -5,27 +5,31 @@ const images = await Astro.glob('/public/images/home/carousel/*')
 
 <script>
 import Swiper from 'swiper';
+import 'swiper/bundle';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Pagination, Autoplay],
   loop: true,
-  spaceBetween: 0,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
   slidesPerView: 1,
-  autoplay: true,
-  speed: 700,
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 0,
-  //   },
-  //   1024: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 0,
-  //   },
-  // },
+  spaceBetween: 0,
+  speed: 900,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination-carousel',
+    clickable: true,
+    type: 'bullets',
+    dynamicBullets: true,
+  },
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',
@@ -35,8 +39,8 @@ const swiper = new Swiper('.swiper', {
 
 
 <section class="swiper w-full xl:max-h-[460px] xl:h-auto mt-[135px] relative">
-  <!-- <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent z-10"></div> -->
-  <div class="swiper-wrapper" id="my-slider">
+  <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent z-10 pointer-events-none"></div>
+  <div class="swiper-wrapper relative" id="my-slider">
     {
       images.map(image => (
       <div class="swiper-slide h-auto rounded overflow-hidden">
@@ -45,16 +49,29 @@ const swiper = new Swiper('.swiper', {
       ))
     }
   </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev rounded flex justify-center items-center ml-8 xl:ml-16 transform rotate-180">
-    <img src="/icons/swiperIcon.svg" alt="Icono siguiente imagen">
-  </div>
-  <div class="swiper-button-next rounded flex justify-center items-center mr-8 xl:mr-16 ">
-    <img src="/icons/swiperIcon.svg" alt="Icono anterior imagen">
-  </div>
+  <div class="swiper-pagination-carousel"></div>
+
 </section>
 
-<style>
+<style is:global>
+
+  .swiper-pagination-carousel {
+    position: absolute;
+    bottom: 1rem !important;
+    z-index: 30;
+  }
+
+  .swiper-pagination-carousel .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.8;
+    margin: 0px 8px !important;
+  }
+
+  .swiper-pagination-carousel .swiper-pagination-bullet-active {
+    background: #636363 !important;
+    opacity: 1;
+  }
+
   .swiper-button-next::after,
   .swiper-button-prev::after {
     content: '';

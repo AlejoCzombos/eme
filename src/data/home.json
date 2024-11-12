@@ -94,42 +94,56 @@
             "number": 4
         }
     ],
-    "benefits": [
-        {
-            "image": {
-                "src": "/images/home/beneficio-1.webp",
-                "alt": "Beneficio 1"
+    "benefits":{
+        "title": "Beneficios exclusivos",
+        "items": [
+            {
+                "image": {
+                    "src": "/images/home/beneficio-1.webp",
+                    "alt": "Beneficio 1"
+                }
+            },
+            {
+                "image": {
+                    "src": "/images/home/beneficio-2.webp",
+                    "alt": "Beneficio 2"
+                }
+            },
+            {
+                "image": {
+                    "src": "/images/home/beneficio-3.webp",
+                    "alt": "Beneficio 3"
+                }
+            },
+            {
+                "image": {
+                    "src": "/images/home/beneficio-4.webp",
+                    "alt": "Beneficio 4"
+                }
+            },
+            {
+                "image": {
+                    "src": "/images/home/beneficio-5.webp",
+                    "alt": "Beneficio 5"
+                }
+            },
+            {
+                "image": {
+                    "src": "/images/home/beneficio-6.webp",
+                    "alt": "Beneficio 6"
+                }
             }
+        ]
+    },
+    "contact": {
+        "map": {
+            "title": "Sucursales"
         },
-        {
-            "image": {
-                "src": "/images/home/beneficio-2.webp",
-                "alt": "Beneficio 2"
-            }
-        },
-        {
-            "image": {
-                "src": "/images/home/beneficio-3.webp",
-                "alt": "Beneficio 3"
-            }
-        },
-        {
-            "image": {
-                "src": "/images/home/beneficio-4.webp",
-                "alt": "Beneficio 4"
-            }
-        },
-        {
-            "image": {
-                "src": "/images/home/beneficio-5.webp",
-                "alt": "Beneficio 5"
-            }
-        },
-        {
-            "image": {
-                "src": "/images/home/beneficio-6.webp",
-                "alt": "Beneficio 6"
+        "contact": {
+            "title": "Contacto",
+            "button": {
+                "text": "Enviar"
             }
         }
-    ]
+    }
 }

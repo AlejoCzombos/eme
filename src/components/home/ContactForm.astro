@@ -1,0 +1,43 @@
+---
+import data from '../../data/home.json'
+import { branches } from '../../data/general-info.json'
+const {contact} = data.contact
+---
+
+<div class="mi-h-[10rem] h-full w-full">
+    <header class="h-20 flex items-center">
+        <h2 class="text-2xl lg:text-start text-center">{contact.title.toLocaleUpperCase()}</h2>
+    </header>
+    <form id="contactForm" class="flex flex-col w-full min-h-96 gap-8 p-10 bg-zinc-200/60">
+        <div class="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-4">
+            <div>
+                <label for="name">Nombre y apellido:</label>
+                <input name="name" type="text" placeholder="Nombre y apellido" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+            </div>
+            <div>
+                <label for="sucursal">Sucursal:</label>
+                <select name="sucursal" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+                    <option value="" disabled selected>Sucursal</option>
+                    {
+                        branches.map(branch => (
+                            <option value={branch.location}>{branch.location}</option>
+                        ))
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-4">
+            <div>
+                <label for="email">Correo:</label>
+                <input name="email" type="email" placeholder="Correo" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+            </div>
+            <div>
+                <label for="number">Número de teléfono:</label>
+                <input name="number" type="number" placeholder="Número de teléfono" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+            </div>
+        </div>
+        <button id="sendEmailButton" class="bg-primary-600 text-white w-full lg:w-44 py-2 rounded-lg hover:scale-110 transition-transform duration-300 ease-in-out" type="button">
+            {contact.button.text}
+        </button>
+    </form>
+</div>
