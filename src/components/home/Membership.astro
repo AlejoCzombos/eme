@@ -1,0 +1,25 @@
+---
+import Section from '../UI/Section.astro'
+
+import data from '../../data/home.json'
+const { membership } = data
+---
+<Section class="grid grid-cols-4">
+    {
+        membership.map((item) => (
+            <div class="item flex flex-col items-center gap-2 group">
+                <img src={item.image.src} alt={item.image.alt} class="size-20 group-hover:-translate-y-2 transition-transform ease-in-out" />
+                <h3 class="font-bold text-xl text-primary-600 text-center group-hover:scale-110 transition-transform ease-in-out">{item.title.toLocaleUpperCase()}</h2>
+            </div>
+        ))
+    }
+</Section>
+
+<style>
+    .item {
+        @apply border-r border-r-primary-600;
+    }
+    .item:last-child {
+        @apply border-none;
+    }
+</style>

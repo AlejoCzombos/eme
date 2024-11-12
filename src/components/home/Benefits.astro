@@ -1,0 +1,82 @@
+---
+import data from '../../data/home.json'
+const { benefits } = data
+
+const images = await Astro.glob('/public/images/home/benefits/*')
+---
+
+<script>
+import Swiper from 'swiper';
+import 'swiper/bundle';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const swiper = new Swiper('.swiper-beneficts', {
+  modules: [Navigation, Pagination, Autoplay],
+  loop: true,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  centerInsufficientSlides: true,
+  slidesPerView: 3,
+  spaceBetween: 60,
+  speed: 500,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 120,
+    },
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+    dynamicBullets: true,
+  },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+});
+</script>
+
+<section class="swiper-beneficts w-full px-10 py-5 lg:px-0 lg:py-16 max-w-6xl m-auto relative overflow-hidden">
+  <div class="swiper-wrapper" id="my-slider">
+    {
+      images.map(image => (
+        <div class="swiper-slide flex justify-center items-center">
+          <img src={image.default.src} alt="" class="w-full h-full object-cover">
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev rounded flex justify-center items-center transform rotate-180">
+    <img src="/icons/swiperBenefits.svg" alt="Icono siguiente imagen">
+  </div>
+  <div class="swiper-button-next rounded flex justify-center items-center">
+    <img src="/icons/swiperBenefits.svg" alt="Icono anterior imagen">
+  </div>
+</section>
+
+<style is:global>
+
+.swiper-pagination-bullet{
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-600 !important;
+}
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: '';
+  }
+</style>

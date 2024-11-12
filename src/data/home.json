@@ -50,28 +50,28 @@
         {
             "title": "Beneficios",
             "image": {
-                "src": "/images/home/beneficios.webp",
+                "src": "/images/home/membership/beneficios.svg",
                 "alt": "Beneficios"
             }
         },
         {
             "title": "EME club",
             "image": {
-                "src": "/images/home/eme-club.webp",
+                "src": "/images/home/membership/eme-club.svg",
                 "alt": "EME club"
             }
         },
         {
             "title": "EME salud",
             "image": {
-                "src": "/images/home/eme-salud.webp",
+                "src": "/images/home/membership/eme-salud.svg",
                 "alt": "EME salud"
             }
         },
         {
             "title": "Afiliate",
             "image": {
-                "src": "/images/home/afiliate.webp",
+                "src": "/images/home/membership/afiliate.svg",
                 "alt": "afiliate"
             }
         }

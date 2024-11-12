@@ -7,7 +7,7 @@ const { plans } = data;
     {
         plans.map((plan) => (
             <a href={plan.href} class="relative h-[22rem] w-full group overflow-hidden">
-                <h3 set:html={plan.title} class="absolute font-bold h-full flex flex-col justify-end p-10 z-10"></h2>
+                <h3 set:html={plan.title} class="absolute font-bold text-white h-full flex flex-col justify-end p-10 z-10"></h2>
                 <img src={plan.image.src} alt={plan.image.alt} 
                 class="absolute h-full w-full object-cover object-top top-0 left-0 -z-10 transition-all duration-500 ease-in-out transform group-hover:object-right scale-100 group-hover:scale-110 group-hover:translate-x-5"
                 />

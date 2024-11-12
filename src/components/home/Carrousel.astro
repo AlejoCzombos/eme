@@ -35,7 +35,7 @@ const swiper = new Swiper('.swiper', {
 
 
 <section class="swiper w-full xl:max-h-[460px] xl:h-auto mt-[135px] relative">
-  <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent z-10"></div>
+  <!-- <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent z-10"></div> -->
   <div class="swiper-wrapper" id="my-slider">
     {
       images.map(image => (
@@ -45,6 +45,7 @@ const swiper = new Swiper('.swiper', {
       ))
     }
   </div>
+  <div class="swiper-pagination"></div>
   <div class="swiper-button-prev rounded flex justify-center items-center ml-8 xl:ml-16 transform rotate-180">
     <img src="/icons/swiperIcon.svg" alt="Icono siguiente imagen">
   </div>
