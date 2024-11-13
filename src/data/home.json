@@ -17,9 +17,9 @@
             "title": "Servicios familiares",
             "image": {
                 "src": "/images/home/plans/servicios-familiares.png",
-                "alt": "Servicios<br>familiares"
+                "alt": "Servicios<br/>familiares"
             },
-            "href": "/familias"
+            "href": "/servicios/familiares"
         },
         {
             "title": "Servicios empresariales",
@@ -27,7 +27,7 @@
                 "src": "/images/home/plans/servicios-empresariales.png",
                 "alt": "Servicios<br>empresariales"
             },
-            "href": "/empresas"
+            "href": "/servicios/empresariales"
         },
         {
             "title": "Servicios corporativos",
@@ -35,7 +35,7 @@
                 "src": "/images/home/plans/servicios-corporativos.png",
                 "alt": "Servicios<br>corporativos"
             },
-            "href": "/corporativos"
+            "href": "/servicios/corporativos"
         },
         {
             "title": "Policonsultorios",
@@ -46,52 +46,56 @@
             "href": "/policonsultorios"
         }
     ],
-    "membership": [
+    "memberships": [
         {
             "title": "Beneficios",
-            "image": {
-                "src": "/images/home/membership/beneficios.svg",
+            "icon": {
+                "src": "/icons/home/membership/beneficios.svg",
                 "alt": "Beneficios"
-            }
+            },
+            "href": "/"
         },
         {
             "title": "EME club",
-            "image": {
-                "src": "/images/home/membership/eme-club.svg",
+            "icon": {
+                "src": "/icons/home/membership/eme-club.svg",
                 "alt": "EME club"
-            }
+            },
+            "href": "/"
         },
         {
             "title": "EME salud",
-            "image": {
-                "src": "/images/home/membership/eme-salud.svg",
+            "icon": {
+                "src": "/icons/home/membership/eme-salud.svg",
                 "alt": "EME salud"
-            }
+            },
+            "href": "/"
         },
         {
             "title": "Afiliate",
-            "image": {
-                "src": "/images/home/membership/afiliate.svg",
+            "icon": {
+                "src": "/icons/home/membership/afiliate.svg",
                 "alt": "afiliate"
-            }
+            },
+            "href": "/"
         }
     ],
     "stats": [
         {
-            "title": "Obras finalizadas",
-            "number": 235
+            "title": "Pacientes atendidos",
+            "number": 12000
         },
         {
-            "title": "Obras en proceso",
-            "number": 300
+            "title": "Pacientes en tratamiento",
+            "number": 8500
         },
         {
-            "title": "Obras proyectadas",
-            "number": 150
+            "title": "Consultas programadas",
+            "number": 4200
         },
         {
-            "title": "Localidades",
-            "number": 4
+            "title": "Centros médicos",
+            "number": 12
         }
     ],
     "benefits":{

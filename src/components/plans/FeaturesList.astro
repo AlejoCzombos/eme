@@ -1,0 +1,46 @@
+---
+import Section from "../UI/Section.astro";
+
+interface FeatureItem {
+  icon: Icon;
+  title: string;
+  details: string;
+}
+interface Icon {
+  src: string;
+  alt: string;
+}
+
+const { items } = Astro.props as { items: FeatureItem[] };
+---
+
+<Section>
+  <h2 class="p-2 mb-10 text-2xl border-b-2 border-primary-500">QUÉ OFRECEMOS</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+    {
+        items.map((item) => (
+            <details id="question" class="group p-5 pb-4">
+                <summary class="flex items-center cursor-pointer">
+                    <img src={item.icon.src} alt={item.icon.alt} class="size-12 text-primary-500 mr-3" />
+                    <img src="/icons/acordeon-arrow.svg" alt="flecha apertura" class="size-10 text-primary-500 transition-all group-open:rotate-180 duration-300 ease-in-out" />
+                    <span class="font-semibold flex-grow text-xl text-[#505050]">{item.title}</span>
+                </summary>
+                <p class="mt-2 text-gray-600 text-lg group-open:animate-fadeIn">
+                    {item.details}
+                </p>
+            </details>
+        ))
+    }
+  </div>
+</Section>
+
+<style>
+#question[open] {
+  @apply bg-secondary-100/40;
+  transition: all 0.3s ease-in-out;
+}
+#question:not([open]) {
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+</style>

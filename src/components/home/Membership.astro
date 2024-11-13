@@ -1,16 +1,15 @@
 ---
 import Section from '../UI/Section.astro'
 
-import data from '../../data/home.json'
-const { membership } = data
+import { memberships } from '../../data/home.json'
 ---
 <Section class="grid grid-cols-4">
     {
-        membership.map((item) => (
-            <div class="item flex flex-col items-center gap-2 group">
-                <img src={item.image.src} alt={item.image.alt} class="size-20 group-hover:-translate-y-2 transition-transform ease-in-out" />
+        memberships.map((item) => (
+            <a href={item.href} class="item flex flex-col items-center gap-2 group">
+                <img src={item.icon.src} alt={item.icon.alt} class="size-20 group-hover:-translate-y-2 transition-transform ease-in-out" />
                 <h3 class="font-bold text-xl text-primary-600 text-center group-hover:scale-110 transition-transform ease-in-out">{item.title.toLocaleUpperCase()}</h2>
-            </div>
+            </a>
         ))
     }
 </Section>
