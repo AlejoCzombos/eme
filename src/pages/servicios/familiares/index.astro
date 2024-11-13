@@ -1,0 +1,19 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import { corporate} from "../../../data/plans.json";
+import HeaderCard from "../../../components/HeaderCard.astro";
+---
+
+<Layout title="EME - Planes familiares" description="Para familiares y personas que buscan servicios de salud prehospitalaria confiable y accesible.">
+    <main class="mt-32 relative mb-32">
+        <header class="relative min-h-[25rem]">
+            <div class="max-w-6xl mx-auto z-10 pt-24">
+                <h1 class="text-white text-5xl z-10 relative">Servicios</h1>
+            </div>
+            <img class="absolute h-full w-full object-cover top-0 left-0 -z-10" src={corporate.image_header.src} alt={corporate.image_header.alt}>
+            <div id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-800 to-transparent z-0 pointer-events-none"></div>
+        </header>
+        <HeaderCard data={corporate} class="absolute bottom-[-5rem] left-1/2 transform -translate-x-1/2 mx-auto" />
+    </main>
+</Layout>

@@ -11,7 +11,7 @@ const { text, h, w } = Astro.props;
 <div class="relative flex group/tooltip">
   <slot />
   <span
-    class="flex justify-center group-hover/tooltip:opacity-100 transition-opacity bg-primary-400 text-black rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 p-1 mx-auto text-center"
+    class="flex justify-center opacity-0 group-hover/tooltip:opacity-100 transition-all duration-150 bg-primary-600 text-white rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full p-1 mx-auto text-center"
     class:list={{
       [`${h}`]: h,
       "-top-14": !h,
@@ -20,7 +20,7 @@ const { text, h, w } = Astro.props;
   >
     {text}
     <svg
-      class="absolute text-primary-400 h-2 w-full left-0 top-full"
+      class="absolute text-primary-600 h-2 w-full left-0 top-full"
       x="0px"
       y="0px"
       viewBox="0 0 255 255"

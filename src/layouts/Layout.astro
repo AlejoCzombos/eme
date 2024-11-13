@@ -20,11 +20,12 @@ const { title, description } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" as="image" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
 	</head>
-	<body class="h-[100%]">
+	<body>
 		<Header/>
 		<FloatingMenu/>
 		<slot />
@@ -59,10 +60,4 @@ const { title, description } = Astro.props;
 	body {
 		font-family: 'Open Sans Variable', sans-serif;
 	}
-
-    /* body {
-        height: auto;
-        background-attachment: fixed;
-        background-size: cover;
-    } */
 </style>
