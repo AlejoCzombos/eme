@@ -18,10 +18,10 @@
         },
         {
             "url": "#",
-            "tooltip": "Videollamada",
+            "tooltip": "Videoconsulta",
             "image": {
                 "src": "/icons/videocall.svg",
-                "alt": "Enlace a videollamada"
+                "alt": "Enlace a Videoconsulta"
             }
         }
     ]

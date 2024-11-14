@@ -16,7 +16,7 @@
         {
             "title": "Servicios familiares",
             "image": {
-                "src": "/images/home/plans/servicios-familiares.png",
+                "src": "/images/home/services/servicios-familiares.png",
                 "alt": "Servicios<br/>familiares"
             },
             "href": "/servicios/familiares"
@@ -24,7 +24,7 @@
         {
             "title": "Servicios empresariales",
             "image": {
-                "src": "/images/home/plans/servicios-empresariales.png",
+                "src": "/images/home/services/servicios-empresariales.png",
                 "alt": "Servicios<br>empresariales"
             },
             "href": "/servicios/empresariales"
@@ -32,7 +32,7 @@
         {
             "title": "Servicios corporativos",
             "image": {
-                "src": "/images/home/plans/servicios-corporativos.png",
+                "src": "/images/home/services/servicios-corporativos.png",
                 "alt": "Servicios<br>corporativos"
             },
             "href": "/servicios/corporativos"
@@ -40,7 +40,7 @@
         {
             "title": "Policonsultorios",
             "image": {
-                "src": "/images/home/plans/servicios-policonsultorios.png",
+                "src": "/images/home/services/servicios-policonsultorios.png",
                 "alt": "Policonsultorios"
             },
             "href": "/policonsultorios"

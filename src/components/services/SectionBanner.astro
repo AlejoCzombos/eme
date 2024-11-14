@@ -12,9 +12,10 @@ interface BackgroundImage {
 const { backgroundImage, title, subtitle } = Astro.props as Props;
 ---
 
-<header class="relative min-h-[25rem]">
-    <div class="max-w-6xl mx-auto z-10 pt-24">
-        <h1 class="text-white text-5xl z-10 relative">{title}</h1>
+<header class="relative min-h-[25rem] flex items-center">
+    <div class="max-w-6xl mx-auto w-full z-10 relative space-y-5">
+        <h1 class="text-white text-5xl">{title}</h1>
+        {subtitle && <p class="text-white font-semibold text-2xl">{subtitle}</p>}
     </div>
     <img class="absolute h-full w-full object-cover top-0 left-0 -z-10" src={backgroundImage.src} alt={backgroundImage.alt}>
     <div id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-800 to-transparent z-0 pointer-events-none"></div>

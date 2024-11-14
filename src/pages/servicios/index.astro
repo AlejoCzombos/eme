@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { services } from "../../data/plans.json";
+import SectionBanner from "../../components/services/SectionBanner.astro";
+import Feature from "../../components/services/Feature.astro";
+import ServiceList from "../../components/services/ServiceList.astro";
+---
+
+<Layout title="EME - Planes familiares" description="Para familiares y personas que buscan servicios de salud prehospitalaria confiable y accesible.">
+    <main class="mt-[135px] relative">
+        <SectionBanner backgroundImage={services.banner.image} title={services.banner.title} subtitle={services.banner.subtitle} />
+        <section class="relative px-10 py-5 lg:px-0 lg:py-8">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 relative z-10">
+                {
+                    services.features.map((item) => (
+                        <Feature icon={item.icon} title={item.title} details={item.details} whiteTheme="true"/>
+                    ))
+                }
+            </div>
+            <div slot="background" id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-tl to-primary-400 to-70% from-secondary-600 z-0 pointer-events-none"></div>
+        </section>
+        <ServiceList services={services.service_list.services}/>
+    </main>
+</Layout>

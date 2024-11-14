@@ -1,0 +1,28 @@
+---
+import Section from "../UI/Section.astro";
+import Feature from "./Feature.astro";
+
+interface FeatureItem {
+  icon: Icon;
+  title: string;
+  details: string;
+}
+interface Icon {
+  src: string;
+  alt: string;
+}
+
+const { items } = Astro.props as { items: FeatureItem[] };
+---
+
+<Section class="relative">
+  <slot name="title" />
+  <slot name="background" />
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+    {
+        items.map((item) => (
+            <Feature icon={item.icon} title={item.title} details={item.details} />
+        ))
+    }
+  </div>
+</Section>
