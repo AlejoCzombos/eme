@@ -1,8 +1,15 @@
 ---
 import Section from '../UI/Section.astro'
 
-import data from '../../data/home.json'
-const { stats } = data
+interface Props {
+  stats : Item[];
+}
+interface Item {
+    number: number;
+    title: string;
+}
+
+const { stats } = Astro.props as Props;
 ---
 
 <section class="bg-primary-100/60 py-3 lg:px-0 lg:py-16">

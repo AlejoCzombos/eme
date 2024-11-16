@@ -1,0 +1,14 @@
+{
+    "SEO": {
+        "title": "EME - Beneficios",
+        "description": "Beneficios exclusivos para nuestros afiliados"
+    },
+    "banner": {
+        "title": "Beneficios",
+        "subtitle": "Beneficios exclusivos para nuestros afiliados",
+        "image": {
+            "src": "/images/services/servicios.png",
+            "alt": "Servicios"
+        }
+    }
+}

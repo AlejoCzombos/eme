@@ -1,7 +1,22 @@
 ---
 import Section from '../UI/Section.astro'
 
-import { memberships } from '../../data/home.json'
+interface Props {
+    memberships : Membership[];
+}
+
+interface Membership {
+    title: string;
+    icon: Image;
+    href: string;
+}
+
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { memberships } = Astro.props as Props;
 ---
 <Section class="grid grid-cols-4">
     {

@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-import { services } from "../../data/plans.json";
+import { SEO, banner, features, service_list } from "../../data/services/index.json";
 import SectionBanner from "../../components/services/SectionBanner.astro";
 import ServiceList from "../../components/services/ServiceList.astro";
 import AdvertisingBanner from "../../components/services/AdvertisingBanner.astro";
@@ -10,9 +10,9 @@ import FeaturesListWhite from "../../components/services/FeaturesListWhite.astro
 
 <Layout title="EME - Planes familiares" description="Para familiares y personas que buscan servicios de salud prehospitalaria confiable y accesible.">
     <main class="mt-[135px] relative">
-        <SectionBanner backgroundImage={services.banner.image} title={services.banner.title} subtitle={services.banner.subtitle} />
-        <FeaturesListWhite features={services.features}/>
-        <ServiceList services={services.service_list.services}/>
+        <SectionBanner backgroundImage={banner.image} title={banner.title} subtitle={banner.subtitle} />
+        <FeaturesListWhite features={features}/>
+        <ServiceList services={service_list.services}/>
         <AdvertisingBanner image={{src:"/images/publicidad.png", alt:"publicidad aplicacion EME para teléfonos"}} />
     </main>
 </Layout>

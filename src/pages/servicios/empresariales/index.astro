@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 
-import { companies } from "../../../data/plans.json";
+import { SEO, banner, card_overlay, features } from "../../../data/services/companies.json";
 import HeaderCard from "../../../components/HeaderCard.astro";
 import FeaturesList from "../../../components/services/FeaturesList.astro";
 import SectionBanner from "../../../components/services/SectionBanner.astro";
@@ -9,9 +9,9 @@ import SectionBanner from "../../../components/services/SectionBanner.astro";
 
 <Layout title="EME - Planes familiares" description="Para familiares y personas que buscan servicios de salud prehospitalaria confiable y accesible.">
     <main class="mt-[135px] relative">
-        <SectionBanner backgroundImage={companies.banner.image} title="Servicios" />
+        <SectionBanner backgroundImage={banner.image} title="Servicios" />
         <!-- <HeaderCard data={family} class="absolute bottom-[-5rem] left-1/2 transform -translate-x-1/2 mx-auto" /> -->
-        <FeaturesList features={companies.features}>
+        <FeaturesList features={features}>
             <h2 slot="title" class="p-2 mb-10 text-2xl border-b-2 border-primary-500">QUÉ OFRECEMOS</h2>
         </FeaturesList>
     </main>

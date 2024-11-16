@@ -6,15 +6,17 @@ import Layout from '../layouts/Layout.astro';
 import Stats from '../components/home/Stats.astro';
 import Benefits from '../components/home/Benefits.astro';
 import Contact from '../components/home/Contact.astro';
+
+import data from "../data/home.json";
 ---
 
-<Layout title="EME" description="EME">
+<Layout title={data.SEO.title} description={data.SEO.description}>
 	<main class="mt-[135px]">
 		<Carrousel />
-		<Plans />
-		<Membership />
-		<Stats />
-		<Benefits />
+		<Plans plans={data.plans}/>
+		<Membership memberships={data.memberships} />
+		<Stats stats={data.stats} />
+		<Benefits title={data.benefits.title} />
 		<Contact />
 	</main>
 </Layout>

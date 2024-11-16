@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { banner, SEO } from "../../data/benefits.json";
+import SectionBanner from "../../components/services/SectionBanner.astro";
+import AdvertisingBanner from "../../components/services/AdvertisingBanner.astro";
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+    <main class="mt-[135px] relative">
+        <SectionBanner backgroundImage={banner.image} title={banner.title} subtitle={banner.subtitle} />
+        <AdvertisingBanner image={{src: "", alt: ""}} />
+    </main>
+</Layout>

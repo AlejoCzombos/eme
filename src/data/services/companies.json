@@ -1,0 +1,46 @@
+{
+    "SEO": {
+        "title": "EME - Planes empresariales",
+        "description": "Equipo Medico de Emergencias ofrece un paquete de servicios completo y eficiente para cuidar la salud de tu empresa.  Porque empleados, clientes y proveedores forman parte del capital más importante para usted. Cuídelos."
+    },
+    "banner": {
+        "title": "Planes empresariales",
+        "image": {
+            "src": "/images/services/servicios-empresariales.png",
+            "alt": "Planes empresariales"
+        }
+    },
+    "card_overlay":{
+        "description": "Equipo Medico de Emergencias ofrece un paquete de servicios completo y eficiente para cuidar la salud de tu empresa.  Porque empleados, clientes y proveedores forman parte del capital más importante para usted. Cuídelos.",
+        "icon": {
+            "src": "/icons/services/servicios-empresariales.svg",
+            "alt": "Planes empresariales"
+        }
+    },
+    "features": [
+        {
+            "title": "Urgencias Odontológicas",
+            "details": "Atención inmediata en caso de urgencias odontológicas.",
+            "icon": {
+                "src": "/icons/services/urgencia-odontogica.svg",
+                "alt": "Urgencias Odontológicas"
+            }
+        },
+        {
+            "title": "Enfermería domiciliaria",
+            "details": "Servicio de enfermería en el hogar para pacientes con enfermedades crónicas o en recuperación.",
+            "icon": {
+                "src": "/icons/services/enfermeria-domiciliaria.svg",
+                "alt": "Enfermería domiciliaria"
+            }
+        },
+        {
+            "title": "Vehículo Protegido",
+            "details": "Servicio de protección vehicular en caso de accidentes o emergencias en la vía pública.",
+            "icon": {
+                "src": "/icons/services/vehiculo-protegido.svg",
+                "alt": "Vehículo Protegido"
+            }
+        }
+    ]
+}

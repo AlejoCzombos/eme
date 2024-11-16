@@ -1,0 +1,54 @@
+{
+    "SEO": {
+        "title": "EME - Planes corporativos",
+        "description": "Nuestro equipo cuenta con la experiencia de 29 años en el medio y un  destacado prestigio en el mercado, ganado por el profesionalismo y la  detallada metodología operativa aplicada a los servicios médicos. Nuestro principal objetivo es encontrar la solución adecuada a las  necesidades específicas de cada cliente asegurando así las mejores  oportunidades de contratación optimizando la relación Costo-Beneficio  para tomar las mejores decisiones en cuanto a cobertura médica para cada afiliado."
+    },
+    "banner": {
+        "title": "Planes corporativos",
+        "image": {
+            "src": "/images/services/servicios-corporativos.png",
+            "alt": "Planes corporativos"
+        }
+    },
+    "card_overlay":{
+        "description": "Nuestro equipo cuenta con la experiencia de 29 años en el medio y un  destacado prestigio en el mercado, ganado por el profesionalismo y la  detallada metodología operativa aplicada a los servicios médicos. Nuestro principal objetivo es encontrar la solución adecuada a las  necesidades específicas de cada cliente asegurando así las mejores  oportunidades de contratación optimizando la relación Costo-Beneficio  para tomar las mejores decisiones en cuanto a cobertura médica para cada afiliado.",
+        "icon": {
+            "src": "/icons/services/servicios-corporativos.svg",
+            "alt": "Planes corporativos"
+        }
+    },
+    "features": [
+        {
+            "title": "Emergencias y urgencias médicas",
+            "details": "Atención médica inmediata en caso de emergencias y urgencias médicas en el hogar, trabajo o vía pública.",
+            "icon": {
+                "src": "/icons/services/urgencias-medicas.svg",
+                "alt": "Emergencias y urgencias médicas"
+            }
+        },
+        {
+            "title": "Traslados de pacientes de alto y bajo riesgo",
+            "details": "Traslado de pacientes en ambulancia de alto y bajo riesgo a centros de salud.",
+            "icon": {
+                "src": "/icons/services/traslado-pacientes.svg",
+                "alt": "Traslados de pacientes de alto y bajo riesgo"
+            }
+        },
+        {
+            "title": "Consultas domiciliarias",
+            "details": "Atención médica en el hogar para pacientes con dificultades para trasladarse a un centro de salud.",
+            "icon": {
+                "src": "/icons/services/consultas-domiciliaria.svg",
+                "alt": "Consultas domiciliarias"
+            }
+        },
+        {
+            "title": "Vehículo Protegido",
+            "details": "Servicio de protección vehicular en caso de accidentes o emergencias en la vía pública.",
+            "icon": {
+                "src": "/icons/services/vehiculo-protegido.svg",
+                "alt": "Vehículo Protegido"
+            }
+        }
+    ]
+}

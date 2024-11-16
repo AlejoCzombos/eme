@@ -1,6 +1,22 @@
 ---
 import data from "../../data/home.json";
-const { plans } = data;
+
+interface Props {
+    plans : Plan[];
+}
+
+interface Plan {
+    title: string;
+    image: Image;
+    href: string;
+}
+
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { plans } = Astro.props as Props;
 ---
 
 <section class="grid grid-cols-4">
