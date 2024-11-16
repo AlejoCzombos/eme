@@ -67,7 +67,8 @@
                         "src": "/images/home/services/servicios-familiares.png",
                         "alt": "Servicios<br/>familiares"
                     },
-                    "href": "/servicios/familiares"
+                    "href": "/servicios/familiares",
+                    "description": "Para familias y personas que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar con atención médica inmediata y de calidad en situaciones emergencia, así como servicios adicionales como consultas y enfermería domiciliaria."
                 },
                 {
                     "title": "Servicios empresariales",
@@ -75,7 +76,8 @@
                         "src": "/images/home/services/servicios-empresariales.png",
                         "alt": "Servicios<br>empresariales"
                     },
-                    "href": "/servicios/empresariales"
+                    "href": "/servicios/empresariales",
+                    "description": "Para familias y personas que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar con atención médica inmediata y de calidad en situaciones emergencia, así como servicios adicionales como consultas y enfermería domiciliaria."
                 },
                 {
                     "title": "Servicios corporativos",
@@ -83,7 +85,8 @@
                         "src": "/images/home/services/servicios-corporativos.png",
                         "alt": "Servicios<br>corporativos"
                     },
-                    "href": "/servicios/corporativos"
+                    "href": "/servicios/corporativos",
+                    "description": "Para familias y personas que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar con atención médica inmediata y de calidad en situaciones emergencia, así como servicios adicionales como consultas y enfermería domiciliaria."
                 }
             ]
         }

@@ -26,13 +26,13 @@ const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
 <style>
 #question[open] {
   @apply bg-secondary-100/40;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 #question.white {
   @apply bg-secondary-900/30;
 }
 #question:not([open]) {
   background-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 </style>

@@ -11,7 +11,7 @@ import SectionBanner from "../../../components/services/SectionBanner.astro";
     <main class="mt-[135px] relative">
         <SectionBanner backgroundImage={corporate.banner.image} title="Servicios" />
         <!-- <HeaderCard data={family} class="absolute bottom-[-5rem] left-1/2 transform -translate-x-1/2 mx-auto" /> -->
-        <FeaturesList items={corporate.features}>
+        <FeaturesList features={corporate.features}>
             <h2 slot="title" class="p-2 mb-10 text-2xl border-b-2 border-primary-500">QUÉ OFRECEMOS</h2>
         </FeaturesList>
     </main>

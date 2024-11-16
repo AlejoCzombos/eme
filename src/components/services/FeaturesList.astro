@@ -12,7 +12,7 @@ interface Icon {
   alt: string;
 }
 
-const { items } = Astro.props as { items: FeatureItem[] };
+const { features } = Astro.props as { features: FeatureItem[] };
 ---
 
 <Section class="relative">
@@ -20,7 +20,7 @@ const { items } = Astro.props as { items: FeatureItem[] };
   <slot name="background" />
   <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
     {
-        items.map((item) => (
+        features.map((item) => (
             <Feature icon={item.icon} title={item.title} details={item.details} />
         ))
     }
