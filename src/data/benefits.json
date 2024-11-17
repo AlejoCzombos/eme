@@ -10,5 +10,31 @@
             "src": "/images/services/servicios.png",
             "alt": "Servicios"
         }
-    }
+    },
+    "memberships": [
+        {
+            "title": "Beneficios",
+            "icon": {
+                "src": "/icons/home/membership/beneficios.svg",
+                "alt": "Beneficios"
+            },
+            "href": "/"
+        },
+        {
+            "title": "EME club",
+            "icon": {
+                "src": "/icons/home/membership/eme-club.svg",
+                "alt": "EME club"
+            },
+            "href": "/"
+        },
+        {
+            "title": "EME salud",
+            "icon": {
+                "src": "/icons/home/membership/eme-salud.svg",
+                "alt": "EME salud"
+            },
+            "href": "/"
+        }
+    ]
 }

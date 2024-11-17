@@ -1,23 +1,46 @@
 ---
+import Breadcrumb from '../UI/Breadcrumb.astro';
+
 interface Props {
-    backgroundImage: BackgroundImage;
+    backgroundImage: Image;
     title: string;
     subtitle?: string;
+    breadcrumb_top?: boolean;
+    class: string;
 }
-interface BackgroundImage {
+interface Image {
     src: string;
     alt: string;
 }
 
-const { backgroundImage, title, subtitle } = Astro.props as Props;
+const { backgroundImage, title, subtitle, breadcrumb_top, class: className } = Astro.props as Props;
 ---
 
-<header class="relative min-h-[25rem] flex items-center">
-    <div class="max-w-6xl mx-auto w-full z-10 relative space-y-5">
+<header class:list={[className, "relative min-h-[25rem] flex flex-col items-start justify-end"]}>
+    {
+        breadcrumb_top && <div class="breadcrum max-w-6xl mx-auto w-full z-10 relative py-10">
+            <Breadcrumb />
+        </div>
+    }
+    <div class={`title max-w-6xl mx-auto w-full z-10 relative space-y-5 flex flex-col items-start ${breadcrumb_top ? "justify-start" : "justify-center"}`}>
         <h1 class="text-white text-5xl">{title}</h1>
         {subtitle && <p class="text-white font-semibold text-2xl">{subtitle}</p>}
     </div>
+    {
+        !breadcrumb_top && <div class="breadcrum max-w-6xl mx-auto w-full z-10 relative py-8">
+            <Breadcrumb />
+        </div>
+    }
     <img class="absolute h-full w-full object-cover top-0 left-0 -z-10" src={backgroundImage.src} alt={backgroundImage.alt}>
     <div id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-800 to-transparent z-0 pointer-events-none"></div>
     <slot/>
 </header>
+
+<style>
+    .title {
+        flex-grow: 1;
+    }
+    .breadcrum {
+        flex-shrink:0
+    }
+</style>

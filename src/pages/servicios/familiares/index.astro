@@ -2,15 +2,16 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import { SEO, banner, card_overlay, features } from "../../../data/services/family.json";
-import HeaderCard from "../../../components/HeaderCard.astro";
+import BannerCard from "../../../components/services/BannerCard.astro";
 import FeaturesList from "../../../components/services/FeaturesList.astro";
 import SectionBanner from "../../../components/services/SectionBanner.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
     <main class="mt-[135px] relative">
-        <SectionBanner backgroundImage={banner.image} title="Servicios" />
-        <!-- <HeaderCard data={family} class="absolute bottom-[-5rem] left-1/2 transform -translate-x-1/2 mx-auto" /> -->
+        <SectionBanner backgroundImage={banner.image} title="Servicios" breadcrumb_top={true} class="mb-10">
+            <BannerCard data={card_overlay} class="absolute bottom-[-5rem] left-1/2 transform -translate-x-1/2 mx-auto z-20" />
+        </SectionBanner>
         <FeaturesList features={features}>
             <h2 slot="title" class="p-2 mb-10 text-2xl border-b-2 border-primary-500">QUÉ OFRECEMOS</h2>
         </FeaturesList>

@@ -1,0 +1,28 @@
+---
+interface Props {
+    href: string;
+    title: string;
+    icon: Image;
+}
+
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { href, icon, title } = Astro.props as Props;
+---
+
+<a href={href} class="item flex flex-col items-center gap-2 group">
+    <img src={icon.src} alt={icon.alt} class="size-20 group-hover:-translate-y-2 transition-transform ease-in-out" />
+    <h3 class="font-bold text-xl text-primary-600 text-center group-hover:scale-110 transition-transform ease-in-out">{title.toLocaleUpperCase()}</h2>
+</a>
+
+<style>
+    .item {
+        @apply border-r border-r-primary-600;
+    }
+    .item:last-child {
+        @apply border-none;
+    }
+</style>

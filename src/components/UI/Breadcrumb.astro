@@ -1,0 +1,39 @@
+---
+const currentPath = Astro.url.pathname
+const paths = currentPath.split("/").filter(Boolean);
+---
+<nav class="text-white text-base font-bold">
+      <ul class="flex space-x-2">
+        <li>
+          <a href="/" class="text-white hover:underline">
+            Inicio
+          </a>
+        </li>
+        { paths.length > 0 &&
+            <li>
+                <span>{"/"}</span>
+            </li>
+        }
+        {paths.map((path, index) => {
+          const fullPath = "/" + paths.slice(0, index + 1).join("/");
+          const isLast = index === paths.length - 1;
+
+          return (
+            <li>
+              {isLast ? (
+                <span class="text-primary-500">
+                  {path.charAt(0) + path.slice(1)}
+                </span>
+              ) : (
+                <>
+                  <a href={fullPath} class="text-white hover:underline">
+                    {path.charAt(0) + path.slice(1)}
+                  </a>
+                  <span>{" / "}</span>
+                </>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>

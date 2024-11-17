@@ -11,6 +11,7 @@
         }
     },
     "card_overlay":{
+        "title": "Planes familiares",
         "description": "Para familias y personas que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar con atención médica inmediata y de calidad en situaciones emergencia, así como servicios adicionales como consultas y enfermería domiciliaria.",
         "icon": {
             "src": "/icons/services/servicios-familiares.svg",
