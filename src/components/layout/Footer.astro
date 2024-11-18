@@ -1,5 +1,77 @@
 ---
+
+import { benefits, company, logo, services, socialMedia, softwareLogo } from '../../data/footer.json'
+import { branches } from '../../data/general-info.json'
+import NavigationItem from '../UI/NavigationItem.astro'
 ---
 
-<footer class="bg-primary-600 min-h-52">
+<footer class="bg-gradient-to-r from-primary-500 to-primary-800 text-white py-10 relative">
+  <div class="flex justify-between max-w-[90rem] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <img src={logo.src} alt={logo.alt} class="w-64">
+        </div>
+        <div class="space-y-2">
+        {
+            branches.map(branch => (
+                <div>
+                    <p class="font-bold text-white text-base">{branch.name}</p>
+                    <p class="text-white text-base">{branch.direction}</p>
+                    <p class="text-white text-base">{branch.number}</p>
+                </div>
+            ))
+        }
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4">
+        <div class="space-y-2">
+            <NavigationItem class="font-bold" white="true" text={services.title} href={services.href} />
+            <ul class="flex flex-col gap-1">
+            {
+                services.items.map(item => (
+                    <NavigationItem text={item.name} href={item.href} white="true" />
+                ))
+            }
+            </ul>
+        </div>
+        
+        <div class="space-y-2">
+            <NavigationItem class="font-bold" white="true" text={benefits.title} href={benefits.href} />
+            <ul class="flex flex-col gap-1">
+            {
+                benefits.items.map(item => (
+                    <NavigationItem text={item.name} href={item.href} white="true" />
+                ))
+            }
+            </ul>
+        </div>
+
+        <div class="space-y-2">
+            <NavigationItem class="font-bold" white="true" text={company.title} href={company.href} />
+            <ul class="flex flex-col gap-1">
+            {
+                company.items.map(item => (
+                    <NavigationItem text={item.name} href={item.href} white="true" />
+                ))
+            }
+            </ul>
+        </div>
+
+        <div class="flex flex-col justify-between items-end max-w-44">
+            <div class="flex space-x-4">
+                {
+                    socialMedia.map(item => (
+                        <a target='_blank' href={item.url} class="size-12 transition-transform hover:scale-125">
+                            <img src={item.image.src} alt={item.image.alt}>
+                        </a>
+                    ))
+                }
+            </div>
+            <a target='_blank' href={softwareLogo.url}>
+                <img src={softwareLogo.src} alt={softwareLogo.alt} class="w-24">
+            </a>
+        </div>
+    </div>
+    </div>
 </footer>

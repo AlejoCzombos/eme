@@ -1,0 +1,28 @@
+---
+import Section from '../UI/Section.astro'
+import MembershipCard from './MembershipCard.astro';
+
+interface Props {
+    memberships : Membership[];
+}
+
+interface Membership {
+    title: string;
+    icon: Image;
+    href: string;
+}
+
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { memberships } = Astro.props as Props;
+---
+<Section class="grid grid-cols-4">
+    {
+        memberships.map((item) => (
+            <MembershipCard title={item.title} icon={item.icon} href={item.href} />
+        ))
+    }
+</Section>

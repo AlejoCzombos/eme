@@ -1,15 +1,13 @@
 ---
-import Section from '../UI/Section.astro'
-import MembershipCard from './MembershipCard.astro';
+import Section from "../UI/Section.astro";
 
 interface Props {
-    memberships : Membership[];
+    membership : Membership;
 }
 
 interface Membership {
     title: string;
-    icon: Image;
-    href: string;
+    images: Image[];
 }
 
 interface Image {
@@ -17,12 +15,23 @@ interface Image {
     alt: string;
 }
 
-const { memberships } = Astro.props as Props;
+const { membership } = Astro.props as Props;
 ---
-<Section class="grid grid-cols-4">
-    {
-        memberships.map((item) => (
-            <MembershipCard title={item.title} icon={item.icon} href={item.href} />
-        ))
-    }
+
+<Section class="flex justify-center items-center">
+    <h2 class="text-3xl max-w-lg">{membership.title}</h2>
+    <div class="flex gap-12">
+        <img src={membership.images[0].src} alt={membership.images[0].alt} class="max-h-24 object-contain hover:scale-110 transition-transform duration-300 ease-in-out" />
+        <span class="border border-primary-600"></span>
+        <img src={membership.images[1].src} alt={membership.images[1].alt} class="max-h-24 object-contain hover:scale-110 transition-transform duration-300 ease-in-out" />
+    </div>
 </Section>
+
+<style>
+    .item {
+        @apply border-r border-r-primary-600 pr-12;
+    }
+    .item:last-child {
+        @apply border-none pr-0;
+    }
+</style>

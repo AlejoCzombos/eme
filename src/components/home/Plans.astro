@@ -19,7 +19,7 @@ interface Image {
 const { plans } = Astro.props as Props;
 ---
 
-<section class="grid grid-cols-4">
+<section class="grid xl:grid-cols-4 grid-cols-2">
     {
         plans.map((plan) => (
             <a href={plan.href} class="relative h-[22rem] w-full group overflow-hidden">

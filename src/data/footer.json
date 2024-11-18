@@ -1,0 +1,99 @@
+{
+    "logo": {
+      "src": "/images/footer/logo_footer.png",
+      "alt": "Logo eme"
+    },
+    "services": {
+      "title": "Servicios",
+      "href": "/servicios",
+      "items": [
+        {
+            "name": "Familiares",
+            "href": "/servicios/familiares"
+        },
+        {
+            "name": "Empresariales",
+            "href": "/servicios/empresariales"
+        },
+        {
+            "name": "Corporativos",
+            "href": "/servicios/corporativos"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Beneficios",
+      "href": "/beneficios",
+      "items": [
+        {
+            "name": "Eme club",
+            "href": "/beneficios/eme-club"
+        },
+        {
+            "name": "Eme salud",
+            "href": "/beneficios/eme-salud"
+        },
+        {
+            "name": "Más beneficios",
+            "href": "/beneficios/mas-beneficios"
+        }
+      ]
+    },
+    "company": {
+      "title": "Empresa",
+      "href": "#",
+      "items": [
+        {
+          "name": "RSE",
+          "href": "#"
+        },
+        {
+          "name": "Franquicias",
+          "href": "#"
+        },
+        {
+          "name": "Contacto",
+          "href": "#"
+        }
+      ]   
+    },
+    "socialMedia": [
+      {
+        "platform": "WhatsApp",
+        "image": {
+            "src": "/icons/whatsapp.svg",
+            "alt": "WhatsApp"
+        },
+        "url": "#"
+      },
+      {
+        "platform": "Instagram",
+        "image": {
+            "src": "/icons/instagram.svg",
+            "alt": "Instagram"
+        },
+        "url": "#"
+      },
+      {
+        "platform": "Facebook",
+        "image": {
+            "src": "/icons/facebook.svg",
+            "alt": "Facebook"
+        },
+        "url": "#"
+      },
+      {
+        "platform": "YouTube",
+        "image": {
+            "src": "/icons/youtube.svg",
+            "alt": "YouTube"
+        },
+        "url": "#"
+      }
+    ],
+    "softwareLogo": {
+      "src": "/images/footer/lav_logo.png",
+      "alt": "Logo de Software",
+      "url": "https://www.linkedin.com/company/lav-ux/" 
+    }
+}

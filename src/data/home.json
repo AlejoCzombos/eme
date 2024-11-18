@@ -50,40 +50,19 @@
             "href": "/policonsultorios"
         }
     ],
-    "memberships": [
-        {
-            "title": "Beneficios",
-            "icon": {
-                "src": "/icons/home/membership/beneficios.svg",
-                "alt": "Beneficios"
+    "membership": {
+        "title": "Conocé nuestros beneficios exclusivos.",
+        "images": [
+            {
+                "src": "/images/home/membership/eme_club.png",
+                "alt": "EME Club"
             },
-            "href": "/beneficios"
-        },
-        {
-            "title": "EME club",
-            "icon": {
-                "src": "/icons/home/membership/eme-club.svg",
-                "alt": "EME club"
-            },
-            "href": "/"
-        },
-        {
-            "title": "EME salud",
-            "icon": {
-                "src": "/icons/home/membership/eme-salud.svg",
-                "alt": "EME salud"
-            },
-            "href": "/"
-        },
-        {
-            "title": "Afiliate",
-            "icon": {
-                "src": "/icons/home/membership/afiliate.svg",
-                "alt": "afiliate"
-            },
-            "href": "/"
-        }
-    ],
+            {
+                "src": "/images/home/membership/eme_salud.png",
+                "alt": "EME Salud"
+            }
+        ]
+    },
     "stats": [
         {
             "title": "Pacientes atendidos",

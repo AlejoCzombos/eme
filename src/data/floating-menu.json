@@ -15,14 +15,6 @@
                 "src": "/icons/phonecall.svg",
                 "alt": "Enlace a soporte técnico"
             }
-        },
-        {
-            "url": "#",
-            "tooltip": "Videoconsulta",
-            "image": {
-                "src": "/icons/videocall.svg",
-                "alt": "Enlace a Videoconsulta"
-            }
         }
     ]
 }

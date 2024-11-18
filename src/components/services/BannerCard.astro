@@ -19,14 +19,14 @@ const {class: className, data} = Astro.props as Props;
 ---
 
 
-<div class:list={[className, "max-w-6xl w-full pl-24 pr-36 py-8 bg-primary-600 rounded-3xl"]}>
-  <div class="flex gap-12">
-    <img class="size-32 z-10" src={data.icon.src} alt={data.icon.alt}>
-    <div class="z-10">
-      <h1 class="text-4xl text-white border-b-2 pb-3">{data.title}</h1>
-      <p class="text-2xl text-white pt-4">
-        {data.description}
-      </p>
+<div class:list={[className, "max-w-6xl w-full bg-primary-600 rounded-l-[40px] rounded-2xl drop-shadow-xl"]}>
+  <div class="flex">
+    <div class="flex flex-col justify-center items-center gap-6 bg-primary-500 rounded-[40px] min-w-60 px-8 py-6 z-10">
+      <img class="size-32 z-10" src={data.icon.src} alt={data.icon.alt}>
+      <h1 class="text-3xl text-white">{data.title}</h1>
+    </div>
+    <div class="flex items-center px-10 py-8">
+      <p class="text-2xl text-white">{data.description}</p>
     </div>
   </div>
 </div>
