@@ -1,4 +1,6 @@
 ---
+import Section from "../UI/Section.astro";
+
 interface Props {
     membership_selector: MembershipSelector[];
 }
@@ -14,11 +16,9 @@ interface Image {
 }
 
 const { membership_selector } = Astro.props as Props;
-
-import {  } from "../../data/benefits.json";
 ---
-<div class="flex flex-col items-center gap-8 p-6">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
+<Section class="flex flex-col items-center gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl">
     
     {
         membership_selector.map((membership) => (
@@ -53,15 +53,17 @@ import {  } from "../../data/benefits.json";
             </div>
         ))
     }
-    </div>
-</div>
+</Section>
 
 <style>
     .item {
-        @apply border-r border-r-primary-600 pr-12;
+        @apply border-r border-r-primary-600 pr-8;
     }
     .item:last-child {
         @apply border-none pr-0;
+    }
+    .button, .active {
+       @apply bg-primary-100/60
     }
 </style>
 
@@ -69,16 +71,36 @@ import {  } from "../../data/benefits.json";
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("button[data-target]");
   const descriptions = document.querySelectorAll(".description");
+  const contents = document.querySelectorAll(".content");
 
+  buttons[0].classList.add("active")
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       const targetId = button.getAttribute("data-target");
 
-      // Ocultar todas las descripciones
+      // Agregar clase active al botón seleccionado
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Ocultar todas las descripciones y contenidos
       descriptions.forEach(desc => desc.classList.add("hidden"));
+      contents.forEach(cont => cont.classList.add("hidden"));
 
       // Mostrar la descripción seleccionada
-      document.getElementById(targetId).classList.remove("hidden");
+      const descriptionElement = document.getElementById(targetId);
+      const contentElement = document.getElementById(targetId + "_content");
+
+      if (descriptionElement) {
+        descriptionElement.classList.remove("hidden");
+      } else {
+        console.error(`No se encontró el elemento con id: ${targetId}`);
+      }
+
+      if (contentElement) {
+        contentElement.classList.remove("hidden");
+      } else {
+        console.error(`No se encontró el elemento con id: ${targetId + "_content"}`);
+      }
     });
   });
 });

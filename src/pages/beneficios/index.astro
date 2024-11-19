@@ -1,14 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-import { banner, SEO, membership_selector } from "../../data/benefits.json";
+import { banner, SEO, membership_selector, eme_club, eme_salud, mas_beneficios } from "../../data/benefits.json";
 import SectionBanner from "../../components/services/SectionBanner.astro";
 import AdvertisingBanner from "../../components/services/AdvertisingBanner.astro";
-import ThreeColumnsGrid from "../../components/UI/ThreeColumnsGrid.astro";
-import MembershipCard from "../../components/home/MembershipCard.astro";
-import Section from "../../components/UI/Section.astro";
-import Membership from "../../components/home/Membership.astro";
 import MembershipSelector from "../../components/benefits/MembershipSelector.astro";
+import EmeSalud from "../../components/benefits/EmeSalud.astro";
+import EmeClub from "../../components/benefits/EmeClub.astro";
+import MasBeneficios from "../../components/benefits/MasBeneficios.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -16,5 +15,8 @@ import MembershipSelector from "../../components/benefits/MembershipSelector.ast
         <SectionBanner backgroundImage={banner.image} title={banner.title} subtitle={banner.subtitle} />
         <AdvertisingBanner image={{src: "", alt: ""}} />
         <MembershipSelector membership_selector={membership_selector} />
+        <EmeClub eme_club={eme_club}/>
+        <EmeSalud eme_salud={eme_salud} />
+        <MasBeneficios mas_beneficios={mas_beneficios} />
     </main>
 </Layout>

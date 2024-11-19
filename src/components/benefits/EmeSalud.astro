@@ -1,0 +1,14 @@
+---
+import Section from "../UI/Section.astro";
+
+const { eme_salud } = Astro.props;
+
+const id = eme_salud.id + "_content";
+---
+
+<Section id={id} class="content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
+    <div>
+        <h2 class="text-3xl font-bold text-center text-primary-600">{eme_salud.title}</h2>
+        <p class="text-center text-lg text-primary-600">{eme_salud.description}</p>
+    </div>
+</Section>
