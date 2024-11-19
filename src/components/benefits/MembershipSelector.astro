@@ -1,0 +1,85 @@
+---
+interface Props {
+    membership_selector: MembershipSelector[];
+}
+interface MembershipSelector {
+    id: string;
+    title?: string;
+    description: string;
+    image: Image;
+}
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { membership_selector } = Astro.props as Props;
+
+import {  } from "../../data/benefits.json";
+---
+<div class="flex flex-col items-center gap-8 p-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
+    
+    {
+        membership_selector.map((membership) => (
+            <button
+                class={`${membership.title ? "flex flex-col items-center gap-2 cursor-pointer group" : "item group"}`}
+                data-target={membership.id}
+            >
+                <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 object-contain group-hover:scale-110 transition-transform">
+                { membership.title && <h3 class="font-bold text-xl text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3> }
+            </button>
+        ))
+    }
+  </div>
+
+    <div class="max-w-6xl w-full bg-primary-100/60 rounded-2xl my-8">
+    {
+        membership_selector.map((membership, index) => (
+            <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out ${ index == 0 ? "" : "hidden" }`} id={membership.id}>
+                <div class="flex px-8 py-6">
+                    <div class="flex justify-center items-center">
+                        <img class="h-48 object-contain" src={membership.image.src} alt={membership.image.alt}>
+                    </div>
+                    <span class="border-r border-primary-600 mx-6"></span>
+                    <div class="flex flex-col justify-center text-xl">
+                        {
+                            membership.description.split("\n").map((paragraph) => (
+                                <p set:html={paragraph}></p>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+    </div>
+</div>
+
+<style>
+    .item {
+        @apply border-r border-r-primary-600 pr-12;
+    }
+    .item:last-child {
+        @apply border-none pr-0;
+    }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("button[data-target]");
+  const descriptions = document.querySelectorAll(".description");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-target");
+
+      // Ocultar todas las descripciones
+      descriptions.forEach(desc => desc.classList.add("hidden"));
+
+      // Mostrar la descripción seleccionada
+      document.getElementById(targetId).classList.remove("hidden");
+    });
+  });
+});
+</script>

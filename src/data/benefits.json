@@ -11,30 +11,31 @@
             "alt": "Servicios"
         }
     },
-    "memberships": [
-        {
-            "title": "Beneficios",
-            "icon": {
-                "src": "/icons/home/membership/beneficios.svg",
-                "alt": "Beneficios"
-            },
-            "href": "/"
-        },
-        {
-            "title": "EME club",
-            "icon": {
-                "src": "/icons/home/membership/eme-club.svg",
-                "alt": "EME club"
-            },
-            "href": "/"
-        },
-        {
-            "title": "EME salud",
-            "icon": {
-                "src": "/icons/home/membership/eme-salud.svg",
-                "alt": "EME salud"
-            },
-            "href": "/"
-        }
-    ]
+    "membership_selector": [
+    {
+      "id": "emeClub",
+      "description": "<strong>Todo un mundo de experiencias nuevas que le permitirá disfrutar de privilegios exclusivos y aprovechar los mejores beneficios cuando realice sus compras diarias en los distintos comercios adheridos que lo integran.</strong>\nA través de su <strong>credencial digital de Beneficios</strong>, el afiliado goza de importantes descuentos especiales en los más variados productos y servicios, desde indumentarias y artículos del hogar, hasta viajes, cenas, regalos y mucho más.",
+      "image": {
+        "src": "/images/home/membership/eme_club.png",
+        "alt": "Eme Club"
+      }
+    },
+    {
+      "id": "emeSalud",
+      "description": "La optima relación <strong>costo-beneficio</strong> queda demostrada totalmente con este novedoso sistema ya que el socio EME abona cualquier consulta, estudio o práctica, solo en la medida que la utilice y con aranceles muy convenientes.",
+      "image": {
+        "src": "/images/home/membership/eme_salud.png",
+        "alt": "Eme Salud"
+      }
+    },
+    {
+      "id": "masBeneficios",
+      "title": "Más Beneficios",
+      "description": "Beneficios exclusivos para nuestros socios EME, sin costo adicional.",
+      "image": {
+        "src": "/icons/home/membership/beneficios.svg",
+        "alt": "Más Beneficios"
+      }
+    }
+  ]
 }
