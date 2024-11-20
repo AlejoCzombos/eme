@@ -1,6 +1,5 @@
 ---
 const { text, line = true, ...props } = Astro.props as { text: string, line: boolean };
-console.log(line);
 ---
 
 <h2 class={`p-2 text-2xl mb-10 ${line ? "border-b-2 border-primary-500" : ""}`} {...props} >{text.toLocaleUpperCase()}</h2>

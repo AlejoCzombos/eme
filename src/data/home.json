@@ -52,14 +52,20 @@
     ],
     "membership": {
         "title": "Conocé nuestros beneficios exclusivos.",
-        "images": [
+        "items": [
             {
-                "src": "/images/home/membership/eme_club.png",
-                "alt": "EME Club"
+                "image":{
+                    "src": "/images/home/membership/eme_club.png",
+                    "alt": "EME Club"
+                },
+                "href": "/beneficios?benefit=eme_club"
             },
             {
-                "src": "/images/home/membership/eme_salud.png",
-                "alt": "EME Salud"
+                "image":{
+                    "src": "/images/home/membership/eme_salud.png",
+                    "alt": "EME Salud"
+                },
+                "href": "/beneficios?benefit=eme_salud"
             }
         ]
     },

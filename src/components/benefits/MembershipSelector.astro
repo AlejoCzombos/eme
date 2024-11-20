@@ -23,7 +23,7 @@ const { membership_selector } = Astro.props as Props;
     {
         membership_selector.map((membership) => (
             <button
-                class={`${membership.title ? "flex flex-col items-center gap-2 cursor-pointer group" : "item group"}`}
+                class={`group ${membership.title ? "flex flex-col items-center gap-2 cursor-pointer" : "item"}`}
                 data-target={membership.id}
             >
                 <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 object-contain group-hover:scale-110 transition-transform">
@@ -36,7 +36,7 @@ const { membership_selector } = Astro.props as Props;
     <div class="max-w-6xl w-full bg-primary-100/60 rounded-2xl">
     {
         membership_selector.map((membership, index) => (
-            <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out ${ index == 0 ? "" : "hidden" }`} id={membership.id}>
+            <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={membership.id}>
                 <div class="flex px-8 py-6">
                     <div class="flex justify-center items-center">
                         <img class="h-48 object-contain" src={membership.image.src} alt={membership.image.alt}>
@@ -69,12 +69,30 @@ const { membership_selector } = Astro.props as Props;
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const selectedBenefit = urlParams.get("benefit") || "eme_club";
+  console.log(selectedBenefit);
+
   const buttons = document.querySelectorAll("button[data-target]");
   const descriptions = document.querySelectorAll(".description");
   const contents = document.querySelectorAll(".content");
 
-  buttons[0].classList.add("active")
+  // Mostrar la descripción y contenido seleccionado por defecto
+  const defaultDescription = document.getElementById(selectedBenefit);
+  const defaultContent = document.getElementById(selectedBenefit + "_content");
+
+  defaultDescription.classList.remove("hidden");
+  defaultContent.classList.remove("hidden");
+
+
   buttons.forEach(button => {
+  
+    const targetId = button.getAttribute("data-target");
+    if (targetId === selectedBenefit) {
+      button.classList.add("active");
+    }
+
     button.addEventListener("click", () => {
       const targetId = button.getAttribute("data-target");
 

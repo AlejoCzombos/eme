@@ -27,15 +27,15 @@
       "items": [
         {
             "name": "Eme club",
-            "href": "/beneficios/eme-club"
+            "href": "/beneficios?benefit=eme_club"
         },
         {
             "name": "Eme salud",
-            "href": "/beneficios/eme-salud"
+            "href": "/beneficios?benefit=eme_salud"
         },
         {
             "name": "Más beneficios",
-            "href": "/beneficios/mas-beneficios"
+            "href": "/beneficios?benefit=mas_beneficios"
         }
       ]
     },

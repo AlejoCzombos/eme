@@ -12,7 +12,7 @@ export default function BenefitsList() {
     }, []);
 
     const fetchBenefits = async () => {
-        const response = await fetch('public/benefits_list.json');
+        const response = await fetch('/benefits_list.json');
         const data = await response.json();
         setBenefits(data);
     }

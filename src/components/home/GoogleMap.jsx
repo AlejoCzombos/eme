@@ -12,7 +12,7 @@ const GoogleMapComponent = ({ branches }) => {
   return (
     <div className="mi-h-[10rem] h-full">
       <header className="flex justify-between px-16 items-center h-20">
-        <h1 class="text-2xl">{contact.map.title.toLocaleUpperCase()}</h1>
+        <h2 className="text-2xl">{contact.map.title.toLocaleUpperCase()}</h2>
         <span>
           <label htmlFor="branchSelect" className="block font-normal text-sm text-slate-400">Seleccionar Localidad</label>
           <select id="branchSelect" onChange={handleSelectChange} className="mb-4 p-2 border font-normal text-slate-600 border-gray-300 rounded min-w-60 w-full">
