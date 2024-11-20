@@ -18,7 +18,7 @@ const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
         <img src={whiteTheme ? "/icons/acordeon-arrow-white.svg" : "/icons/acordeon-arrow.svg"} alt="flecha apertura" class="size-10 transition-all group-open:rotate-180 duration-300 ease-in-out" />
         <span class={`font-semibold flex-grow text-2xl ${whiteTheme ? "text-white" : "text-[#505050]"}`}>{title}</span>
     </summary>
-    <p class={`mt-2 text-xl group-open:animate-fade-down animate-duration-500 ${whiteTheme ? "text-white" : "text-gray-600"}`}>
+    <p class={`mt-2 text-xl group-open:animate-fade-down animate-duration-300 ${whiteTheme ? "text-white" : "text-gray-600"}`}>
         {details}
     </p>
 </details>

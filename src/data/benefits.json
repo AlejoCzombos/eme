@@ -39,28 +39,83 @@
       }
     ],
     "eme_club": {
-      "id": "emeClub",
-      "description": "<strong>Todo un mundo de experiencias nuevas que le permitirá disfrutar de privilegios exclusivos y aprovechar los mejores beneficios cuando realice sus compras diarias en los distintos comercios adheridos que lo integran.</strong>\nA través de su <strong>credencial digital de Beneficios</strong>, el afiliado goza de importantes descuentos especiales en los más variados productos y servicios, desde indumentarias y artículos del hogar, hasta viajes, cenas, regalos y mucho más.",
-      "image": {
-        "src": "/images/home/membership/eme_club.png",
-        "alt": "Eme Club"
-      }
+      "id": "emeClub"
     },
     "eme_salud": {
       "id": "emeSalud",
-      "description": "La optima relación <strong>costo-beneficio</strong> queda demostrada totalmente con este novedoso sistema ya que el socio EME abona cualquier consulta, estudio o práctica, solo en la medida que la utilice y con aranceles muy convenientes.",
-      "image": {
-        "src": "/images/home/membership/eme_salud.png",
-        "alt": "Eme Salud"
+      "we_offer": {
+        "title": "Qué te ofrecemos",
+        "features": [
+          {
+              "title": "Consultorios externos",
+              "details": "Consultas médicas en consultorios externos.",
+              "icon": {
+                  "src": "/icons/benefits/salud.svg",
+                  "alt": "Consultorios externos"
+              }
+          },
+          {
+              "title": "Diagnostico por imágenes",
+              "details": "Estudios de diagnóstico por imágenes.",
+              "icon": {
+                  "src": "/icons/benefits/salud.svg",
+                  "alt": "Diagnostico por imágenes"
+              }
+          },
+          {
+              "title": "Odontología",
+              "details": "Consultas odontológicas",
+              "icon": {
+                  "src": "/icons/benefits/salud.svg",
+                  "alt": "Odontología"
+              }
+          },
+          {
+              "title": "Farmacia",
+              "details": "Descuentos en farmacias adheridas",
+              "icon": {
+                  "src": "/icons/benefits/salud.svg",
+                  "alt": "Farmacia"
+              }
+          },
+          {
+              "title": "Óptica",
+              "details": "Descuentos en ópticas adheridas",
+              "icon": {
+                  "src": "/icons/benefits/salud.svg",
+                  "alt": "Óptica"
+              }
+          }
+        ]
+      },
+      "how_to_use": {
+        "title": "Cómo utilizar EME Salud",
+        "steps": [
+          {
+            "description": "Adquiera la Orden de Consulta en las oficinas de EME o a su cobrador.",
+            "image": {
+              "src": "/images/benefits/eme_salud/orden_consulta.png",
+              "alt": "Orden de Consulta"
+            }
+          },
+          {
+            "description": "Concurra con dicha orden al especialista elegido.",
+            "image": {
+              "src": "/images/benefits/eme_salud/turno_consultorio.png",
+              "alt": "Turno en consultorio"
+            }
+          },
+          {
+            "description": "Si el médico especialista le indicara algún estudio complementario  consulte en las oficinas de EME cuáles son los Institutos de Prácticas conveniados.",
+            "image": {
+              "src": "/images/benefits/eme_salud/estudio_complementario.png",
+              "alt": "Estudio complementario"
+            }
+          }
+        ]
       }
     },
     "mas_beneficios": {
-      "id": "masBeneficios",
-      "title": "Más Beneficios",
-      "description": "Beneficios exclusivos para nuestros socios EME, sin costo adicional.",
-      "image": {
-        "src": "/icons/home/membership/beneficios.svg",
-        "alt": "Más Beneficios"
-      }
+      "id": "masBeneficios"
     }
 }

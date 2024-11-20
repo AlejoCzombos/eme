@@ -5,6 +5,7 @@ import { SEO, banner, features, card_overlay } from "../../../data//services/cor
 import FeaturesList from "../../../components/services/FeaturesList.astro";
 import SectionBanner from "../../../components/services/SectionBanner.astro";
 import BannerCard from "../../../components/services/BannerCard.astro";
+import H2Title from "../../../components/UI/H2Title.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -13,7 +14,7 @@ import BannerCard from "../../../components/services/BannerCard.astro";
             <BannerCard data={card_overlay} class="absolute bottom-[-7rem] left-1/2 transform -translate-x-1/2 mx-auto z-20" />
         </SectionBanner>
         <FeaturesList features={features}>
-            <h2 slot="title" class="p-2 mb-10 text-2xl border-b-2 border-primary-500">QUÉ OFRECEMOS</h2>
+            <H2Title slot="title" text="Qué te ofrecemos" />
         </FeaturesList>
     </main>
 </Layout>
