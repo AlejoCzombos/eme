@@ -48,41 +48,41 @@
         "features": [
           {
               "title": "Consultorios externos",
-              "details": "Consultas médicas en consultorios externos.",
+              "details": "Los Consultorios Externos de Medicina General como los de Especialidades, atenderán al socio EME con la presentación de la correspondiente Orden de Consulta Ambulatoria. La misma podrá ser adquirida en las oficinas de EME de su localidad, al cobrador domiciliario o en los puntos de venta que la empresa podrá habilitar en el futuro.",
               "icon": {
-                  "src": "/icons/benefits/salud.svg",
+                  "src": "/icons/benefits/consultorios.svg",
                   "alt": "Consultorios externos"
               }
           },
           {
-              "title": "Diagnostico por imágenes",
-              "details": "Estudios de diagnóstico por imágenes.",
+              "title": "Diagnostico por imágenes / otras prácticas",
+              "details": "En los institutos conveniados con EME, el afiliado deberá presentar la indicación firmada por el médico tratante y abonar el arancel correspondiente a la práctica a realizar, conforme a la lista de precios acordada con el Instituto y que podrá ser solicitada por el afiliado para su verificación. Las órdenes de prácticas Complementarias, se entregan gratuitamente (sin costo) a los afiliados, conjuntamente con la compra de Ordenes de Consulta Ambulatoria.",
               "icon": {
-                  "src": "/icons/benefits/salud.svg",
+                  "src": "/icons/benefits/diagnostico_imagen.svg",
                   "alt": "Diagnostico por imágenes"
               }
           },
           {
               "title": "Odontología",
-              "details": "Consultas odontológicas",
+              "details": "En los Consultorios Odontológicos que poseen convenio con EME el afiliado podrá efectuar los tratamientos necesarios abonando el arancel especial acordado con el prestador para los mismos, pudiendo el afiliado requerir la lista de precios a fin de verificar su cumplimiento.",
               "icon": {
-                  "src": "/icons/benefits/salud.svg",
+                  "src": "/icons/benefits/odontologia.svg",
                   "alt": "Odontología"
               }
           },
           {
               "title": "Farmacia",
-              "details": "Descuentos en farmacias adheridas",
+              "details": "En las Farmacias Adheridas a su Red Prestacional el socio obtendrá un importante porcentaje de descuento. Para ello, el paciente deberá requerir al médico tratante que le indique para su tratamiento, los medicamentos en el recetario EME Este recetario se entrega gratuitamente junto con la compra de las Ordenes de Consulta Ambulatoria.",
               "icon": {
-                  "src": "/icons/benefits/salud.svg",
+                  "src": "/icons/benefits/farmacias.svg",
                   "alt": "Farmacia"
               }
           },
           {
               "title": "Óptica",
-              "details": "Descuentos en ópticas adheridas",
+              "details": "Los mejores referentes de Profesionalidad, Calidad y Servicio en el mundo de la Óptica y la Audiología, ponen a disposición del socio EME las mejores marcas con los diseños mas avanzados y exclusivos; materiales de alta calidad y los mejores tratamientos adaptados a las necesidades de cada cliente.",
               "icon": {
-                  "src": "/icons/benefits/salud.svg",
+                  "src": "/icons/benefits/opticas.svg",
                   "alt": "Óptica"
               }
           }
@@ -116,6 +116,43 @@
       }
     },
     "mas_beneficios": {
-      "id": "mas_beneficios"
+      "id": "mas_beneficios",
+      "we_offer": {
+        "title": "Qué te ofrecemos",
+        "features": [
+          {
+              "title": "Cobertura nacional e internacional",
+              "details": "A través de la Red SIEM (Sistema Integrado de Emergencias Médicas): en más de 1000 localidades del país y en más de 17 países en 180 empresas donde el afiliado con la sola presentación de su carnet EME podrá atenderse ante cualquier Emergencia o Consulta Médica SIN CARGO",
+              "icon": {
+                  "src": "/icons/benefits/cobertura_nacional.svg",
+                  "alt": "Cobertura nacional e internacional"
+              }
+          },
+          {
+              "title": "Plan materno infantil",
+              "details": "Destinado a la atención prehospitalaria del hijo de una afiliada al Sistema quién gozará durante el primer año de los mismos servicios a los que se encuentra suscripta su madre.",
+              "icon": {
+                  "src": "/icons/benefits/plan_materno.svg",
+                  "alt": "Plan materno infantil"
+              }
+          },
+          {
+              "title": "Casa protegida",
+              "details": "Atención de las Emergencias y urgencias Médicas que puedan requerir los invitados de un afiliado en fiestas o reuniones familiares. Se deberá comunicar con EME con una anticipación de 12 hs. para confirmar domicilio y cantidad de personas.",
+              "icon": {
+                  "src": "/icons/benefits/casa_protegida.svg",
+                  "alt": "Casa protegida"
+              }
+          },
+          {
+              "title": "Atención gratuita en consultorios externos",
+              "details": "En nuestra Base Operativa en el horario de Lunes a Viernes de 08:00 a 13:00 y de 16:00 a 22:00 hs. Sábados de 08:00 a 13:00 hs. Atención por orden de llegada.",
+              "icon": {
+                  "src": "/icons/benefits/atencion_gratuita.svg",
+                  "alt": "Atención gratuita en consultorios externos"
+              }
+          }
+        ]
+      }
     }
 }

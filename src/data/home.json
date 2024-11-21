@@ -51,7 +51,7 @@
         }
     ],
     "membership": {
-        "title": "Conocé nuestros beneficios exclusivos.",
+        "title": "Conocé nuestros beneficios exclusivos, sólo para afiliados.",
         "items": [
             {
                 "image":{
@@ -66,6 +66,14 @@
                     "alt": "EME Salud"
                 },
                 "href": "/beneficios?benefit=eme_salud"
+            },
+            {
+                "title": "Más Beneficios",
+                "href": "/beneficios?benefit=mas_beneficios",
+                "image": {
+                    "src": "/icons/home/membership/beneficios.svg",
+                    "alt": "Más Beneficios"
+                }
             }
         ]
     },
@@ -136,7 +144,14 @@
             "title": "Contacto",
             "button": {
                 "text": "Enviar"
-            }
+            },
+            "subjects": [
+                "Afiliaciones",
+                "Consultas",
+                "Reclamos",
+                "Sugerencias",
+                "Otros"
+            ]
         }
     }
 }

@@ -18,16 +18,18 @@ interface Image {
 const { membership_selector } = Astro.props as Props;
 ---
 <Section class="flex flex-col items-center gap-8">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
     
     {
         membership_selector.map((membership) => (
             <button
-                class={`group ${membership.title ? "flex flex-col items-center gap-2 cursor-pointer" : "item"}`}
+                class="group item"
                 data-target={membership.id}
             >
-                <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 object-contain group-hover:scale-110 transition-transform">
+              <div class="w-full h-full flex flex-col items-center justify-center gap-2 cursor-pointer">
+                <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 p-3 object-contain group-hover:scale-110 transition-transform">
                 { membership.title && <h3 class="font-bold text-xl text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3> }
+              </div>
             </button>
         ))
     }
@@ -62,8 +64,8 @@ const { membership_selector } = Astro.props as Props;
     .item:last-child {
         @apply border-none pr-0;
     }
-    .button, .active {
-       @apply bg-primary-100/60
+    .button, .active > div{
+       @apply bg-primary-100/60 rounded-2xl
     }
 </style>
 

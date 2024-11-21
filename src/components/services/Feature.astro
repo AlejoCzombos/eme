@@ -14,12 +14,11 @@ const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
 ---
 <details id="question" class={`group p-5 pb-4 rounded-2xl ${whiteTheme ? "white" : ""} `}>
     <summary class="flex items-center cursor-pointer">
-        <img src={icon.src} alt={icon.alt} class={`mr-3 ${whiteTheme ? "size-20 bg-white/80 rounded-full p-3" : "size-14"}`} />
+        <img src={icon.src} alt={icon.alt} class={`mr-3 ${whiteTheme ? "size-20" : "size-14"}`} />
         <img src={whiteTheme ? "/icons/acordeon-arrow-white.svg" : "/icons/acordeon-arrow.svg"} alt="flecha apertura" class="size-10 transition-all group-open:rotate-180 duration-300 ease-in-out" />
-        <span class={`font-semibold flex-grow text-2xl ${whiteTheme ? "text-white" : "text-[#505050]"}`}>{title}</span>
+        <span class={`font-semibold text-pretty text-2xl ${whiteTheme ? "text-white" : "text-[#505050]"}`}>{title}</span>
     </summary>
-    <p class={`mt-2 text-xl group-open:animate-fade-down animate-duration-300 ${whiteTheme ? "text-white" : "text-gray-600"}`}>
-        {details}
+    <p class={`mt-2 text-xl group-open:animate-fade-down animate-duration-300 ${whiteTheme ? "text-white" : "text-gray-600"}`} set:html={details}>
     </p>
 </details>
 
@@ -29,7 +28,7 @@ const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
   transition: all 0.5s ease-in-out;
 }
 #question.white {
-  @apply bg-secondary-900/30;
+  @apply bg-primary-900/20;
 }
 #question:not([open]) {
   background-color: transparent;

@@ -20,27 +20,27 @@
     },
     "features": [
         {
-            "title": "Urgencias Odontológicas",
-            "details": "Atención inmediata en caso de urgencias odontológicas.",
+            "title": "Area protegida",
+            "details": "Los mejores referentes de Profesionalidad, Calidad y Servicio en el mundo de la Óptica y la Audiología, ponen a disposición del socio EME las mejores marcas con los diseños mas avanzados y exclusivos; materiales de alta calidad y los mejores tratamientos adaptados a las necesidades de cada cliente.",
             "icon": {
-                "src": "/icons/services/urgencia-odontogica.svg",
-                "alt": "Urgencias Odontológicas"
+                "src": "/icons/services/urgencias-medicas.svg",
+                "alt": "Area protegida"
             }
         },
         {
-            "title": "Enfermería domiciliaria",
-            "details": "Servicio de enfermería en el hogar para pacientes con enfermedades crónicas o en recuperación.",
+            "title": "Control de ausentismo por enfermedades inculpables",
+            "details": "Este servicio consiste en verificar en nuestros consultorios externos o en el domicilio del empleado las causas del ausentismo, confeccionando una Evaluacion Clínica Prestacional e Informe de lo actuado. Dicho informe es remitido a la Empresa dentro de las 24 hs. de solicitado el servicio. El servicio es único ya que es prestado las 24 hs. del día los 365 días del año en el Area de cobertura.",
+            "icon": {
+                "src": "/icons/services/consultas-domiciliaria.svg",
+                "alt": "Control de ausentismo por enfermedades inculpables"
+            }
+        },
+        {
+            "title": "Medicina laboral",
+            "details": "Nuestra gama de servicios, supervisados por médicos especialistas, ofrece soluciones para el ámbito laboral:<ul class='text-xl text-gray-600 list-disc'><li><strong>Exámenes preocupacionales:</strong> Determinan aptitud del postulante según condiciones psicofísicas. Obligatorios según Ley 24557.</li><li><strong>Exámenes médicos periódicos:</strong> Detección temprana de enfermedades profesionales. A cargo de las ART.</li><li><strong>Exámenes de retiro:</strong> Evalúan la condición física al finalizar la relación laboral.</li><li><strong>Exámenes de reingreso:</strong> Verifican aptitud tras ausencias prolongadas.</li><li><strong>Exámenes de reubicación laboral:</strong> Garantizan aptitud psicofísica para nuevos puestos.</li><li><strong>Higiene y seguridad laboral:</strong> Implementación de planes de mejora con ingenieros especializados.</li><li><strong>Comités internos de seguridad:</strong> Prevención y análisis de accidentes laborales.</li><li><strong>Atención prehospitalaria:</strong> Respuesta inmediata 24/7 a accidentes laborales con unidades especializadas.</li></ul>",
             "icon": {
                 "src": "/icons/services/enfermeria-domiciliaria.svg",
-                "alt": "Enfermería domiciliaria"
-            }
-        },
-        {
-            "title": "Vehículo Protegido",
-            "details": "Servicio de protección vehicular en caso de accidentes o emergencias en la vía pública.",
-            "icon": {
-                "src": "/icons/services/vehiculo-protegido.svg",
-                "alt": "Vehículo Protegido"
+                "alt": "Medicina laboral"
             }
         }
     ]

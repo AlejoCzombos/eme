@@ -9,15 +9,32 @@ const {contact} = data.contact
         <h2 class="text-2xl lg:text-start text-center">{contact.title.toLocaleUpperCase()}</h2>
     </header>
     <form id="contactForm" class="flex flex-col w-full min-h-96 gap-8 p-10 bg-zinc-200/60">
-        <div class="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-                <label for="name">Nombre y apellido:</label>
-                <input name="name" type="text" placeholder="Nombre y apellido" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+                <label for="nombre_completo">Nombre y apellido:</label>
+                <input name="nombre_completo" type="text" placeholder="Nombre y apellido" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
             </div>
             <div>
-                <label for="sucursal">Sucursal:</label>
+                <label for="asunto">Asunto:</label>
+                 <select name="asunto" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+                    <option value="" disabled selected>Asunto</option>
+                    {
+                        contact.subjects.map(subject => (
+                            <option value={subject}>{subject}</option>
+                        ))
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div>
+                <label for="correo">Correo:</label>
+                <input name="correo" type="email" placeholder="Correo" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+            </div>
+            <div>
+                <label for="sucursal">Localidad:</label>
                 <select name="sucursal" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
-                    <option value="" disabled selected>Sucursal</option>
+                    <option value="" disabled selected>Localidad</option>
                     {
                         branches.map(branch => (
                             <option value={branch.location}>{branch.location}</option>
@@ -26,18 +43,74 @@ const {contact} = data.contact
                 </select>
             </div>
         </div>
-        <div class="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div>
-                <label for="email">Correo:</label>
-                <input name="email" type="email" placeholder="Correo" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
-            </div>
-            <div>
-                <label for="number">Número de teléfono:</label>
-                <input name="number" type="number" placeholder="Número de teléfono" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+                <label for="teléfono">Número de teléfono:</label>
+                <input name="teléfono" type="number" placeholder="Número de teléfono" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
             </div>
         </div>
-        <button id="sendEmailButton" class="bg-primary-600 text-white w-full lg:w-44 py-2 rounded-lg hover:scale-110 transition-transform duration-300 ease-in-out" type="button">
+        <button id="sendEmailButton" class="bg-primary-600 text-white w-full py-2 rounded-lg hover:scale-110 transition-transform duration-300 ease-in-out" type="submit">
             {contact.button.text}
         </button>
     </form>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const sendEmailButton = document.getElementById('sendEmailButton');
+
+  const generateGmailLink = ({ to, subject, body }) => {
+    const baseUrl = 'https://mail.google.com/mail/?view=cm&fs=1';
+    const params = new URLSearchParams();
+
+    if (to) params.append('to', to);
+    if (subject) params.append('su', subject);
+    if (body) params.append('body', body);
+
+    return `${baseUrl}&${params.toString()}`;
+  };
+
+  const updateGmailLink = () => {
+    const nombreElement = form.querySelector('input[name="nombre_completo"]');
+    const asuntoElement = form.querySelector('select[name="asunto"]');
+    const correoElement = form.querySelector('input[name="correo"]');
+    const sucursalElement = form.querySelector('select[name="sucursal"]');
+    const telefonoElement = form.querySelector('input[name="teléfono"]');
+
+    const nombre = nombreElement ? (nombreElement as HTMLInputElement).value : '';
+    const asunto = asuntoElement ? (asuntoElement as HTMLInputElement).value : '';
+    const correo = correoElement ? (correoElement as HTMLInputElement).value : '';
+    const sucursal = sucursalElement ? (sucursalElement as HTMLInputElement).value : '';
+    const telefono = telefonoElement ? (telefonoElement as HTMLInputElement).value : '';
+
+    const body = `Nombre completo: ${nombre}\nAsunto: ${asunto}\nCorreo: ${correo}\nLocalidad: ${sucursal}\nNúmero de teléfono: ${telefono}`;
+
+    const gmailLink = generateGmailLink({
+      to: 'emeclub@eme.com.ar',
+      subject: asunto,
+      body: body
+    });
+
+    sendEmailButton.setAttribute('href', gmailLink);
+  };
+
+   form.addEventListener('input', updateGmailLink);
+  
+  sendEmailButton.addEventListener('click', () => {
+    if (form.checkValidity()) {
+      updateGmailLink();
+      const href = sendEmailButton.getAttribute('href');
+      if (href) {
+        window.open(href, '_blank');
+      }
+    } else {
+      // Forzar la validación para mostrar los mensajes de error
+      form.reportValidity();
+    }
+  });
+
+  // Inicializar el enlace de correo
+  updateGmailLink();
+});
+</script>

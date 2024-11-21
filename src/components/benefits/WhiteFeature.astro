@@ -14,7 +14,7 @@ const { icon, title, details } = Astro.props as FeatureItem
 <details id="question" class="group p-5 px-10 rounded-3xl bg-white">
     <summary class="flex items-center justify-around cursor-pointer">
         <img src={icon.src} alt={icon.alt} class="size-16 mr-6" />
-        <span class="font-semibold flex-grow text-xl text-primary-500">{title.toLocaleUpperCase()}</span>
+        <span class="font-bold flex-grow text-xl text-[#545F71]">{title.toLocaleUpperCase()}</span>
         <img src="/icons/benefits/flecha.svg" alt="flecha apertura" class="size-10 transition-all group-open:rotate-180 duration-300 ease-in-out" />
     </summary>
     <p class="mt-2 text-xl group-open:animate-fade-down animate-duration-300">
