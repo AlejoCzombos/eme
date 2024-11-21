@@ -27,17 +27,20 @@ const { plans } = Astro.props as Props;
                 <img src={plan.image.src} alt={plan.image.alt} 
                 class="absolute h-full w-full object-cover object-top top-0 left-0 -z-10 transition-all duration-500 ease-in-out transform group-hover:object-right scale-100 group-hover:scale-110 group-hover:translate-x-5"
                 />
-                <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full z-0"></div>
+                <div id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full z-0"></div>
             </a>
         ))
     }
 </section>
 
 <style>
-    .plan:nth-child(odd) #gradient {
+    #gradient {
+        @apply bg-gradient-to-t from-[#004C4A] to-transparent to-75%
+    }
+    /* .plan:nth-child(odd) #gradient {
         @apply bg-gradient-to-t from-secondary-900 to-transparent to-70%
     }
     .plan:nth-child(even) {
         @apply bg-gradient-to-t from-primary-700 to-transparent to-70%
-    }
+    } */
 </style>

@@ -14,7 +14,7 @@
     "features": [
         {
             "title": "Cobertura nacional e internacional",
-            "details": "Atención médica en todo el país y en el exterior.",
+            "details": "A través de la Red SIEM (Sistema Integrado de Emergencias Médicas): en más de 1000 localidades del país y en más de 17 países en 180 empresas donde el afiliado con la sola presentación de su carnet EME podrá atenderse ante cualquier Emergencia o Consulta Médica SIN CARGO.",
             "icon": {
                 "src": "/icons/services/cobertura.svg",
                 "alt": "Cobertura nacional e internacional"
@@ -22,42 +22,58 @@
         },
         {
             "title": "Plan materno infantil",
-            "details": "Atención médica especializada para embarazadas y niños.",
+            "details": "Destinado a la atención prehospitalaria del hijo de una afiliada al Sistema quién gozará durante el primer año de los mismos servicios a los que se encuentra suscripta su madre.",
             "icon": {
-                "src": "/icons/services/cobertura.svg",
+                "src": "/icons/services/plan_materno.svg",
                 "alt": "Plan materno infantil"
             }
         },
         {
-            "title": "Casa protegida",
-            "details": "Servicio de protección en el hogar en caso de emergencias.",
+            "title": "Urgencias médicas",
+            "details": "La atención de Emergencias que pongan en riesgo la vida del paciente, exige recursos humanos altamente entrenados, una infraestructura acorde y los procesos especialmente diseñados para tal fin. En éste sentido EME llena un importante vacío de atención que no está cubierto adecuadamente por ninguna Obra Social, Prepagas, ni sistema de salud existente. EME no compite con las Obras Sociales ni con los Institutos Asistenciales, ni con los profesionales médicos en general muy por el contrario complementa su accionar.",
             "icon": {
-                "src": "/icons/services/casa_protegida.svg",
-                "alt": "Casa protegida"
+                "src": "/icons/services/urgencias_medicas.svg",
+                "alt": "Urgencias médicas"
             }
         },
         {
-            "title": "Consultorios externos",
-            "details": "Consultas médicas en consultorios externos.",
+            "title": "Policonsultorios",
+            "details": "Consultas médicas en diferentes especialidades.",
             "icon": {
-                    "src": "/icons/services/consultorio.svg",
-                "alt": "Consultorios externos"
+                    "src": "/icons/services/policonsultorios.svg",
+                "alt": "Policonsultorios"
             }
         },
         {
             "title": "Enfermería domiciliaria",
-            "details": "Servicio de enfermería en el hogar para pacientes con enfermedades crónicas o en recuperación.",
+            "details": "Servicio programado destinado a proveer la prestación domiciliaria de prácticas de enfermería que tengan su correspondiente indicacion medica. El abono mensual da acceso a un cupo de prestaciones no acumulativos.",
             "icon": {
-                "src": "/icons/services/cobertura.svg",
+                "src": "/icons/services/enfermeria_domiciliaria.svg",
                 "alt": "Enfermería domiciliaria"
             }
         },
         {
             "title": "Vehículo Protegido",
-            "details": "Servicio de protección vehicular en caso de accidentes o emergencias en la vía pública.",
+            "details": "Destinado a la atención médica pre hospitalaria que pudieran sufrir los ocupantes de un vehículo protegido y los terceros no transportados involucrados, en ocasión de un accidente de tránsito vehicular.",
             "icon": {
-                "src": "/icons/services/vehiculo.svg",
+                "src": "/icons/services/vehiculo_protegido.svg",
                 "alt": "Vehículo Protegido"
+            }
+        },
+        {
+            "title": "Traslado de pacientes de alto y bajo riesgo",
+            "details": "Es un programa específico complementario destinado a la movilización de pacientes imposibilitados de deambular en aquellos casos no relacionados con un cuadro de emergencias. Opera exclusivamente con cargo, en el área urbana local de cobertura o, desde y hacia cualquier punto del país. Las atenciones son brindadas los 365 días del año, las 24 hs. del día con asignación de turnos.",
+            "icon": {
+                "src": "/icons/services/traslado_pacientes.svg",
+                "alt": "Traslado de pacientes de alto y bajo riesgo"
+            }
+        },
+        {
+            "title": "Medicina laboral de alta calidad",
+            "details": "Atención médica especializada para empresas y trabajadores.",
+            "icon": {
+                "src": "/icons/services/medicina_laboral.svg",
+                "alt": "Traslado de pacientes de alto y bajo riesgo"
             }
         }
     ],
