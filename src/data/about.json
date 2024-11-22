@@ -1,0 +1,133 @@
+{
+    "SEO": {
+        "title": "EME - Nosotros",
+        "description": "EQUIPO MÉDICO DE EMERGENCIAS es una Empresa de  Asistencia Medica Extrahospitalaria dirigida a grupos familiares,  empresas públicas y privadas, entidades intermedias y gubernamentales."
+    },
+    "banner": {
+        "title": "Nosotros",
+        "subtitle": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
+        "image": {
+            "src": "/images/services/servicios.png",
+            "alt": "Nosotros"
+        }
+    },
+    "history": {
+        "title": "Nuestra Historia",
+        "resume": "EQUIPO MÉDICO DE EMERGENCIAS es una Empresa de  Asistencia Medica Extrahospitalaria dirigida a grupos familiares,  empresas públicas y privadas, entidades intermedias y gubernamentales.",
+        "description": "Fundada en el año 1986 en la ciudad de Resistencia, se convierte en el  primer servicio privado de Emergencias de la Provincia del Chaco. En la  época, adopta características similares a los avanzados sistemas que  operaban en las ciudades más importantes del país con el objeto de  brindar cobertura extrahospitalaria en las localidades de Resistencia,  Barranqueras, Puerto Vilelas y Fontana. El espíritu dinámico, creativo y de constante superación de los socios  fundadores, los doctores Jorge Ángel Yaya y Jorge Rodríguez Revigliono,  se incorpora desde el inicio a la Organización determinando hitos en el  desarrollo institucional.",
+        "image": {
+            "src": "/images/about/historia.png",
+            "alt": "Nuestra Historia"
+        }
+    },
+    "mision_vision": {
+        "mision": {
+            "title": "Misión",
+            "description": "Familias y personas individuales que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar.",
+            "icon": {
+                "src": "/icons/about/mision.svg",
+                "alt": "Misión"
+            }
+        },
+        "vision": {
+            "title": "Visión",
+            "description": "Familias y personas individuales que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar.",
+            "icon": {
+                "src": "/icons/about/vision.svg",
+                "alt": "Visión"
+            }
+        }
+    },
+    "company_values": {
+        "title": "Ética y Valores",
+        "values": [
+            {
+                "title": "Vocación de servicio",
+                "icon": {
+                    "src": "/icons/about/vocacion_servicio.svg",
+                    "alt": "Vocación de servicio"
+                }
+            },
+            {
+                "title": "Transparencia en la gestión",
+                "icon": {
+                    "src": "/icons/about/transparencia.svg",
+                    "alt": "Transparencia en la gestión"
+                }
+            },
+            {
+                "title": "Desempeño ético del trabajo",
+                "icon": {
+                    "src": "/icons/about/desempeno_etico.svg",
+                    "alt": "Desempeño ético del trabajo"
+                }
+            },
+            {
+                "title": "Pertenencia a la Organización",
+                "icon": {
+                    "src": "/icons/about/pertenencia.svg",
+                    "alt": "Pertenencia a la Organización"
+                }
+            },
+            {
+                "title": "Búsqueda de la excelencia",
+                "icon": {
+                    "src": "/icons/about/busqueda_excelencia.svg",
+                    "alt": "Búsqueda de la excelencia"
+                }
+            },
+            {
+                "title": "Imagen de prestigio institucional",
+                "icon": {
+                    "src": "/icons/about/prestigio.svg",
+                    "alt": "Imagen de prestigio institucional"
+                }
+            }
+        ]
+    },
+    "politics": {
+        "title": "Políticas de Calidad",
+        "features": [
+            {
+                "title": "Calidad",
+                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
+                "icon": {
+                    "src": "/icons/about/urgencias_medicas.svg",
+                    "alt": "Calidad"
+                }
+            },
+            {
+                "title": "Seguridad",
+                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
+                "icon": {
+                    "src": "/icons/about/urgencias_medicas.svg",
+                    "alt": "Seguridad"
+                }
+            },
+            {
+                "title": "Confianza",
+                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
+                "icon": {
+                    "src": "/icons/about/urgencias_medicas.svg",
+                    "alt": "Confianza"
+                }
+            },
+            {
+                "title": "Compromiso",
+                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
+                "icon": {
+                    "src": "/icons/about/urgencias_medicas.svg",
+                    "alt": "Compromiso"
+                }
+            },
+            {
+                "title": "Responsabilidad",
+                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
+                "icon": {
+                    "src": "/icons/about/urgencias_medicas.svg",
+                    "alt": "Responsabilidad"
+                }
+            }
+        ]
+    }
+}

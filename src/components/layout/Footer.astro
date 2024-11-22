@@ -11,13 +11,14 @@ import NavigationItem from '../UI/NavigationItem.astro'
         <div>
             <img src={logo.src} alt={logo.alt} class="w-64">
         </div>
-        <div class="space-y-2">
+        <div class="space-y-4">
         {
             branches.map(branch => (
                 <div>
-                    <p class="font-bold text-white text-base">{branch.name}</p>
-                    <p class="text-white text-base">{branch.direction}</p>
-                    <p class="text-white text-base">{branch.number}</p>
+                    <p class="font-bold text-white text-base">{branch.location + ": "}
+                        <span class="text-white text-base font-normal">{branch.direction}</span>
+                    </p>
+                    <p class="text-white text-base">{"" + branch.number}</p>
                 </div>
             ))
         }

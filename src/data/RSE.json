@@ -1,0 +1,23 @@
+{
+    "SEO": {
+        "title": "EME - Responsabilidad Social Empresarial",
+        "description": "EME es una empresa comprometida con la sociedad, por ello, hemos implementado políticas de responsabilidad social empresarial que nos permiten contribuir al bienestar de la comunidad."
+    },
+    "banner": {
+        "title": "Responsabilidad Social Empresarial",
+        "subtitle": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
+        "image": {
+            "src": "/images/services/servicios.png",
+            "alt": "Nosotros"
+        }
+    },
+    "foundation": {
+        "title": "COMPROMISO SOCIAL FUNDACIÓN EME",
+        "detail": "En el añ0 1989",
+        "description": "Por iniciativa de los socios fundadores y  directivos de la empresa, nace la Fundación EME, institución civil sin  fines de lucro de carácter privado que se origina con el fin de  retribuir a la sociedad en su conjunto el apoyo dispensado. Sustentada  económicamente y de forma exclusiva con los aportes de EME , esta  entidad es el brazo social de la empresa a través del cual se canalizan  las actividades asistenciales y de capacitación que se proveen con  carácter gratuito y aportes donaciones o apoyo a iniciativas personales, grupales o institucionales en el medio donde la empresa opera.",
+        "image": {
+            "src": "/images/about/historia.png",
+            "alt": "Nuestra Historia"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+---
+import Feature from "../services/Feature.astro";
+
+interface Props {
+    politics: {
+        title: string;
+        features: {
+            title: string;
+            details: string;
+            icon: Image;
+        }[];
+    }
+}
+interface Image {
+  src: string;
+  alt: string;
+}
+
+const { politics } = Astro.props as Props;
+const { title, features } = politics;
+---
+
+
+<section class="relative px-10 my-5 lg:px-0 lg:my-16">
+    <div class="relative w-full">
+        <h2 class="max-w-6xl mx-auto py-6 text-2xl text-white relative z-10">{title.toLocaleUpperCase()}</h2>
+        <div slot="background" id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-[#00B2AD]"></div>
+    </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 relative z-10">
+        {
+            features.map((item) => (
+                <Feature icon={item.icon} title={item.title} details={item.details}/>
+            ))
+        }
+    </div>
+    <div slot="background" id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-primary-100/60"></div>
+</section>

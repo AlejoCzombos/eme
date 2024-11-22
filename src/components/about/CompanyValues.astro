@@ -1,0 +1,36 @@
+---
+import H2Title from '../UI/H2Title.astro';
+import Section from '../UI/Section.astro';
+
+interface Props {
+    company_values: {
+        title: string;
+        values: {
+            title: string;
+            icon: Image;
+        }[];
+    };
+}
+
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { company_values } = Astro.props as Props;
+const { title, values } = company_values;
+---
+
+<section class="px-10 py-5 lg:px-0 lg:py-16 max-w-7xl m-auto">
+    <H2Title text={title} line={false} class="text-primary-500" />
+    <div class="flex flex-wrap justify-center gap-12">
+        {
+            values.map((value) => (
+                <div class="flex flex-col items-center w-full max-w-[10.8rem] gap-8 group">
+                <img class="size-28 group-hover:-translate-y-5 transition-transform duration-300 ease-in-out" src={value.icon.src} alt={value.icon.alt} />
+                <p class="text-center font-bold text-2xl group-hover:scale-105 transition-transform duration-300 ease-in-out">{value.title}</p>
+            </div>
+            ))
+        }
+    </div>
+</section>
