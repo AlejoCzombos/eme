@@ -20,35 +20,48 @@
     },
     "features": [
         {
-            "title": "Emergencias y urgencias médicas",
-            "details": "Atención médica inmediata en caso de emergencias y urgencias médicas en el hogar, trabajo o vía pública.",
+            "id": 1,
+            "title": "Mejores resultados",
+            "details": "Esto significa un ahorro importante para el cliente al contratar con tarifas especiales adecuadas al volumen de clientes incorporados masivamente.",
             "icon": {
-                "src": "/icons/services/urgencias-medicas.svg",
-                "alt": "Emergencias y urgencias médicas"
+                "src": "/icons/services/mejores_resultados.svg",
+                "alt": "Mejores resultados"
             }
         },
         {
-            "title": "Traslados de pacientes de alto y bajo riesgo",
-            "details": "Traslado de pacientes en ambulancia de alto y bajo riesgo a centros de salud.",
+            "id": 2,
+            "title": "Cumplir con normativas",
+            "details": "Ajustado a los requerimientos sanitarios y normativos vigentes de cada provincia donde actúa la Empresa.",
             "icon": {
-                "src": "/icons/services/traslado-pacientes.svg",
-                "alt": "Traslados de pacientes de alto y bajo riesgo"
+                "src": "/icons/services/complir_normas.svg",
+                "alt": "Cumplir con normativas"
             }
         },
         {
-            "title": "Consultas domiciliarias",
-            "details": "Atención médica en el hogar para pacientes con dificultades para trasladarse a un centro de salud.",
+            "id": 3,
+            "title": "Conocimiento del mercado",
+            "details": "Alto conocimiento del mercado nacional ya que nuestra empresa EME Equipo médico de Emergencias es socia fundadora de la RED SIEM, la Red de Emergencias Médicas más importante de Latinoamérica.",
             "icon": {
-                "src": "/icons/services/consultas-domiciliaria.svg",
-                "alt": "Consultas domiciliarias"
+                "src": "/icons/services/conocimiento_mercado.svg",
+                "alt": "Conocimiento del mercado"
             }
         },
         {
-            "title": "Vehículo Protegido",
-            "details": "Servicio de protección vehicular en caso de accidentes o emergencias en la vía pública.",
+            "id": 4,
+            "title": "Filosofía de calidad",
+            "details": "Capacidad de Gerenciamiento y filosofía de Calidad Total donde la satisfacción del CLIENTE es nuestra principal preocupación. Nuestra Empresa cuenta con un Sistema de Gestión de Calidad bajo Normas ISO 9001, con acreditación y evaluación permanente de Organismos externos (IRAM).",
             "icon": {
-                "src": "/icons/services/vehiculo-protegido.svg",
-                "alt": "Vehículo Protegido"
+                "src": "/icons/services/filosofia_calidad.svg",
+                "alt": "Filosofía de calidad"
+            }
+        },
+        {
+            "id": 5,
+            "title": "Antecedentes y trayectoria",
+            "details": "Antecedentes y Trayectoria, ya que desde hace 29 años prestamos servicios de manera ininterrumpida a una cartera de afiliados que hoy supera los 120.000 socios, con un volumen de 200.000 prestaciones anuales.",
+            "icon": {
+                "src": "/icons/services/antecedentes.svg",
+                "alt": "Antecedentes y trayectoria"
             }
         }
     ]

@@ -72,7 +72,7 @@
             "title": "Medicina laboral de alta calidad",
             "details": "Atención médica especializada para empresas y trabajadores.",
             "icon": {
-                "src": "/icons/services/medicina_laboral.svg",
+                "src": "/icons/services/laboral.svg",
                 "alt": "Traslado de pacientes de alto y bajo riesgo"
             }
         }
@@ -87,7 +87,8 @@
                     "alt": "Servicios<br/>familiares"
                 },
                 "href": "/servicios/familiares",
-                "description": "Para que tu familia esté siempre protegida EME brinda los servicios de: emergencias y urgencias médicas, consultas domiciliarias,  enfermería domiciliaria, consultorios externos, traslados de pacientes,  urgencias odontológicas, vehículo protegido."
+                "subtitle": "Para que tu familia esté siempre protegida",
+                "description": "EME brinda los servicios de: emergencias y urgencias médicas, consultas domiciliarias,  enfermería domiciliaria, consultorios externos, traslados de pacientes,  urgencias odontológicas, vehículo protegido."
             },
             {
                 "title": "Servicios empresariales",
@@ -96,7 +97,8 @@
                     "alt": "Servicios<br>empresariales"
                 },
                 "href": "/servicios/empresariales",
-                "description": "Para que tu empresa esté siempre protegida EME ofrece los servicios de: área protegida, medicina laboral (exámenes de ingreso, periódicos y de egreso), control de ausentismo, y todo lo que hace a la salud  organizacional."
+                "subtitle": "Para que tu empresa esté siempre protegida ",
+                "description": "EME ofrece los servicios de: área protegida, medicina laboral (exámenes de ingreso, periódicos y de egreso), control de ausentismo, y todo lo que hace a la salud  organizacional."
             },
             {
                 "title": "Servicios corporativos",
@@ -105,7 +107,8 @@
                     "alt": "Servicios<br>corporativos"
                 },
                 "href": "/servicios/corporativos",
-                "description": "El Area de la Organización brinda adecuada respuesta a los  clientes institucionales, sean éstos Mutuales, Obras Sociales, Prepagas, Aseguradoras, Asociaciones, Sindicatos, etc., mediante la mejor relación costo-beneficio y la garantía de la calidad de nuestros  servicios."
+                "subtitle": "Brindamos adecuada respuesta a los  clientes institucionales",
+                "description": "sean éstos Mutuales, Obras Sociales, Prepagas, Aseguradoras, Asociaciones, Sindicatos, etc., mediante la mejor relación costo-beneficio y la garantía de la calidad de nuestros  servicios."
             }
         ]
     }

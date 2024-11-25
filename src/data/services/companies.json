@@ -18,29 +18,32 @@
             "alt": "Planes para empresas"
         }
     },
-    "features": [
+    "feature_selector": [
         {
-            "title": "Area protegida",
-            "details": "Los mejores referentes de Profesionalidad, Calidad y Servicio en el mundo de la Óptica y la Audiología, ponen a disposición del socio EME las mejores marcas con los diseños mas avanzados y exclusivos; materiales de alta calidad y los mejores tratamientos adaptados a las necesidades de cada cliente.",
+            "id": "area_protegida",
+            "title": "Área Protegida",
+            "description": "Destinado a brindar <strong>atención prehospitalaria</strong> a todas aquellas personas  que, cualquiera sea el carácter que revistan para el contratante  (empleados, clientes, visitantes, alumnos, etc), tengan una situación de emergencia médica en el área y/o local que estos declaren como  protegido y en el horario que se haya acordado el servicio mediante el  sistema o modalidad de abono o prepago. El programa incluye la <strong>atención inmediata de cuadros agudos que pongan en riesgo la vida del paciente</strong> o que presenten inminencia de descompensación, mediante la afectación de una <strong>Unidad de Terapia Intensiva Móvil o Unidad Cardiocoronaria Móvil</strong>, un <strong>profesional médico</strong> acompañado por <strong>personal auxiliar paramédico</strong>, y  comprenden la atención del paciente en el área, su estabilización en el lugar, eventual traslado si el caso  lo requiere a la unidad asistencial fija elegida por el adherente o responsable del paciente y la atención hasta que el paciente es recibido en destino por otro profesional.",
             "icon": {
-                "src": "/icons/services/urgencias-medicas.svg",
-                "alt": "Area protegida"
+                "src": "/icons/services/area_protegida.svg",
+                "alt": "Área Protegida"
             }
         },
         {
-            "title": "Control de ausentismo por enfermedades inculpables",
-            "details": "Este servicio consiste en verificar en nuestros consultorios externos o en el domicilio del empleado las causas del ausentismo, confeccionando una Evaluacion Clínica Prestacional e Informe de lo actuado. Dicho informe es remitido a la Empresa dentro de las 24 hs. de solicitado el servicio. El servicio es único ya que es prestado las 24 hs. del día los 365 días del año en el Area de cobertura.",
+            "id": "medicina_laboral",
+            "title": "Medicina Laboral",
+            "description": "La optima relación <strong>costo-beneficio</strong> queda demostrada totalmente con este novedoso sistema ya que el socio EME abona cualquier consulta, estudio o práctica, solo en la medida que la utilice y con aranceles muy convenientes.",
             "icon": {
-                "src": "/icons/services/consultas-domiciliaria.svg",
-                "alt": "Control de ausentismo por enfermedades inculpables"
+                "src": "/icons/services/medicina_laboral.svg",
+                "alt": "Medicina Laboral"
             }
         },
         {
-            "title": "Medicina laboral",
-            "details": "Nuestra gama de servicios, supervisados por médicos especialistas, ofrece soluciones para el ámbito laboral:<ul class='text-xl text-gray-600 list-disc'><li><strong>Exámenes preocupacionales:</strong> Determinan aptitud del postulante según condiciones psicofísicas. Obligatorios según Ley 24557.</li><li><strong>Exámenes médicos periódicos:</strong> Detección temprana de enfermedades profesionales. A cargo de las ART.</li><li><strong>Exámenes de retiro:</strong> Evalúan la condición física al finalizar la relación laboral.</li><li><strong>Exámenes de reingreso:</strong> Verifican aptitud tras ausencias prolongadas.</li><li><strong>Exámenes de reubicación laboral:</strong> Garantizan aptitud psicofísica para nuevos puestos.</li><li><strong>Higiene y seguridad laboral:</strong> Implementación de planes de mejora con ingenieros especializados.</li><li><strong>Comités internos de seguridad:</strong> Prevención y análisis de accidentes laborales.</li><li><strong>Atención prehospitalaria:</strong> Respuesta inmediata 24/7 a accidentes laborales con unidades especializadas.</li></ul>",
+            "id": "control_ausentismo",
+            "title": "Control de Ausentismo",
+            "description": "Este servicio consiste en verificar en nuestros consultorios externos o  en el domicilio del empleado las causas del ausentismo, confeccionando  una Evaluacion Clínica Prestacional e Informe de lo actuado. Dicho  informe es remitido a la Empresa dentro de las 24 hs. de solicitado el  servicio. El servicio es único ya que es prestado las 24 hs. del día los 365 días del año en el Area de cobertura.",
             "icon": {
-                "src": "/icons/services/enfermeria-domiciliaria.svg",
-                "alt": "Medicina laboral"
+                "src": "/icons/services/ausentismo.svg",
+                "alt": "Control de Ausentismo"
             }
         }
     ]
