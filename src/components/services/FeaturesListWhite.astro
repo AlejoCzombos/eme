@@ -16,7 +16,7 @@ const { features } = Astro.props as { features: FeatureItem[] };
 
 
 <section class="relative px-10 py-5 lg:px-0 lg:py-8">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 relative z-10">
+    <div class="max-w-[85%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 relative z-10">
         {
             features.map((item) => (
                 <Feature icon={item.icon} title={item.title} details={item.details} whiteTheme="true"/>

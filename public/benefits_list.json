@@ -3,80 +3,90 @@
         "id": 1,
         "title": "Health Insurance",
         "category": "Insurance",
+        "locality": "Resistencia",
         "description": "Health insurance is a type of insurance coverage that pays for medical and surgical expenses incurred by the insured. Health insurance can reimburse the insured for expenses incurred from illness or injury, or pay the care provider directly. It's often included in employer benefit packages as a means of enticing quality employees, with premiums partially covered by the employer but often also deducted from employee paychecks. The cost of health insurance premiums is deductible to the payer, and the benefits received are tax-free.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 2,
         "title": "Dental Insurance",
         "category": "Insurance",
+        "locality": "Resistencia",
         "description": "Dental insurance is a type of health insurance designed to pay a portion of the costs associated with dental care. There are several different types of individual, family, or group dental insurance plans grouped into three primary categories: Indemnity, Preferred Provider Network (PPO), and Dental Health Managed Organizations (DHMO).",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 3,
         "title": "Vision Insurance",
         "category": "Insurance",
+        "locality": "Saenz Pena",
         "description": "Vision insurance is a way to reduce eye care expenses. Vision insurance is different from a vision discount plan. With vision insurance, you pay a premium, usually monthly or annually, and get benefits like eye exams, glasses, and contact lenses. Vision discount plans are membership programs that give you discounts on eye care and eyewear when you pay an annual fee.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 4,
         "title": "Life Insurance",
         "category": "Insurance",
+        "locality": "Saenz Pena",
         "description": "Life insurance is a contract between an insurer and a policyholder in which the insurer guarantees payment of a death benefit to named beneficiaries upon the death of the insured. The insurance company promises a death benefit in exchange for premiums paid by the policyholder.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 5,
         "title": "Disability Insurance",
         "category": "Insurance",
+        "locality": "Saenz Pena",
         "description": "Disability insurance is a type of insurance that will provide income in the event a worker is unable to perform their work and earn money due to a disability. This insurance provides individuals with a percentage of their income in the event they are unable to work due to illness or injury.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 6,
         "title": "Retirement Plan",
         "category": "Retirement",
+        "locality": "Corrientes",
         "description": "A retirement plan is a financial arrangement designed to replace employment income upon retirement. These plans may be set up by employers, insurance companies, trade unions, the government, or other institutions. Congress has expressed a desire to encourage responsible retirement planning by granting favorable tax treatment to a wide variety of plans.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 7,
         "title": "401(k) Plan",
         "category": "Retirement",
+        "locality": "Saenz Pena",
         "description": "A 401(k) plan is a tax-advantaged, defined-contribution retirement account offered by many employers to their employees. It is named after a section of the U.S. Internal Revenue Code. Workers can make contributions to their 401(k) accounts through automatic payroll withholding, and their employers can match some or all of those contributions.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 8,
         "title": "Pension Plan",
         "category": "Retirement",
+        "locality": "Resistencia",
         "description": "A pension plan is a retirement plan that requires an employer to make contributions to a pool of funds set aside for a worker's future benefit. The pool of funds is invested on the employee's behalf, and the earnings on the investments generate income to the worker upon retirement.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 9,
         "title": "Annuity",
         "category": "Retirement",
+        "locality": "Corrientes",
         "description": "An annuity is a financial product that pays out a fixed stream of payments to an individual, primarily used as an income stream for retirees. Annuities are created and sold by financial institutions, which accept and invest funds from individuals and then, upon annuitization, issue a stream of payments at a later point in time.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     },
     {
         "id": 10,
         "title": "Social Security",
         "category": "Retirement",
+        "locality": "Corrientes",
         "description": "Social Security is a federal insurance program that provides benefits to retired people and those who are unemployed or disabled. The program is funded by payroll taxes. The Social Security Administration (SSA) administers Social Security.",
         "image": "https://placehold.co/800",
-        "discount": "10%"
+        "discount": "10"
     }
 ]
