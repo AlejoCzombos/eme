@@ -4,17 +4,17 @@ import { branches } from '../../data/general-info.json'
 const {contact} = data.contact
 ---
 
-<div class="mi-h-[10rem] h-full w-full">
+<div class="mi-h-[11rem] h-full w-full">
     <header class="h-20 flex items-center">
         <h2 class="text-2xl lg:text-start text-center">{contact.title.toLocaleUpperCase()}</h2>
     </header>
     <form id="contactForm" class="flex flex-col w-full min-h-96 gap-8 p-10 bg-zinc-200/60">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div>
+            <fieldset>
                 <label for="nombre_completo">Nombre y apellido:</label>
                 <input name="nombre_completo" type="text" placeholder="Nombre y apellido" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
-            </div>
-            <div>
+            </fieldset>
+            <fieldset>
                 <label for="asunto">Asunto:</label>
                  <select name="asunto" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
                     <option value="" disabled selected>Asunto</option>
@@ -24,14 +24,14 @@ const {contact} = data.contact
                         ))
                     }
                 </select>
-            </div>
+            </fieldset>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div>
+            <fieldset>
                 <label for="correo">Correo:</label>
                 <input name="correo" type="email" placeholder="Correo" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
-            </div>
-            <div>
+            </fieldset>
+            <fieldset>
                 <label for="sucursal">Localidad:</label>
                 <select name="sucursal" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
                     <option value="" disabled selected>Localidad</option>
@@ -41,17 +41,23 @@ const {contact} = data.contact
                         ))
                     }
                 </select>
-            </div>
+            </fieldset>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div>
-                <label for="teléfono">Número de teléfono:</label>
-                <input name="teléfono" type="number" placeholder="Número de teléfono" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+            <fieldset>
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" placeholder="Mensaje" class=" min-h-28 max-h-44 rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required></textarea>
+            </fieldset>
+            <div class="flex flex-col gap-4">
+                <fieldset>
+                    <label for="telefono">Número de teléfono:</label>
+                    <input name="telefono" type="number" placeholder="Escriba su consulta o mensaje" class="rounded-md py-3 px-6 w-full placeholder:text-zinc-200 border border-zinc-300" required>
+                </fieldset>
+                <button id="sendEmailButton" class="bg-primary-600 text-white w-full py-2 rounded-lg hover:scale-110 transition-transform duration-300 ease-in-out" type="submit">
+                    {contact.button.text}
+                </button>
             </div>
         </div>
-        <button id="sendEmailButton" class="bg-primary-600 text-white w-full py-2 rounded-lg hover:scale-110 transition-transform duration-300 ease-in-out" type="submit">
-            {contact.button.text}
-        </button>
     </form>
 </div>
 
@@ -76,19 +82,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const asuntoElement = form.querySelector('select[name="asunto"]');
     const correoElement = form.querySelector('input[name="correo"]');
     const sucursalElement = form.querySelector('select[name="sucursal"]');
-    const telefonoElement = form.querySelector('input[name="teléfono"]');
+    const telefonoElement = form.querySelector('input[name="telefono"]');
+    const mensajeElement = form.querySelector('textarea[name="mensaje"]');
 
     const nombre = nombreElement ? (nombreElement as HTMLInputElement).value : '';
     const asunto = asuntoElement ? (asuntoElement as HTMLInputElement).value : '';
     const correo = correoElement ? (correoElement as HTMLInputElement).value : '';
     const sucursal = sucursalElement ? (sucursalElement as HTMLInputElement).value : '';
     const telefono = telefonoElement ? (telefonoElement as HTMLInputElement).value : '';
+    const mensaje = mensajeElement ? (mensajeElement as HTMLInputElement).value : '';
 
-    const body = `Nombre completo: ${nombre}\nAsunto: ${asunto}\nCorreo: ${correo}\nLocalidad: ${sucursal}\nNúmero de teléfono: ${telefono}`;
+    const body = `${mensaje}\n\nNombre completo: ${nombre}\nCorreo: ${correo}\nLocalidad: ${sucursal}\nNúmero de teléfono: ${telefono}`;
 
     const gmailLink = generateGmailLink({
       to: 'emeclub@eme.com.ar',
-      subject: asunto,
+      subject: `${asunto} - ${sucursal} - ${nombre}`,
       body: body
     });
 

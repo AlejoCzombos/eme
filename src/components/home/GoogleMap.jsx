@@ -10,7 +10,7 @@ const GoogleMapComponent = ({ branches }) => {
   };
 
   return (
-    <div className="mi-h-[10rem] h-full">
+    <div className="min-w-full h-full">
       <header className="flex justify-between px-16 items-center h-20">
         <h2 className="text-2xl">{contact.map.title.toLocaleUpperCase()}</h2>
         <span>
@@ -30,7 +30,7 @@ const GoogleMapComponent = ({ branches }) => {
         width="100%"
         allowFullScreen
         loading="lazy"
-        className="border rounded min-h-96"
+        className="border rounded min-h-[27rem]"
       ></iframe>
     </div>
   );

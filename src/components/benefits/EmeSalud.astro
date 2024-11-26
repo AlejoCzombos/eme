@@ -30,7 +30,7 @@ const id = eme_salud.id + "_content";
                         <div class="flex justify-center items-center bg-primary-500 text-white rounded-full w-10 h-10 text-lg font-bold">
                             {index + 1}
                         </div>
-                        <div class="bg-gray-300 w-full h-32 mt-4"></div>
+                        <img src={item.image.src} alt={item.image.alt} class="object-contain max-h-60 w-full h-full mt-4"/>
                         <p class="mt-4 font-semibold">
                             {item.description}
                         </p>
