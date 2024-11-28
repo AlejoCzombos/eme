@@ -1,12 +1,14 @@
 ---
 import H2Title from "../UI/H2Title.astro";
 import Section from "../UI/Section.astro";
+import SelectableFeatures from "./SelectableFeatures";
 
 interface FeatureItem {
   id: string;
   title: string;
   description: string;
   icon: Icon;
+  features?: {};
 }
 interface Icon {
   src: string;
@@ -67,15 +69,7 @@ const { feature_selector } = Astro.props as { feature_selector: FeatureItem[] };
     {
         // Medicina laboral
         <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={feature_selector[1].id}>
-            <div class="flex px-8 py-6">
-                <div class="flex flex-col justify-center text-xl">
-                    {
-                        feature_selector[1].description.split("\n").map((paragraph) => (
-                            <p set:html={paragraph}></p>
-                        ))
-                    }
-                </div>
-            </div>
+            <SelectableFeatures client:only="react" features={feature_selector[1].features}/>
         </div>
     }
 </Section>

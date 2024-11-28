@@ -35,7 +35,73 @@
             "icon": {
                 "src": "/icons/services/medicina_laboral.svg",
                 "alt": "Medicina Laboral"
-            }
+            },
+            "features": [
+                {
+                    "title": "Exámenes preocupacionales",
+                    "description": "Tienen como propósito determinar la aptitud del postulante conforme a sus condiciones psicofísicas para el desempeño de las actividades que se le requerirán. Sirven para detectar afecciones pre-existentes y en su caso, para evaluar la adecuación del postulante, en función de sus características y antecedentes individuales, para aquellos trabajos en los que estuvieren eventualmente presentes los agentes de riesgos de las Enfermedades Profesionales. La Ley 24557 y su Dec. Reg. 043/97 determinan que estos exámenes son OBLIGATORIOS y estarán a cargo del empleador, debiendo realizarse en el momento previo al inicio de la relación laboral.",
+                    "icon": {
+                        "src": "/icons/services/examenes.svg",
+                        "alt": "Exámenes preocupacionales"
+                    }
+                },
+                {
+                    "title": "Exámenes medicos periódicos",
+                    "description": "Tienen por objetivo la detección precoz de enfermedades profesionales ocasionadas por la exposición reiterada del trabajador a los agentes de riesgos. Estos exámenes son OBLIGATORIOS y están a cargo de las ART, pero no excluyen la responsabilidad del empleador ante su incumplimiento.",
+                    "icon": {
+                        "src": "/icons/benefits/atencion_gratuita.svg",
+                        "alt": "Exámenes medicos periódicos"
+                    }
+                },
+                {
+                    "title": "Examanes Médicos de retiro o post ocupacionales",
+                    "description": "Estos exámenes están orientados a evaluar y certificar en que condición física se retira el empleado que ha cesado la relación laboral, por renuncia o despido, teniendo en cuenta las diferentes contingencias médicos laborales que rodearon el transcurrir por la empresa de dicho empleado salvaguardando la integridad de la misma.",
+                    "icon": {
+                        "src": "/icons/services/retiro.svg",
+                        "alt": "Examanes Médicos de retiro o post ocupacionales"
+                    }
+                },
+                {
+                    "title": "Exámenes de reingreso",
+                    "description": "Estos exámenes se realizan al personal que por diversos motivos, ha permanecido fuera de la empresa por un largo período (enfermedad inculpable o accidente laboral) Tiene como propósito detectar las patologías eventualmente sobrevenidas durante la ausencia, además de evaluar la capacidad psicofísica para reanudar tareas habituales encomendadas. Es de responsabilidad de las ART cuando tienen origen en accidentes laborales y-o enfermedades profesionales, no así cuando es por motivos de enfermedades inculpables.",
+                    "icon": {
+                        "src": "/icons/services/reingreso.svg",
+                        "alt": "Exámenes de reingreso"
+                    }
+                },
+                {
+                    "title": "Exámenes médicos de reubicación laboral",
+                    "description": "Estos exámenes, también llamados exámenes previos a la transferencia de actividades, tienen por objetivos los mismos de los exámenes de ingreso y egreso, dado que el fin último es conocer la aptitud psicofísica del empleado para evaluar su adaptabilidad al nuevo puesto de trabajo.",
+                    "icon": {
+                        "src": "/icons/services/examenes.svg",
+                        "alt": "Exámenes médicos de reubicación laboral"
+                    }
+                },
+                {
+                    "title": "Higiene y seguridad laboral",
+                    "description": "Es una tarea que la lleva a cabo un Ingeniero en Higiene y Seguridad Industrial, asesorando y colaborando con el empresario para poder dar cumplimiento al PLAN DE MEJORAMIENTO exigido por la Ley de Riesgos de Trabajo y de esa manera poder brindar mayor cobertura en seguridad a la empresa.",
+                    "icon": {
+                        "src": "/icons/services/higiene.svg",
+                        "alt": "Higiene y seguridad laboral"
+                    }
+                },
+                {
+                    "title": "Integración del comité interno de seguridad de la empresa",
+                    "description": "La capacidad profesional del equipo interdisciplinario de EME S.R.L.puede brindar expresa colaboración en la integración de los comités internos de Seguridad de cada empresa, dado que en los mismos se analizan y se detallan las causales de los diversos accidentes laborales, con el único objetivo de EVITAR FUTUROS ACCIDENTES que ocasionan innumerables aumentos de costos indirectos, por daños a la propiedad y/o a las personas.",
+                    "icon": {
+                        "src": "/icons/services/comite.svg",
+                        "alt": "Integración del comité interno de seguridad de la empresa"
+                    }
+                },
+                {
+                    "title": "Atención prehispitalaria del accidente laboral",
+                    "description": "Consiste en la atención inmediata y adecuada del accidente laboral y “en itinere” de los empleados de su Empresa, a través de una flota de Unidades de Terapia Intensiva y Trauma únicas en la región. La atención se brinda durante las 24 hs, del día los 365 días del año, y comprende la atención inicial del accidentado con personal medico y paramédico, y su estabilización y evacuación al centro asistencial fijo indicado por el contratante.",
+                    "icon": {
+                        "src": "/icons/services/accidente.svg",
+                        "alt": "Atención prehispitalaria del accidente laboral"
+                    }
+                }
+            ]
         },
         {
             "id": "control_ausentismo",

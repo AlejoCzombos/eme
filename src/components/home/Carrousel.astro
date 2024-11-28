@@ -1,4 +1,6 @@
 ---
+import TertiaryButton from "../UI/TertiaryButton.astro"
+
 
 const images = await Astro.glob('/public/images/home/carousel/*')
 ---
@@ -38,14 +40,22 @@ const swiper = new Swiper('.swiper', {
 </script>
 
 
-<section class="swiper w-full xl:max-h-[460px] xl:h-auto relative">
-  <!-- <div id="gradient" class=" absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent z-10 pointer-events-none"></div> -->
+<section class="swiper w-full xl:h-auto relative">
   <div class="swiper-wrapper relative" id="my-slider">
     {
       images.map(image => (
-      <div class="swiper-slide h-auto rounded overflow-hidden">
-        <img src={image.default.src} alt="" class="w-full h-full object-cover">
-      </div>
+        <div class="swiper-slide h-auto rounded overflow-hidden relative">
+          <img src={image.default.src} alt="" class="w-full h-full object-cover">
+          
+          {/* Text and buttons */}
+          <div class="carousel-text absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-10">
+            <h2 class="text-white text-center">AFILIATE</h2>
+            <p class="text-white text-2xl max-w-5xl text-center">Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación, adaptado a tus necesidades.</p>
+            <TertiaryButton text="CUIDÁ LO QUE MÁS NECESITAS"/>
+            <div id="gradient-carousel" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent to-80% pointer-events-none"></div>
+          </div>
+
+        </div>
       ))
     }
   </div>
@@ -75,5 +85,13 @@ const swiper = new Swiper('.swiper', {
   .swiper-button-next::after,
   .swiper-button-prev::after {
     content: '';
+  }
+
+  #gradient-carousel {
+    z-index: 10;
+  }
+  
+  .carousel-text h2 , .carousel-text p, .carousel-text a {
+    z-index: 20;
   }
 </style>
