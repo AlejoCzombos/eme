@@ -15,7 +15,7 @@ const { href, icon, title } = Astro.props as Props;
 
 <a href={href} class="item flex flex-col items-center gap-2 group">
     <img src={icon.src} alt={icon.alt} class="size-20 group-hover:-translate-y-2 transition-transform ease-in-out" />
-    <h3 class="font-bold text-xl text-primary-600 text-center group-hover:scale-110 transition-transform ease-in-out">{title.toLocaleUpperCase()}</h3>
+    <h3 class="font-bold text-primary-600 text-center group-hover:scale-110 transition-transform ease-in-out">{title.toLocaleUpperCase()}</h3>
 </a>
 
 <style>

@@ -37,11 +37,14 @@ const { title, description } = Astro.props;
 @tailwind base;
 
 	@layer base{
-		h1, h2 {
+		h1 {
 			@apply text-4xl xl:text-6xl
 		}
+		h2 {
+			@apply text-3xl xl:text-2xl
+		}
 		h3 {
-			@apply text-2xl xl:text-3xl
+			@apply text-2xl xl:text-xl
 		}
 		h1, h2, h3, h4, h5, h6 {
 			@apply text-black font-bold

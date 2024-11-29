@@ -33,7 +33,7 @@ const { membership } = Astro.props as Props;
         <span class="border border-primary-600"></span>
         <a href={membership.items[2].href} class="flex justify-center items-center hover:scale-110 transition-transform duration-300 ease-in-out">
             <img src={membership.items[2].image.src} alt={membership.items[2].image.alt} class="max-h-20 " />
-            <h3 class="font-bold text-xl text-primary-600 text-center">{membership.items[2].title.toLocaleUpperCase()}</h3>
+            <h3 class="font-bold text-primary-600 text-center">{membership.items[2].title.toLocaleUpperCase()}</h3>
         </a>
     </div>
 </section>

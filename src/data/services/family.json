@@ -23,7 +23,7 @@
             "title": "Emergencias y urgencias médicas",
             "details": "La atención de Emergencias que pongan en riesgo la vida del paciente, exige recursos humanos altamente entrenados, una infraestructura acorde y los procesos especialmente diseñados para tal fin. En éste sentido EME llena un importante vacío de atención que no está cubierto adecuadamente por ninguna Obra Social, Prepagas, ni sistema de salud existente. EME no compite con las Obras Sociales ni con los Institutos Asistenciales, ni con los profesionales médicos en general muy por el contrario complementa su accionar.",
             "icon": {
-                "src": "/icons/services/urgencias-medicas.svg",
+                "src": "/icons/services/emergencia.svg",
                 "alt": "Emergencias y urgencias médicas"
             }
         },
@@ -31,7 +31,7 @@
             "title": "Traslados de pacientes de alto y bajo riesgo",
             "details": "Es un programa específico complementario destinado a la movilización de pacientes imposibilitados de deambular en aquellos casos no relacionados con un cuadro de emergencias. Opera exclusivamente con cargo, en el área urbana local de cobertura o, desde y hacia cualquier punto del país. Las atenciones son brindadas los 365 días del año, las 24 hs. del día con asignación de turnos.",
             "icon": {
-                "src": "/icons/services/traslado-pacientes.svg",
+                "src": "/icons/services/traslado.svg",
                 "alt": "Traslados de pacientes de alto y bajo riesgo"
             }
         },
@@ -39,7 +39,7 @@
             "title": "Consultas domiciliarias",
             "details": "Comprende todos aquellos cuadros clínicos que, aùn sin poner en riesgo la vida del paciente, requieren la atención de un profesional médico, sin movilizar al paciente de su domicilio o lugar en que se encuentre, eliminando una serie de inconvenientes derivados de la situación misma y del traslado del enfermo. La atención es permanente (24 hs. los 365 días del año) con o sin costos adicionales, según el plan de su elección.",
             "icon": {
-                "src": "/icons/services/consultas-domiciliaria.svg",
+                "src": "/icons/services/domiciliaria.svg",
                 "alt": "Consultas domiciliarias"
             }
         },
@@ -55,7 +55,7 @@
             "title": "Enfermería domiciliaria",
             "details": "Servicio programado destinado a proveer la prestación domiciliaria de prácticas de enfermería que tengan su correspondiente indicacion medica. El abono mensual da acceso a un cupo de prestaciones no acumulativos.",
             "icon": {
-                "src": "/icons/services/enfermeria-domiciliaria.svg",
+                "src": "/icons/services/domiciliaria.svg",
                 "alt": "Enfermería domiciliaria"
             }
         },
@@ -63,7 +63,7 @@
             "title": "Vehículo Protegido",
             "details": "Destinado a la atención médica pre hospitalaria que pudieran sufrir los ocupantes de un vehículo protegido y los terceros no transportados involucrados, en ocasión de un accidente de tránsito vehicular.",
             "icon": {
-                "src": "/icons/services/vehiculo-protegido.svg",
+                "src": "/icons/services/traslado.svg",
                 "alt": "Vehículo Protegido"
             }
         }

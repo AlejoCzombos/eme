@@ -27,7 +27,7 @@ const { features } = Astro.props as { features: FeatureItem[] };
             <div class="flip-card-front flex flex-col items-center justify-between rounded-2xl px-12 py-16 min-h-[500px]">
               <img src={icon.src} alt={icon.alt} class="size-36" />
               <span class="my-8 border-b w-full border-primary-500"></span>
-              <h2 class="text-2xl font-bold text-center">{title}</h2>
+              <h2 class="font-bold text-center">{title}</h2>
               <footer class="flex flex-col items-center mt-7">
                 <img src="/icons/services/ver.svg" alt="Ver contenido" class="size-11" />
                 <p class="text-sm font-light">clic para ver</p>

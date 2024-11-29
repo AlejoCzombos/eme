@@ -16,7 +16,7 @@ const { services } = Astro.props;
                             <img src={service.image.src} alt={service.image.alt} 
                             class="h-full w-full object-cover object-top -z-10 transition-all duration-500 ease-in-out transform group-hover:object-right scale-100 group-hover:scale-110 group-hover:translate-x-5"
                             />
-                            <h2 set:html={service.title} id="serviceCard" class="absolute top-0 left-0 font-bold text-white text-3xl h-full flex flex-col justify-end p-10 z-10"></h2>
+                            <h2 set:html={service.title} id="serviceCard" class="absolute top-0 left-0 font-bold text-3xl text-white h-full flex flex-col justify-end p-10 z-10"></h2>
                             <div id="gradientServices"></div>
                         </a>
                     </hgroup>
@@ -44,7 +44,8 @@ const { services } = Astro.props;
     }
     
     #serviceCard {
-        min-width: 25rem;
-        min-height: 25rem;
+        min-width: 15rem;
+        max-width: 15rem;
+        min-height: 22rem;
     }
 </style>

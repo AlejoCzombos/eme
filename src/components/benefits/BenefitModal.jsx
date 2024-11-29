@@ -24,7 +24,7 @@ export default function BenefitModal({ benefit, onClose, isOpen }) {
             className="max-h-64 object-contain h-full max-w-md rounded-2xl"
           />
           <div className="flex flex-col gap-2">
-            <h2 className="text-2xl font-bold text-gray-700">{benefit.title}</h2>
+            <h2 className="font-bold text-gray-700">{benefit.title}</h2>
             <p className="mt-2 text-gray-500">{benefit.category}</p>
             <p className="mt-4 text-xl font-bold text-gray-800">
                 {benefit.discount + " % off"}

@@ -5,6 +5,7 @@ interface Props {
     backgroundImage: Image;
     title: string;
     subtitle?: string;
+    quote?: string;
     breadcrumb_top?: boolean;
     class?: string;
 }
@@ -13,7 +14,7 @@ interface Image {
     alt: string;
 }
 
-const { backgroundImage, title, subtitle, breadcrumb_top, class: className } = Astro.props as Props;
+const { backgroundImage, title, subtitle, breadcrumb_top, quote, class: className } = Astro.props as Props;
 ---
 
 <header class:list={[className, "relative min-h-[25rem] flex flex-col items-start justify-end"]}>
@@ -25,6 +26,7 @@ const { backgroundImage, title, subtitle, breadcrumb_top, class: className } = A
     <div class={`title max-w-6xl mx-auto w-full z-10 relative space-y-5 flex flex-col items-start ${breadcrumb_top ? "justify-start" : "justify-center"}`}>
         <h1 class="text-white text-5xl">{title}</h1>
         {subtitle && <p class="text-white font-semibold text-2xl">{subtitle}</p>}
+        {quote && <quote class="text-white italic text-2xl">{'"' + quote + '"'}</quote>}
     </div>
     {
         !breadcrumb_top && <div class="breadcrum max-w-6xl mx-auto w-full z-10 relative py-8">
