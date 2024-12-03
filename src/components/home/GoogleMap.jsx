@@ -10,10 +10,10 @@ const GoogleMapComponent = ({ branches }) => {
   };
 
   return (
-    <div className="min-w-full h-full">
-      <header className="flex justify-between px-16 items-center h-20">
-        <h2 >{contact.map.title.toLocaleUpperCase()}</h2>
-        <span>
+    <div>
+      <header className="flex flex-wrap justify-between px-0 xl:px-16 items-center h-32 xl:h-20">
+        <h2 className="w-full xl:w-auto">{contact.map.title.toLocaleUpperCase()}</h2>
+        <span className="w-full xl:w-auto">
           <label htmlFor="branchSelect" className="block font-normal text-sm text-slate-400">Seleccionar Localidad</label>
           <select id="branchSelect" onChange={handleSelectChange} className="mb-4 p-2 border font-normal text-slate-600 border-gray-300 rounded min-w-60 w-full">
             {
@@ -30,7 +30,7 @@ const GoogleMapComponent = ({ branches }) => {
         width="100%"
         allowFullScreen
         loading="lazy"
-        className="border rounded min-h-[27rem]"
+        className="border rounded h-[27rem]"
       ></iframe>
     </div>
   );

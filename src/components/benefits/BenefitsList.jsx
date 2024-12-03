@@ -62,7 +62,7 @@ export default function BenefitsList() {
   return (
     <>
       {/* Formulario de búsqueda */}
-      <div className="mb-6 flex flex-col md:flex-row gap-8 max-w-3xl mx-auto">
+      <div className="mb-6 flex flex-col md:flex-row gap-4 lg:gap-8 max-w-3xl mx-auto">
         <select
           value={selectedLocality}
           onChange={(e) => setSelectedLocality(e.target.value)}

@@ -5,13 +5,13 @@ import { branches } from '../../data/general-info.json'
 import NavigationItem from '../UI/NavigationItem.astro'
 ---
 
-<footer class="bg-gradient-to-r from-primary-500 to-primary-800 text-white py-10 relative">
-  <div class="flex justify-between max-w-[90rem] mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
+<footer class="px-10 lg:px-0 lg:py-16 bg-gradient-to-r from-primary-500 to-primary-800 text-white py-10 relative">
+  <div class="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start max-w-[90rem] mx-auto gap-8">
+    <div class="flex flex-col lg:flex-row gap-8 mx-auto">
+        <div class="max-w-60 mx-auto lg:mx-0">
             <img src={logo.src} alt={logo.alt} class="w-64">
         </div>
-        <div class="space-y-4">
+        <div class="max-w-lg space-y-4">
         {
             branches.map(branch => (
                 <div>
@@ -25,8 +25,8 @@ import NavigationItem from '../UI/NavigationItem.astro'
         </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-4">
-        <div class="space-y-2">
+    <div class="flex flex-wrap justify-end gap-4 lg:gap-0 w-full">
+        <div class="space-y-2 max-w-48 w-full mx-auto lg:mx-0">
             <NavigationItem class="font-bold" white="true" text={services.title} href={services.href} />
             <ul class="flex flex-col gap-1">
             {
@@ -37,7 +37,7 @@ import NavigationItem from '../UI/NavigationItem.astro'
             </ul>
         </div>
         
-        <div class="space-y-2">
+        <div class="space-y-2 max-w-44 w-full mx-auto lg:mx-0">
             <NavigationItem class="font-bold" white="true" text={benefits.title} href={benefits.href} />
             <ul class="flex flex-col gap-1">
             {
@@ -48,7 +48,7 @@ import NavigationItem from '../UI/NavigationItem.astro'
             </ul>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-2 max-w-44 w-full mx-auto lg:mx-0">
             <NavigationItem class="font-bold" white="true" text={company.title} href={company.href} />
             <ul class="flex flex-col gap-1">
             {
@@ -59,7 +59,9 @@ import NavigationItem from '../UI/NavigationItem.astro'
             </ul>
         </div>
 
-        <div class="flex flex-col justify-between items-end max-w-44">
+        <span class="lg:hidden"></span>
+
+        <div class="flex flex-col col-span-2 lg:col-span-1 justify-between items-center lg:items-end lg:max-w-64 w-full gap-4 h-full">
             <div class="flex space-x-4">
                 {
                     socialMedia.map(item => (

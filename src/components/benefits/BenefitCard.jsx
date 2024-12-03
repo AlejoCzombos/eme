@@ -13,8 +13,8 @@ export default function BenefitCard({ benefit, onSelect }) {
 
       <div className="p-4">
         <span className="block text-sm text-gray-500">{benefit.category}</span>
-        <h2 className="font-semibold text-lg text-gray-700">{benefit.title}</h2>
-        <p className="mt-2 text-xl font-bold text-gray-800">{benefit.discount + " % off"}</p>
+        <h2 className="font-semibold text-start text-base lg:text-lg text-gray-700">{benefit.title}</h2>
+        <p className="mt-2 text-lg lg:text-xl font-bold text-gray-800">{benefit.discount + " % off"}</p>
       </div>
     </div>
   )

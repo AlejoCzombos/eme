@@ -20,29 +20,20 @@ interface Image {
 
 const { membership } = Astro.props as Props;
 ---
-<section class="flex justify-center items-center w-full px-10 py-5 lg:px-0 lg:pt-14 lg:pb-24 max-w-7xl mx-auto">
+<section class="flex flex-col xl:flex-row justify-center items-center w-full px-10 py-12 lg:px-0 lg:pt-14 lg:pb-24 max-w-7xl mx-auto">
     <h2 class="text-3xl max-w-sm py-10">{membership.title}</h2>
-    <div class="flex gap-12">
+    <div class="flex flex-wrap xl:flex-nowrap gap-12 justify-center">
         <a href={membership.items[0].href}>
             <img src={membership.items[0].image.src} alt={membership.items[0].image.alt} class="max-h-20 object-contain hover:scale-110 transition-transform duration-300 ease-in-out" />
         </a>
-        <span class="border border-primary-600"></span>
+        <span class="hidden xl:block border border-primary-600"></span>
         <a href={membership.items[1].href}>
             <img src={membership.items[1].image.src} alt={membership.items[1].image.alt} class="max-h-20 object-contain hover:scale-110 transition-transform duration-300 ease-in-out" />
         </a>
-        <span class="border border-primary-600"></span>
-        <a href={membership.items[2].href} class="flex justify-center items-center hover:scale-110 transition-transform duration-300 ease-in-out">
-            <img src={membership.items[2].image.src} alt={membership.items[2].image.alt} class="max-h-20 " />
+        <span class="hidden xl:block border border-primary-600"></span>
+        <a href={membership.items[2].href} class="flex justify-center items-center gap-3 hover:scale-110 transition-transform duration-300 ease-in-out">
+            <img src={membership.items[2].image.src} alt={membership.items[2].image.alt} class="min-h-20" />
             <h3 class="font-bold text-primary-600 text-center">{membership.items[2].title.toLocaleUpperCase()}</h3>
         </a>
     </div>
 </section>
-
-<style>
-    .item {
-        @apply border-r border-r-primary-600 pr-12;
-    }
-    .item:last-child {
-        @apply border-none pr-0;
-    }
-</style>

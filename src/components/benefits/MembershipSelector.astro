@@ -26,10 +26,17 @@ const { membership_selector } = Astro.props as Props;
                 class="group item"
                 data-target={membership.id}
             >
-              <div class="w-full h-full flex flex-col items-center justify-center gap-2 cursor-pointer">
-                <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 p-3 object-contain group-hover:scale-110 transition-transform">
-                { membership.title && <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3> }
-              </div>
+              {
+                !membership.title ?
+                <div class="w-full h-full flex flex-col items-center justify-center gap-2 cursor-pointer">
+                  <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 p-3 object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out">
+                </div>
+                :
+                <div class="w-full h-full flex justify-center items-center gap-3">
+                  <img src={membership.image.src} alt={membership.image.alt} class="min-h-24 p-3 object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out">
+                  <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3>
+                </div>
+              }
             </button>
         ))
     }
@@ -40,10 +47,10 @@ const { membership_selector } = Astro.props as Props;
         membership_selector.map((membership, index) => (
             <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={membership.id}>
                 <div class="flex px-8 py-6">
-                    <div class="flex justify-center items-center">
+                    <div class="hidden lg:flex justify-center items-center">
                         <img class="h-48 object-contain" src={membership.image.src} alt={membership.image.alt}>
                     </div>
-                    <span class="border-r border-primary-600 mx-6"></span>
+                    <span class="hidden lg:flex border-r border-primary-600 mx-6"></span>
                     <div class="flex flex-col justify-center text-xl">
                         {
                             membership.description.split("\n").map((paragraph) => (
@@ -58,12 +65,20 @@ const { membership_selector } = Astro.props as Props;
 </Section>
 
 <style>
+
     .item {
-        @apply border-r border-r-primary-600 pr-8;
-    }
-    .item:last-child {
         @apply border-none pr-0;
     }
+
+    @screen lg {
+        .item {
+            @apply border-r border-r-primary-600 pr-8;
+        }
+        .item:last-child {
+            @apply border-none pr-0;
+        }
+    }
+
     .button, .active > div{
        @apply bg-primary-100/60 rounded-2xl
     }

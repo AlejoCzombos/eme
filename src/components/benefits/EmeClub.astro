@@ -7,6 +7,6 @@ const { eme_club } = Astro.props;
 const id = eme_club.id + "_content";
 ---
 
-<Section id={id} class="content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
+<section id={id} class="px-5 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
     <BenefitsList client:only="react" />
-</Section>
+</section>

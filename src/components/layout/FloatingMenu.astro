@@ -4,7 +4,7 @@ import Tooltip from "../UI/Tooltip.astro";
 const {buttons} = data
 ---
 
-<div class="fixed bottom-10 right-20 z-30 flex flex-col gap-3">
+<div class="fixed bottom-6 xl:bottom-10 right-6 xl:right-20 z-30 flex flex-col gap-3">
     {
         buttons.map((button) => (
             <Tooltip text={button.tooltip} h="-top-[4.3rem]" w="w-32">
