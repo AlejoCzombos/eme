@@ -12,12 +12,12 @@ interface Item {
 const { stats } = Astro.props as Props;
 ---
 
-<section class="bg-primary-100/60 py-3 lg:px-0 lg:py-16">
-    <div class="grid grid-cols-4 max-w-4xl m-auto">
+<section class="bg-primary-100/60 py-10 lg:px-0 lg:py-16">
+    <div class="grid grid-cols-2 lg:grid-cols-4 max-w-4xl m-auto gap-y-6">
     {
         stats.map((item) => (
-            <div class="item flex flex-col items-center gap-5 group">
-                <span class="text-5xl text-primary-600">{item.number}</span>
+            <div class="item flex flex-col items-center gap-1 lg:gap-5 group">
+                <span class="text-3xl lg:text-5xl text-primary-600">{item.number}</span>
                 <p class="text-sm text-center group-hover:scale-110 transition-transform ease-in-out">{item.title}</p>
             </div>
         ))

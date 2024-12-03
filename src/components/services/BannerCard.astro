@@ -3,7 +3,6 @@
 interface Props {
     data: Data;
     class: string;
-    breadcrumb_top?: boolean;
 }
 interface Data {
     title: string;
@@ -19,11 +18,11 @@ const {class: className, data} = Astro.props as Props;
 ---
 
 
-<div class:list={[className, "max-w-6xl w-full bg-primary-600 rounded-l-[40px] rounded-2xl drop-shadow-xl"]}>
+<div class:list={[className, "hidden lg:block max-w-6xl w-full bg-primary-600 rounded-l-[40px] rounded-2xl drop-shadow-xl"]}>
   <div class="flex">
     <div class="flex flex-col justify-center items-center gap-6 bg-gradient-to-b to-primary-600 to-80% from-secondary-900 rounded-[40px] min-w-60 px-8 py-6 z-10">
-      <img class="size-32 z-10" src={data.icon.src} alt={data.icon.alt}>
-      <h1 class="text-3xl text-white">{data.title}</h1>
+      <img class="size-20 lg:size-32 z-10" src={data.icon.src} alt={data.icon.alt}>
+      <h1 class="text-xl lg:text-3xl text-white">{data.title}</h1>
     </div>
     <div class="flex items-center px-10 py-8">
       <p class="text-2xl text-white">{data.description}</p>

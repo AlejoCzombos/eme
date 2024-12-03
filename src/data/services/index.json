@@ -5,7 +5,7 @@
     },
     "banner": {
         "title": "Servicios",
-        "subtitle": "Pensamos en tus necesidades",
+        "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
         "image": {
             "src": "/images/services/servicios.png",
             "alt": "Servicios"

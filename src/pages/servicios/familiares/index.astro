@@ -5,13 +5,15 @@ import { SEO, banner, card_overlay, features } from "../../../data/services/fami
 import BannerCard from "../../../components/services/BannerCard.astro";
 import SectionBanner from "../../../components/services/SectionBanner.astro";
 import FamilyFeatures from "../../../components/services/FamilyFeatures.astro";
+import BannerCardMobile from "../../../components/services/BannerCardMobile.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
     <main class="mt-[135px] relative">
-        <SectionBanner backgroundImage={banner.image} title="Servicios" breadcrumb_top={true} class="mb-24">
-            <BannerCard data={card_overlay} class="absolute bottom-[-7rem] left-1/2 transform -translate-x-1/2 mx-auto z-20" />
+        <SectionBanner backgroundImage={banner.image} title="Servicios" breadcrumb_top={true} class="lg:mb-24">
+            <BannerCard data={card_overlay} class="absolute lg:bottom-[-7rem] left-1/2 transform -translate-x-1/2 mx-auto z-20" />
         </SectionBanner>
+        <BannerCardMobile data={card_overlay} />
         <FamilyFeatures features={features} />
     </main>
 </Layout>

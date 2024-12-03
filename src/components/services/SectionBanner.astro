@@ -17,19 +17,22 @@ interface Image {
 const { backgroundImage, title, subtitle, breadcrumb_top, quote, class: className } = Astro.props as Props;
 ---
 
-<header class:list={[className, "relative min-h-[25rem] flex flex-col items-start justify-end"]}>
+<header class:list={[className, "relative min-h-40 xl:min-h-[25rem] flex flex-col items-start justify-end"]}>
     {
-        breadcrumb_top && <div class="breadcrum max-w-6xl mx-auto w-full z-10 relative py-10">
+        breadcrumb_top && <div class="breadcrum hidden lg:block max-w-6xl mx-auto w-full z-10 relative py-10">
             <Breadcrumb />
         </div>
     }
-    <div class={`title max-w-6xl mx-auto w-full z-10 relative space-y-5 flex flex-col items-start ${breadcrumb_top ? "justify-start" : "justify-center"}`}>
-        <h1 class="text-white text-5xl">{title}</h1>
-        {subtitle && <p class="text-white font-semibold text-2xl">{subtitle}</p>}
-        {quote && <quote class="text-white italic text-2xl">{'"' + quote + '"'}</quote>}
+    <div class={`title max-w-xs lg:max-w-6xl mx-auto w-full z-10 relative gap-0 lg:gap-5 flex flex-col items-start ${breadcrumb_top ? "justify-center lg:justify-start" : "justify-center"}`}>
+        <h1 class="text-white text-2xl lg:text-5xl">{title}</h1>
+        {subtitle && <p class="text-white font-semibold text-base lg:text-2xl">{subtitle}</p>}
+        {quote && <quote class="text-white italic text-sm lg:text-2xl">{'"' + quote + '"'}</quote>}
+        { (!subtitle && !quote) && 
+            <quote class="text-white italic text-sm lg:hidden">{'"Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado."'}</quote>
+        }
     </div>
     {
-        !breadcrumb_top && <div class="breadcrum max-w-6xl mx-auto w-full z-10 relative py-8">
+        !breadcrumb_top && <div class="breadcrum hidden lg:block max-w-6xl mx-auto w-full z-10 relative py-8">
             <Breadcrumb />
         </div>
     }
