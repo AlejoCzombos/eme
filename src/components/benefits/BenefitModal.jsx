@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom";
 
 export default function BenefitModal({ benefit, onClose, isOpen }) {
-    console.log(benefit);
   return ReactDOM.createPortal(
     <div
       onClick={onClose}
@@ -9,19 +8,19 @@ export default function BenefitModal({ benefit, onClose, isOpen }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`bg-white rounded-3xl shadow-xl w-[90%] max-w-2xl p-6 relative ${isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
+        className={`bg-white rounded-3xl shadow-xl w-[90%] max-w-3xl p-6 relative ${isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
       >
         <button
           onClick={onClose}
-          className="size-8 absolute top-4 right-4 transition hover:scale-125 md:size-6 rotate-45 cursor-pointer"
+          className="size-6 absolute top-4 right-4 transition hover:scale-125 md:size-6 rotate-45 cursor-pointer"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#505050" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" /></svg>
         </button>
         <div className="flex flex-col lg:flex-row items-center justify-start gap-6 xl:gap-12 w-full">
           <img
-            src={benefit.image}
+            src={"http://localhost:7000" + benefit.imagen_url} 
             alt={benefit.title}
-            className="max-h-80 object-contain h-full max-w-md rounded-2xl w-full"
+            className="min-h-80 max-h-80 object-contain h-full max-w-md rounded-2xl "
           />
           <div className="flex flex-col gap-0 xl:gap-2">
             <h2 className="font-bold text-gray-700 text-start">{benefit.title}</h2>

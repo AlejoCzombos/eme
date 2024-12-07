@@ -18,14 +18,14 @@ interface Icon {
 const { feature_selector } = Astro.props as { feature_selector: FeatureItem[] };
 ---
 
-<Section class="space-y-12">
-    <H2Title text="Qué te ofrecemos" />
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
+<Section class="lg:space-y-12">
+    <H2Title text="Qué te ofrecemos" class="hidden lg:block" />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-12 w-full border-b lg:border-none border-primary-600 pb-8 mb-8">
         
         {
             feature_selector.map(({ icon, id, title }) => (
                 <button
-                    class="group item flex items-center cursor-pointer px-6 py-4 rounded-2xl"
+                    class="group item flex items-center cursor-pointer px-6 py-4 rounded-2xl hover:scale-110 transition-transform duration-300 ease-in-out"
                     data-target={id}
                 >
                     <img src={icon.src} alt={icon.alt} class="mr-3 size-16" />
@@ -76,7 +76,7 @@ const { feature_selector } = Astro.props as { feature_selector: FeatureItem[] };
 
 <style>
     .button, .active{
-       @apply bg-primary-100/60 rounded-2xl
+       @apply bg-primary-100/60 rounded-2xl scale-110;
     }
 </style>
 
@@ -88,14 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const buttons = document.querySelectorAll("button[data-target]");
   const descriptions = document.querySelectorAll(".description");
-//   const contents = document.querySelectorAll(".content");
 
-  // Mostrar la descripción y contenido seleccionado por defecto
   const defaultDescription = document.getElementById(selectedFeature);
-//   const defaultContent = document.getElementById(selectedFeature + "_content");
 
   defaultDescription.classList.remove("hidden");
-//   defaultContent.classList.remove("hidden");
 
 
   buttons.forEach(button => {
@@ -114,23 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Ocultar todas las descripciones y contenidos
       descriptions.forEach(desc => desc.classList.add("hidden"));
-    //   contents.forEach(cont => cont.classList.add("hidden"));
 
       // Mostrar la descripción seleccionada
       const descriptionElement = document.getElementById(targetId);
-    //   const contentElement = document.getElementById(targetId + "_content");
 
       if (descriptionElement) {
         descriptionElement.classList.remove("hidden");
       } else {
         console.error(`No se encontró el elemento con id: ${targetId}`);
       }
-
-    //   if (contentElement) {
-    //     contentElement.classList.remove("hidden");
-    //   } else {
-    //     console.error(`No se encontró el elemento con id: ${targetId + "_content"}`);
-    //   }
     });
   });
 });

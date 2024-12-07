@@ -1,4 +1,6 @@
 ---
+import PrimaryButton from '../UI/PrimaryButton.astro';
+
 interface Props {
   title: string;
 }
@@ -32,9 +34,10 @@ const swiper = new Swiper('.swiper-beneficts', {
   breakpoints: {
     1024: {
       slidesPerView: 5,
-      spaceBetween: 180,
+      spaceBetween: 170,
     },
   },
+  wrapperClass: 'swiper-wrapper',
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -48,33 +51,35 @@ const swiper = new Swiper('.swiper-beneficts', {
 });
 </script>
 
-<section class="w-full px-10 py-12 lg:px-0 lg:pt-14 lg:pb-24 max-w-6xl m-auto relative overflow-hidden">
+<section class="w-full px-10 py-12 lg:px-0 lg:py-14 max-w-7xl m-auto relative overflow-hidden">
   <h2 class="p-2 mb-16">{title.toLocaleUpperCase()}</h2>
-  <div class="swiper-beneficts relative">
+  <div class="swiper-beneficts max-w-6xl m-auto relative overflow-hidden">
     <div class="swiper-wrapper" id="my-slider">
       {
         images.map(image => (
           <div class="swiper-slide flex justify-center items-center">
-            <img src={image.default.src} alt="" class="w-full h-full object-cover">
+            <img src={image.default.src} alt="" class="w-full h-full max-h-44 object-cover">
           </div>
         ))
       }
     </div>
-    <div class="swiper-button-prev transform rotate-180 hover:scale-125 transition-transform duration-300 ease-in-out">
-      <img src="/icons/swiperBenefits.svg" alt="Icono siguiente imagen">
-    </div>
-    <div class="swiper-button-next hover:scale-125 transition-transform duration-200 ease-in-out">
-      <img src="/icons/swiperBenefits.svg" alt="Icono anterior imagen">
-    </div>
-    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev transform rotate-180 hover:scale-125 transition-transform duration-300 ease-in-out">
+    <img class="size-6 lg:size-28" src="/icons/swiperBenefits.svg" alt="Icono siguiente imagen">
+  </div>
+  <div class="swiper-button-next hover:scale-125 transition-transform duration-300 ease-in-out">
+    <img class="size-6 lg:size-28" src="/icons/swiperBenefits.svg" alt="Icono anterior imagen">
+  </div>
+  <div class="flex justify-center mt-28">
+    <PrimaryButton text="Ver más beneficios" href="/beneficios"/>
   </div>
 </section>
 
 <style is:global>
 
 .swiper-pagination {
-  bottom: -3.5rem !important;
-
+  bottom: 30% !important;
 }
 
 .swiper-pagination-bullet{
@@ -89,5 +94,9 @@ const swiper = new Swiper('.swiper-beneficts', {
   .swiper-button-next::after,
   .swiper-button-prev::after {
     content: '';
+  }
+  .swiper-button-next,
+  .swiper-button-prev{
+    top: 45%;
   }
 </style>

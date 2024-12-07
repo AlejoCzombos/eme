@@ -1,0 +1,123 @@
+{
+  "SEO": {
+    "title": "404",
+    "description": "Page not found"
+  },
+  "title": "No encontramos lo que buscabas, pero estamos acá para ayudarte.",
+  "icon": {
+    "src": "/icons/404.svg",
+    "alt": "404"
+  },
+  "button": {
+    "href": "/servicios",
+    "text": "Explorá nuestros servicios"
+  },
+  "curiosities": [
+    {
+      "title": "Importancia del RCP",
+      "info": "Los <b>primeros auxilios básicos</b>, como el RCP, pueden aumentar hasta en un <b>70%</b> las probabilidades de supervivencia si se aplican en los primeros minutos de un paro cardíaco.",
+      "sources": [
+        "https://www.argentina.gob.ar/salud/deis/datos",
+        "https://www.paho.org/es/argentina/datos-estadisticas"
+      ]
+    },
+    {
+      "title": "Beber agua es esencial",
+      "info": "El cuerpo humano está compuesto en un <b>60%</b> de agua. Beber suficiente agua diariamente es clave para mantener el equilibrio de líquidos en el organismo.",
+      "sources": [
+        "https://www.cdc.gov/healthyweight/healthy_eating/water.html"
+      ]
+    },
+    {
+      "title": "La risa y la salud",
+      "info": "Reírse puede reducir los niveles de estrés y aumentar las defensas del sistema inmunológico.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6125056/"
+      ]
+    },
+    {
+      "title": "El poder de dormir bien",
+      "info": "Dormir al menos <b>7 horas</b> cada noche mejora la memoria, la concentración y reduce el riesgo de enfermedades cardíacas.",
+      "sources": [
+        "https://www.sleepfoundation.org/sleep-hygiene"
+      ]
+    },
+    {
+      "title": "Beneficios del ejercicio",
+      "info": "Hacer <b>30 minutos</b> de ejercicio moderado al día puede reducir el riesgo de enfermedades crónicas como la diabetes y la hipertensión.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+      ]
+    },
+    {
+      "title": "Los efectos de fumar",
+      "info": "El tabaquismo es responsable de más de <b>8 millones</b> de muertes anuales en el mundo, según la OMS.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+      ]
+    },
+    {
+      "title": "La importancia de la vacunación",
+      "info": "Las vacunas previenen alrededor de <b>2-3 millones</b> de muertes al año en el mundo.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/immunization-coverage"
+      ]
+    },
+    {
+      "title": "La salud mental importa",
+      "info": "Cuidar la salud mental es tan importante como cuidar la salud física. Hablar con un profesional puede marcar la diferencia.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+      ]
+    },
+    {
+      "title": "La dieta equilibrada",
+      "info": "Comer frutas y verduras diariamente reduce el riesgo de enfermedades cardiovasculares y mejora la salud en general.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ]
+    },
+    {
+      "title": "El azúcar y la salud",
+      "info": "Consumir en exceso azúcar añadido puede aumentar el riesgo de obesidad, diabetes tipo 2 y caries.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      ]
+    },
+    {
+      "title": "El impacto del aire limpio",
+      "info": "Respirar aire limpio es vital: la contaminación del aire mata a más de <b>7 millones</b> de personas cada año.",
+      "sources": [
+        "https://www.who.int/health-topics/air-pollution#tab=tab_1"
+      ]
+    },
+    {
+      "title": "La tecnología y la salud",
+      "info": "El uso excesivo de dispositivos electrónicos puede causar problemas visuales y trastornos del sueño.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6619444/"
+      ]
+    },
+    {
+      "title": "La importancia del desayuno",
+      "info": "Un desayuno saludable puede mejorar el rendimiento cognitivo y aumentar la energía durante el día.",
+      "sources": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3905273/"
+      ]
+    },
+    {
+      "title": "Los beneficios del sol",
+      "info": "Tomar sol de manera moderada ayuda al cuerpo a producir <b>vitamina D</b>, esencial para la salud ósea.",
+      "sources": [
+        "https://www.who.int/news-room/q-a-detail/radiation-the-ultraviolet-(uv)"
+      ]
+    },
+    {
+      "title": "El impacto del estrés",
+      "info": "El estrés crónico puede aumentar el riesgo de enfermedades cardíacas, obesidad y depresión.",
+      "sources": [
+        "https://www.who.int/news-room/fact-sheets/detail/stress"
+      ]
+    }
+  ]
+}

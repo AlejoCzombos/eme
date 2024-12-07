@@ -22,7 +22,7 @@ const {buttons} = data
                     ))
                 }
             </div>
-            <a class="inline-flex items-center p-2 size-16 justify-center text-sm text-gray-100 rounded-lg lg:hidden hover:bg-primary-600"  id="menu-button" data-collapse-toggle="navbar-sticky" data-nav-toggle="#navbar-sticky" href="#" aria-controls="navbar-sticky" aria-expanded="false">
+            <a class="inline-flex items-center p-2 size-16 justify-center text-sm text-gray-100 rounded-lg lg:hidden bg-primary-600"  id="menu-button" data-collapse-toggle="navbar-sticky" data-nav-toggle="#navbar-sticky" href="#" aria-controls="navbar-sticky" aria-expanded="false">
                 <span class="sr-only">Abrir menu navegación</span>
                 <svg class="size-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
@@ -35,7 +35,7 @@ const {buttons} = data
             <div class="flex lg:hidden justify-center items-center gap-3 w-[350px] mx-auto">
                 {
                     buttons.map((button) => (
-                        <PrimaryButton class="text-2xl lg:text-base" text={button.text.toLocaleUpperCase()} href={button.link}/>
+                        <PrimaryButton class="text-xl lg:text-base" text={button.text.toLocaleUpperCase()} href={button.link}/>
                     ))
                 }
             </div>

@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
 import BenefitCard from "./BenefitCard";
 import BenefitModal from "./BenefitModal";
+import Loader from "../UI/Loader";
 
 export default function BenefitsList() {
   const [benefits, setBenefits] = useState([]);
   const [filteredBenefits, setFilteredBenefits] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedBenefit, setSelectedBenefit] = useState(null);
-  const [localities, setLocalities] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedLocality, setSelectedLocality] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+
+  const localities = [
+    { id: 1, name: "Resistencia" },
+    { id: 2, name: "Corrientes" },
+    { id: 3, name: "Sáenz Peña" },
+  ];
 
   useEffect(() => {
     fetchBenefits();
@@ -22,15 +28,13 @@ export default function BenefitsList() {
 
   const fetchBenefits = async () => {
     setLoading(true);
-    const response = await fetch("/benefits_list.json");
+    const response = await fetch("http://localhost:7000/api/beneficios");
     const data = await response.json();
     setBenefits(data);
     setFilteredBenefits(data);
 
-    // Extraer localidades y categorías únicas
-    const uniqueLocalities = Array.from(new Set(data.map((b) => b.locality)));
+    // Extraer categorías únicas
     const uniqueCategories = Array.from(new Set(data.map((b) => b.category)));
-    setLocalities(uniqueLocalities);
     setCategories(uniqueCategories);
 
     setLoading(false);
@@ -38,8 +42,9 @@ export default function BenefitsList() {
 
   const applyFilters = () => {
     const filtered = benefits.filter((benefit) => {
+
       const matchesLocality =
-        selectedLocality === "" || benefit.locality === selectedLocality;
+        selectedLocality === "" || benefit.locality == selectedLocality;
       const matchesCategory =
         selectedCategory === "" || benefit.category === selectedCategory;
       return matchesLocality && matchesCategory;
@@ -70,8 +75,8 @@ export default function BenefitsList() {
         >
           <option value="">Todas las localidades</option>
           {localities.map((locality) => (
-            <option key={locality} value={locality}>
-              {locality}
+            <option key={locality.id} value={locality.id}>
+              {locality.name}
             </option>
           ))}
         </select>
@@ -91,15 +96,19 @@ export default function BenefitsList() {
 
       {/* Listado de beneficios */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {loading && <p>Loading...</p>}
-        {!loading &&
+        {loading ? (
+          <div className="col-span-full flex items-center justify-center h-full">
+            <Loader />
+          </div>
+        ) : (
           filteredBenefits.map((benefit) => (
             <BenefitCard
               key={benefit.id}
               benefit={benefit}
               onSelect={handleSelect}
             />
-          ))}
+          ))
+        )}
       </div>
 
       {/* Modal */}

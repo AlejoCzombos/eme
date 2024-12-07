@@ -12,11 +12,11 @@ interface Icon {
 
 const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
 ---
-<details id="question" class={`group w-full lg:p-5 rounded-2xl ${whiteTheme ? "white p-1" : "p-3"} `}>
+<details id="question" class={`group w-full p-3 lg:p-5 rounded-2xl ${whiteTheme ? "white" : ""} `}>
     <summary class="flex items-center cursor-pointer">
-        <img src={icon.src} alt={icon.alt} class={` lg:mr-3 ${whiteTheme ? "size-10 xl:size-20 mr-0" : "size-12 xl:size-14 mr-3"}`} />
-        <img src={whiteTheme ? "/icons/acordeon-arrow-white.svg" : "/icons/acordeon-arrow.svg"} alt="flecha apertura" class={`lg:size-10 transition-all group-open:rotate-180 duration-300 ease-in-out ${whiteTheme ? "size-4" : "size-6 mr-2"}`} />
-        <span class={`font-semibold text-pretty xl:text-2xl ${whiteTheme ? "text-white text-sm" : "text-[#505050] text-base"}`}>{title}</span>
+        <img src={icon.src} alt={icon.alt} class={`size-12 xl:size-14 mr-3 lg:mr-3 ${whiteTheme ? "size-14 xl:size-20" : ""}`} />
+        <img src={whiteTheme ? "/icons/acordeon-arrow-white.svg" : "/icons/acordeon-arrow.svg"} alt="flecha apertura" class={`size-6 lg:size-10 transition-all group-open:rotate-180 duration-300 ease-in-out`} />
+        <span class={`font-semibold text-pretty text-lg xl:text-2xl ${whiteTheme ? "text-white" : "text-[#505050]"}`}>{title}</span>
     </summary>
     <p class={`mt-2 text-sm xl:text-xl group-open:animate-fade-down animate-duration-300 ${whiteTheme ? "text-white" : "text-gray-600"}`} set:html={details}>
     </p>

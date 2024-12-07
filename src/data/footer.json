@@ -72,7 +72,7 @@
             "src": "/icons/instagram.svg",
             "alt": "Instagram"
         },
-        "url": "#"
+        "url": "https://www.instagram.com/eme_argentina"
       },
       {
         "platform": "Facebook",
@@ -80,15 +80,15 @@
             "src": "/icons/facebook.svg",
             "alt": "Facebook"
         },
-        "url": "#"
+        "url": "https://www.facebook.com/emebeneficios"
       },
       {
-        "platform": "YouTube",
+        "platform": "Linkedin",
         "image": {
-            "src": "/icons/youtube.svg",
-            "alt": "YouTube"
+            "src": "/icons/linkedin.svg",
+            "alt": "Linkedin"
         },
-        "url": "#"
+        "url": "https://www.linkedin.com/company/equipo-medico-de-emergencias"
       }
     ],
     "softwareLogo": {

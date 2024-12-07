@@ -79,20 +79,20 @@
     },
     "stats": [
         {
+            "title": "Sucursales",
+            "number": 3
+        },
+        {
+            "title": "Afiliados",
+            "number": 114245
+        },
+        {
+            "title": "Vidas salvadas",
+            "number": 24055
+        },
+        {
             "title": "Pacientes atendidos",
-            "number": 12000
-        },
-        {
-            "title": "Pacientes en tratamiento",
-            "number": 8500
-        },
-        {
-            "title": "Consultas programadas",
-            "number": 4200
-        },
-        {
-            "title": "Centros médicos",
-            "number": 12
+            "number": 111971
         }
     ],
     "benefits":{

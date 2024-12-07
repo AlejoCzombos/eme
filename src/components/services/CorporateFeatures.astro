@@ -17,25 +17,26 @@ const { features } = Astro.props as { features: FeatureItem[] };
 ---
 
 <section class="w-[95%] lg:max-w-[85%] min-h-[45rem] mx-auto px-0 py-12 lg:px-0 lg:py-16">
-  <H2Title text="Garantizamos" />
+  <H2Title text="Garantizamos" class="hidden lg:block" />
   <div class="w-full cards-container flex flex-wrap justify-center gap-4 lg:gap-6">
     {
       features.map(({ id, icon, title, details }) => (
         <div class="flip-card" id={id}>
           <div class="flip-card-inner">
             <!-- Frente de la tarjeta -->
-            <div class="flip-card-front flex flex-col items-center justify-between rounded-2xl px-5 py-8 lg:px-12 lg:py-16 min-h-[350px] lg:min-h-[500px]">
-              <img src={icon.src} alt={icon.alt} class="size-24 lg:size-36" />
-              <span class="py-4 mb-4 lg:mb-0 lg:my-8 border-b w-full border-primary-500"></span>
-              <h2 class="text-xl lg:text-2xl font-bold text-center">{title}</h2>
+            <div class="flip-card-front flex flex-row lg:flex-col items-center justify-between rounded-2xl px-5 py-8 lg:px-12 lg:py-16 min-h-[220px] lg:min-h-[500px]">
+              <img src={icon.src} alt={icon.alt} class="size-20 lg:size-36" />
+              <span class="hidden lg:block my-8 border-b h-full w-full border-primary-500"></span>
+              <h2 class="text-base lg:text-2xl font-bold text-start lg:text-center ml-3 lg:ml-0 max-w-28 lg:max-w-2xl">{title}</h2>
+              <span class="lg:hidden mx-4 border-r min-h-[100px] border-primary-500"></span>
               <footer class="flex flex-col items-center mt-7">
                 <img src="/icons/services/ver.svg" alt="Ver contenido" class="size-9 lg:size-11" />
-                <p class="text-xs lg:text-sm font-light">clic para ver</p>
+                <p class="text-xs lg:text-sm font-light text-center">clic para ver</p>
               </footer>
             </div>
             <!-- Parte trasera de la tarjeta -->
-            <div class="flip-card-back flex flex-col items-center justify-between rounded-2xl px-3 py-4 lg:px-10 lg:py-12 min-h-[350px] lg:min-h-[500px]">
-              <p class="text-sm lg:text-base font-light leading-[17px] lg:leading-7">{details}</p>
+            <div class="flip-card-back flex flex-col items-center justify-between rounded-2xl px-3 py-3 lg:px-10 lg:py-12 min-h-[220px] lg:min-h-[500px]">
+              <p class="text-sm lg:text-base font-light leading-5 lg:leading-7">{details}</p>
               <footer class="flex flex-col items-center">
                 <img src="/icons/services/ocultar.svg" alt="Ver contenido" class="size-9 lg:size-11" />
                 <p class="text-xs lg:text-sm font-light">clic para ocultar</p>
@@ -58,7 +59,8 @@ const { features } = Astro.props as { features: FeatureItem[] };
 .flip-card {
   position: relative;
   width: 45%;
-  height: 350px;
+  height: 220px;
+  width: 330px;
   perspective: 1000px; /* Profundidad 3D */
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;

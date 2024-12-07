@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { SEO, button, curiosities, icon, title } from "../data/404.json";
+import PrimaryButton from '../components/UI/PrimaryButton.astro';
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<main class="mt-[135px]">
+        <section class="flex flex-col gap-10 max-w-3xl mx-auto px-10 lg:px-0 py-12 lg:py-10">
+            <h1 class="max-w-xl mx-auto text-2xl text-[#505050]">{title}</h1>
+            <img src={icon.src} alt={icon.alt} class="w-[95%] lg:max-w-xl mx-auto aspect-[1.5]" />
+            {
+                curiosities.map(curiosity => (
+                        <article class="curiosity lg:max-w-lg mx-auto space-y-5 hidden">
+                            <div>
+                                <h2 class="text-start text-2xl text-primary-500 py-2">{curiosity.title}</h2>
+                                <p set:html={curiosity.info}></p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl text-start">Fuentes:</h3>
+                                <ul>
+                                    {
+                                        curiosity.sources.map(source => (
+                                            <li>
+                                                {source}
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </article>
+                    ))
+                }
+                <PrimaryButton href={button.href} text={button.text} class="mx-auto rounded-lg"></PrimaryButton>
+        </section>
+	</main>
+</Layout>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const curiosities = document.querySelectorAll(".curiosity");
+
+    const randomIndex = Math.floor(Math.random() * curiosities.length);
+    curiosities[randomIndex].classList.remove("hidden");
+
+});
+</script>

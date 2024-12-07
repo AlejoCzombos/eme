@@ -13,14 +13,41 @@ const { stats } = Astro.props as Props;
 ---
 
 <section class="bg-primary-100/60 py-10 lg:px-0 lg:py-16">
-    <div class="grid grid-cols-2 lg:grid-cols-4 max-w-4xl m-auto gap-y-6">
-    {
-        stats.map((item) => (
-            <div class="item flex flex-col items-center gap-1 lg:gap-5 group">
-                <span class="text-3xl lg:text-5xl text-primary-600">{item.number}</span>
-                <p class="text-sm text-center group-hover:scale-110 transition-transform ease-in-out">{item.title}</p>
-            </div>
-        ))
-    }
-    </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 max-w-4xl m-auto gap-y-6">
+    {stats.map((item) => (
+      <div class="item flex flex-col items-center gap-1 lg:gap-5 group">
+        <span 
+          class="counter text-3xl lg:text-5xl text-primary-600" 
+          style={`--final-num: ${item.number};`}
+        ></span>
+        <p class="text-sm text-center">{item.title}</p>
+      </div>
+    ))}
+  </div>
 </section>
+
+<style>
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+
+  span.counter {
+    animation: counter 3s ease-in-out forwards;
+    counter-reset: num var(--num);
+  }
+
+  span.counter::after {
+    content: counter(num);
+  }
+
+  @keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: var(--final-num);
+    }
+  }
+</style>

@@ -18,7 +18,7 @@ interface Image {
 const { membership_selector } = Astro.props as Props;
 ---
 <Section class="flex flex-col items-center gap-8">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-8 w-full max-w-4xl pb-4 border-b lg:border-none border-primary-600">
     
     {
         membership_selector.map((membership) => (
@@ -28,12 +28,12 @@ const { membership_selector } = Astro.props as Props;
             >
               {
                 !membership.title ?
-                <div class="w-full h-full flex flex-col items-center justify-center gap-2 cursor-pointer">
-                  <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 p-3 object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div class="w-full h-full flex flex-col items-center justify-center gap-2 cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out">
+                  <img src={membership.image.src} alt={membership.image.alt} class="max-w-64 max-h-24 p-3 object-contain ">
                 </div>
                 :
-                <div class="w-full h-full flex justify-center items-center gap-3">
-                  <img src={membership.image.src} alt={membership.image.alt} class="min-h-24 p-3 object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div class="w-full h-full flex justify-center items-center gap-3 hover:scale-110 transition-transform duration-300 ease-in-out">
+                  <img src={membership.image.src} alt={membership.image.alt} class="p-3 max-h-24 object-contain">
                   <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3>
                 </div>
               }
@@ -44,13 +44,14 @@ const { membership_selector } = Astro.props as Props;
 
     <div class="max-w-6xl w-full bg-primary-100/60 rounded-2xl">
     {
-        membership_selector.map((membership, index) => (
+        membership_selector.map((membership) => (
             <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={membership.id}>
-                <div class="flex px-8 py-6">
-                    <div class="hidden lg:flex justify-center items-center">
-                        <img class="h-48 object-contain" src={membership.image.src} alt={membership.image.alt}>
+                <div class="flex flex-col lg:flex-row px-8 py-6">
+                    <div class="flex justify-center items-center gap-3 mx-auto">
+                        <img class="max-h-16 lg:max-h-48 lg:h-48 object-contain" src={membership.image.src} alt={membership.image.alt}>
+                        {  membership.title && <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3> }
                     </div>
-                    <span class="hidden lg:flex border-r border-primary-600 mx-6"></span>
+                    <span class="flex border-b lg:border-r border-primary-600 my-6 lg:mx-6"></span>
                     <div class="flex flex-col justify-center text-xl">
                         {
                             membership.description.split("\n").map((paragraph) => (
@@ -80,7 +81,7 @@ const { membership_selector } = Astro.props as Props;
     }
 
     .button, .active > div{
-       @apply bg-primary-100/60 rounded-2xl
+       @apply bg-primary-100/60 rounded-2xl scale-110
     }
 </style>
 

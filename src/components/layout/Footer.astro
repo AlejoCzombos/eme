@@ -27,45 +27,43 @@ import NavigationItem from '../UI/NavigationItem.astro'
 
     <div class="flex flex-wrap justify-end gap-4 lg:gap-0 w-full">
         <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
-            <NavigationItem class="font-bold" white="true" text={services.title} href={services.href} />
+            <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={services.title} href={services.href} />
             <ul class="flex flex-col gap-0.5 lg:gap-1">
             {
                 services.items.map(item => (
-                    <NavigationItem text={item.name} href={item.href} white="true" />
+                    <NavigationItem class="text-sm lg:text-base" text={item.name} href={item.href} white="true" />
                 ))
             }
             </ul>
         </div>
         
         <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
-            <NavigationItem class="font-bold" white="true" text={benefits.title} href={benefits.href} />
+            <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={benefits.title} href={benefits.href} />
             <ul class="flex flex-col gap-0.5 lg:gap-1">
             {
                 benefits.items.map(item => (
-                    <NavigationItem text={item.name} href={item.href} white="true" />
+                    <NavigationItem class="text-sm lg:text-base" text={item.name} href={item.href} white="true" />
                 ))
             }
             </ul>
         </div>
 
         <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
-            <NavigationItem class="font-bold" white="true" text={company.title} href={company.href} />
+            <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={company.title} href={company.href} />
             <ul class="flex flex-col gap-0.5 lg:gap-1">
             {
                 company.items.map(item => (
-                    <NavigationItem text={item.name} href={item.href} class="font-bold" white="true" />
+                    <NavigationItem text={item.name} href={item.href} class="font-bold text-sm lg:text-base" white="true" />
                 ))
             }
             </ul>
         </div>
 
-        <span class="lg:hidden"></span>
-
         <div class="flex flex-col col-span-2 lg:col-span-1 justify-between items-center lg:items-end lg:max-w-64 w-full gap-4 h-full">
             <div class="flex space-x-4">
                 {
                     socialMedia.map(item => (
-                        <a target='_blank' href={item.url} class="size-12 transition-transform hover:scale-125">
+                        <a target='_blank' href={item.url} class="size-11 transition-transform hover:scale-125">
                             <img src={item.image.src} alt={item.image.alt}>
                         </a>
                     ))
