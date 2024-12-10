@@ -1,0 +1,24 @@
+{
+    "SEO": {
+        "title": "EME - Policonsultorios",
+        "description": "EME es una empresa comprometida con la sociedad, por ello, hemos implementado políticas de responsabilidad social empresarial que nos permiten contribuir al bienestar de la comunidad."
+    },
+    "banner": {
+        "title": "Policonsultorios",
+        "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
+        "image": {
+            "src": "/images/policonsultorios/banner.png",
+            "alt": "Policonsultorios"
+        }
+    },
+    "search": {
+        "title": "Todos nuestros servicios a tu alcance",
+        "subtitle": {
+            "text": "Búsqueda de especialistas",
+            "icon": {
+                "src": "/icons/policonsultorio.svg",
+                "alt": "Doctor"
+            }
+        }
+    }
+}

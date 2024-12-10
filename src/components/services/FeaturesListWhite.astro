@@ -1,4 +1,5 @@
 ---
+import Breadcrumb from "../UI/Breadcrumb.astro";
 import Feature from "./Feature.astro";
 
 interface FeatureItem {
@@ -16,7 +17,8 @@ const { features } = Astro.props as { features: FeatureItem[] };
 
 
 <section class="relative px-0 py-6 lg:px-0 lg:py-8">
-    <div class="max-w-[85%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 relative z-10">
+    <div class="w-[90%] max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 relative z-10">
+      <Breadcrumb class="lg:hidden" />
         {
             features.map((item) => (
                 <Feature icon={item.icon} title={item.title} details={item.details} whiteTheme="true"/>

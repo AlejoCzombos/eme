@@ -20,7 +20,7 @@ interface Image {
 
 const { membership } = Astro.props as Props;
 ---
-<section class="flex flex-col xl:flex-row justify-center items-center w-full px-10 py-12 lg:px-0 lg:pt-14 lg:pb-24 max-w-7xl mx-auto">
+<section class="flex flex-col xl:flex-row justify-center items-center w-full px-10 py-12 lg:px-0 lg:py-8 max-w-7xl mx-auto">
     <h2 class="text-3xl max-w-sm py-10">{membership.title}</h2>
     <div class="flex flex-wrap xl:flex-nowrap gap-12 justify-center">
         <a href={membership.items[0].href}>

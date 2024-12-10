@@ -7,8 +7,8 @@
         "title": "Beneficios",
         "subtitle": "Beneficios exclusivos para nuestros afiliados",
         "image": {
-            "src": "/images/services/servicios.png",
-            "alt": "Servicios"
+            "src": "/images/benefits/banner.png",
+            "alt": "Beneficios"
         }
     },
     "membership_selector": [

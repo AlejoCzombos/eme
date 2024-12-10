@@ -12,9 +12,9 @@ export default function BenefitModal({ benefit, onClose, isOpen }) {
       >
         <button
           onClick={onClose}
-          className="size-6 absolute top-4 right-4 transition hover:scale-125 md:size-6 rotate-45 cursor-pointer"
+          className=" absolute top-4 right-4 transition hover:scale-125 md:size-6 rotate-45 cursor-pointer"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#505050" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" /></svg>
+          <svg className="size-8" xmlns="http://www.w3.org/2000/svg" fill="#505050" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" /></svg>
         </button>
         <div className="flex flex-col lg:flex-row items-center justify-start gap-6 xl:gap-12 w-full">
           <img

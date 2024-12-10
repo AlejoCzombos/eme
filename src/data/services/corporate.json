@@ -12,7 +12,7 @@
     },
     "card_overlay":{
         "title": "Planes corporativos",
-        "description": "Nuestro equipo cuenta con la experiencia de 29 años en el medio y un  destacado prestigio en el mercado, ganado por el profesionalismo y la  detallada metodología operativa aplicada a los servicios médicos. Nuestro principal objetivo es encontrar la solución adecuada a las  necesidades específicas de cada cliente asegurando así las mejores  oportunidades de contratación optimizando la relación Costo-Beneficio  para tomar las mejores decisiones en cuanto a cobertura médica para cada afiliado.",
+        "description": "Con 29 años de experiencia, EME se destaca por su prestigio, profesionalismo y <strong>metodología operativa</strong>. Nuestro objetivo es <strong>brindar soluciones personalizadas que optimicen la relación costo-beneficio para cada afiliado</strong>.",
         "icon": {
             "src": "/icons/services/servicios-corporativos.svg",
             "alt": "Planes corporativos"
@@ -31,7 +31,7 @@
         {
             "id": 2,
             "title": "Cumplir con normativas",
-            "details": "Ajustado a los requerimientos sanitarios y normativos vigentes de cada provincia donde actúa la Empresa.",
+            "details": "Ajustado a los requerimientos sanitarios y normativos vigentes de cada provincia donde actúa la Empresa.",
             "icon": {
                 "src": "/icons/services/complir_normas.svg",
                 "alt": "Cumplir con normativas"
@@ -40,7 +40,7 @@
         {
             "id": 3,
             "title": "Conocimiento del mercado",
-            "details": "Alto conocimiento del mercado nacional ya que nuestra empresa EME Equipo médico de Emergencias es socia fundadora de la RED SIEM, la Red de Emergencias Médicas más importante de Latinoamérica.",
+            "details": "Como socia fundadora de RED SIEM, EME forma parte de la red de emergencias médicas más importante de Latinoamérica.",
             "icon": {
                 "src": "/icons/services/conocimiento_mercado.svg",
                 "alt": "Conocimiento del mercado"
@@ -49,7 +49,7 @@
         {
             "id": 4,
             "title": "Filosofía de calidad",
-            "details": "Capacidad de Gerenciamiento y filosofía de Calidad Total donde la satisfacción del CLIENTE es nuestra principal preocupación. Nuestra Empresa cuenta con un Sistema de Gestión de Calidad bajo Normas ISO 9001, con acreditación y evaluación permanente de Organismos externos (IRAM).",
+            "details": "Comprometidos con la satisfacción del cliente, implementamos un Sistema de Gestión de Calidad certificado por Normas ISO 9001 y evaluado regularmente por IRAM.",
             "icon": {
                 "src": "/icons/services/filosofia_calidad.svg",
                 "alt": "Filosofía de calidad"
@@ -58,7 +58,7 @@
         {
             "id": 5,
             "title": "Antecedentes y trayectoria",
-            "details": "Antecedentes y Trayectoria, ya que desde hace 29 años prestamos servicios de manera ininterrumpida a una cartera de afiliados que hoy supera los 120.000 socios, con un volumen de 200.000 prestaciones anuales.",
+            "details": "Con 29 años de experiencia, atendemos a más de 120.000 afiliados y realizamos 200.000 prestaciones anuales.",
             "icon": {
                 "src": "/icons/services/antecedentes.svg",
                 "alt": "Antecedentes y trayectoria"

@@ -7,19 +7,26 @@ interface Props {
 interface Item {
     number: number;
     title: string;
+    icon: {
+        src: string;
+        alt: string;
+    };
 }
 
 const { stats } = Astro.props as Props;
 ---
 
-<section class="bg-primary-100/60 py-10 lg:px-0 lg:py-16">
-  <div class="grid grid-cols-2 lg:grid-cols-4 max-w-4xl m-auto gap-y-6">
+<section class="py-10 lg:px-0 lg:pt-24 lg:pb-12">
+  <div class="grid grid-cols-2 lg:grid-cols-4 max-w-6xl m-auto gap-y-6">
     {stats.map((item) => (
       <div class="item flex flex-col items-center gap-1 lg:gap-5 group">
-        <span 
-          class="counter text-3xl lg:text-5xl text-primary-600" 
-          style={`--final-num: ${item.number};`}
-        ></span>
+        <div class="flex justify-center items-center gap-3">
+          <img src={item.icon.src} alt={item.icon.alt} class="size-10 lg:size-12" />
+          <span 
+            class="counter text-3xl lg:text-5xl text-primary-600" 
+            style={`--final-num: ${item.number}; min-width: ${item.number.toString().length}ch;`}
+          ></span>
+        </div>
         <p class="text-sm text-center">{item.title}</p>
       </div>
     ))}
@@ -34,7 +41,9 @@ const { stats } = Astro.props as Props;
   }
 
   span.counter {
-    animation: counter 3s ease-in-out forwards;
+    display: inline-block;
+    text-align: center;
+    animation: counter 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
     counter-reset: num var(--num);
   }
 

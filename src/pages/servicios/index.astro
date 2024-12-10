@@ -8,7 +8,7 @@ import AdvertisingBanner from "../../components/services/AdvertisingBanner.astro
 import FeaturesListWhite from "../../components/services/FeaturesListWhite.astro";
 ---
 
-<Layout title="EME - Planes familiares" description="Para familiares y personas que buscan servicios de salud prehospitalaria confiable y accesible.">
+<Layout title={SEO.title} description={SEO.description}>
     <main class="mt-[135px] relative">
         <SectionBanner backgroundImage={banner.image} title={banner.title} quote={banner.quote} />
         <FeaturesListWhite features={features}/>

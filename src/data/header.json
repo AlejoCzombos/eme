@@ -15,15 +15,15 @@
     ],
     "navigation": [
         {
-            "text": "inicio",
+            "text": "Inicio",
             "href": "/"
         },
         {
-            "text": "servicios",
+            "text": "Servicios",
             "href": "/servicios"
         },
         {
-            "text": "beneficios",
+            "text": "Beneficios",
             "href": "/beneficios"
         },
         {
@@ -31,15 +31,15 @@
             "href": "/RSE"
         },
         {
-            "text": "franquicias",
+            "text": "Franquicias",
             "href": "/franquicias"
         },
         {
-            "text": "nosotros",
+            "text": "Nosotros",
             "href": "/nosotros"
         },
         {
-            "text": "contacto",
+            "text": "Contacto",
             "href": "/contacto"
         }
     ]

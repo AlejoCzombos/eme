@@ -1,8 +1,10 @@
 ---
 const currentPath = Astro.url.pathname
 const paths = currentPath.split("/").filter(Boolean);
+
+const {class: className} = Astro.props;
 ---
-<nav class="text-white text-base font-bold">
+<nav class:list={["text-white text-base font-bold", className]}>
       <ul class="flex space-x-2">
         <li>
           <a href="/" class="text-white hover:underline">

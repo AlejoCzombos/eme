@@ -8,14 +8,16 @@ import Benefits from '../components/home/Benefits.astro';
 import Contact from '../components/home/Contact.astro';
 
 import data from "../data/home.json";
+import AdvertisingBanner from '../components/services/AdvertisingBanner.astro';
 ---
 
 <Layout title={data.SEO.title} description={data.SEO.description}>
 	<main class="mt-[135px]">
 		<Carrousel />
-		<Plans plans={data.plans}/>
-		<Membership membership={data.membership} />
+		<Plans plans={data.plans} />
 		<Stats stats={data.stats} />
+		<AdvertisingBanner image={{src:"", alt:""}}/>
+		<Membership membership={data.membership} />
 		<Benefits title={data.benefits.title} />
 		<Contact />
 	</main>

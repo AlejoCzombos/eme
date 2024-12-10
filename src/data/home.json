@@ -51,7 +51,7 @@
         }
     ],
     "membership": {
-        "title": "Conocé nuestros beneficios exclusivos, sólo para afiliados.",
+        "title": "Clickeá para conocer nuestros beneficios exclusivos, sólo para afiliados.",
         "items": [
             {
                 "image":{
@@ -80,19 +80,35 @@
     "stats": [
         {
             "title": "Sucursales",
-            "number": 3
+            "number": 3,
+            "icon": {
+                "src": "/icons/home/stats/sucursales.svg",
+                "alt": "Sucursales"
+            }
         },
         {
             "title": "Afiliados",
-            "number": 114245
+            "number": 114245,
+            "icon": {
+                "src": "/icons/home/stats/afiliados.svg",
+                "alt": "Sucursales"
+            }
         },
         {
             "title": "Vidas salvadas",
-            "number": 24055
+            "number": 24055,
+            "icon": {
+                "src": "/icons/home/stats/vidas_salvadas.svg",
+                "alt": "Sucursales"
+            }
         },
         {
             "title": "Pacientes atendidos",
-            "number": 111971
+            "number": 111971,
+            "icon": {
+                "src": "/icons/home/stats/pacientes.svg",
+                "alt": "Sucursales"
+            }
         }
     ],
     "benefits":{

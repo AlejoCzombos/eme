@@ -21,6 +21,6 @@ const {data} = Astro.props as Props;
         <h1 class="text-xl text-white">{data.title}</h1>
     </div>
     <div class="flex items-center px-4 pt-3">
-        <p class="text-base">{data.description}</p>
+        <p class="text-base" set:html={data.description}></p>
     </div>
 </div>

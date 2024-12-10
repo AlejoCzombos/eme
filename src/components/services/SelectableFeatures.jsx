@@ -28,7 +28,7 @@ export default function SelectableFeatures({ features }) {
                 alt={feature.icon.alt}
               />
             </div>
-            <p className="text-center font-semibold text-lg group-hover:scale-105 transition-transform duration-300 ease-in-out">
+            <p className="text-center font-semibold text-sm lg:text-base group-hover:scale-105 transition-transform duration-300 ease-in-out">
               {feature.title.toLocaleUpperCase()}
             </p>
           </div>
