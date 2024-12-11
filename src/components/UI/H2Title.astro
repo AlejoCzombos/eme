@@ -2,4 +2,4 @@
 const { text, line = true, class: className, ...props } = Astro.props as { text: string, line: boolean, class: string };
 ---
 
-<h2 class={`p-2 mb-10 ${line ? "border-b-2 border-primary-500" : ""} ${className}`} {...props} >{text.toLocaleUpperCase()}</h2>
+<h2 class={`p-2 mb-10 ${line ? "border-b-2 border-primary-500" : ""} ${className}`} {...props} >{text}</h2>

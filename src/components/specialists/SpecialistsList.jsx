@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Loader from "../UI/Loader";
 import SpecialistsTable from "./SpecialistsTable";
 import Dropdown from "../UI/Dropdown";
+import EmptyState from "../UI/EmptyState";
 
 export default function SpecialistsList({ data }) {
   const [specialists, setSpecialists] = useState([]);
@@ -51,10 +52,10 @@ export default function SpecialistsList({ data }) {
   };
 
   return (
-    <section className="px-5 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out">
+    <section className="px-5 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto">
+      <h2 class="text-[#505050] pb-10">{data.title}</h2>
         <div className="grid grid-cols-2 pb-8">
             <div className="flex flex-col gap-8">
-                <h2 class="text-[#505050]">{data.title}</h2>
                 <div className="bg-primary-600 rounded-2xl p-2 px-4 flex items-center gap-10">
                     <img src={data.subtitle.icon.src} alt={data.subtitle.icon.alt} className="size-10" />
                     <h3 className="text-white text-2xl">{data.subtitle.text}</h3>
@@ -77,10 +78,9 @@ export default function SpecialistsList({ data }) {
                 </div>
             </div>
             <div className="flex justify-center items-center">
-            
+                <img src={data.logo.src} alt={data.logo.alt} className="object-contain max-h-40" />
             </div>
         </div>
-      
 
       {/* Tabla de especialistas */}
       {loading ? (
@@ -88,7 +88,11 @@ export default function SpecialistsList({ data }) {
           <Loader />
         </div>
       ) : (
-        <SpecialistsTable specialists={filteredSpecialists} />
+        filteredSpecialists.length === 0 ? (
+          <EmptyState text={"Pronto podrás ver los horarios de nuestros especialistas."} />
+        ) : (
+          <SpecialistsTable specialists={filteredSpecialists} />
+        )
       )}
     </section>
   );

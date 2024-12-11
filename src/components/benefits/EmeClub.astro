@@ -1,4 +1,5 @@
 ---
+import H2Title from "../UI/H2Title.astro";
 import BenefitsList from "./BenefitsList";
 
 const { eme_club } = Astro.props;
@@ -6,6 +7,7 @@ const { eme_club } = Astro.props;
 const id = eme_club.id + "_content";
 ---
 
-<section id={id} class="px-5 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
+<section id={id} class="px-5 py-12 lg:px-0 lg:py-8 max-w-6xl m-auto content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
+    <H2Title text="Encontrá tus beneficios por categorías:" line={false}></H2Title>
     <BenefitsList client:only="react" />
 </section>

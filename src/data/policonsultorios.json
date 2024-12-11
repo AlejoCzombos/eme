@@ -16,9 +16,14 @@
         "subtitle": {
             "text": "Búsqueda de especialistas",
             "icon": {
-                "src": "/icons/policonsultorio.svg",
+                "src": "/icons/policonsultorios.svg",
                 "alt": "Doctor"
             }
+        },
+        "logo": {
+            "src": "/images/policonsultorios/logo.png",
+            "alt": "Policonsultorios"
         }
+
     }
 }

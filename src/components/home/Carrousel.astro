@@ -20,8 +20,13 @@ const swiper = new Swiper('.swiper', {
   centeredSlidesBounds: true,
   slidesPerView: 1,
   spaceBetween: 0,
-  speed: 900,
+  speed: 800,
   allowTouchMove: false,
+  // breakpoints: {
+  //   1024: {
+  //     allowTouchMove: false,
+  //   }
+  // },
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -48,23 +53,33 @@ const swiper = new Swiper('.swiper', {
           <img src={image.default.src} alt="" class="w-full h-full object-cover">
           
           {/* Text and buttons */}
+          {/* <div class="carousel-text absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-1 lg:gap-10">
+            <h2 class="text-white text-center text-xl lg:text-4xl">AFILIATE</h2>
+            <p class="text-white text-xs lg:text-2xl text-center max-w-[80%] lg:max-w-5xl">Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación, adaptado a tus necesidades.</p>
+            <TertiaryButton text="CUIDÁ LO QUE MÁS NECESITAS" href="/servicios" class="text-xs lg:text-2xl"/>
+            <div id="gradient-carousel" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent to-80% pointer-events-none"></div>
+          </div> */}
+        </div>
+      ))
+    }
+      <div id="swiper-slide-banner" class="swiper-slide h-auto rounded overflow-hidden relative">
+          <img src="/images/home/carousel/afiliate.png" alt="Afiliate a EME club" class="w-full h-full object-cover">
+          
+          {/* Text and buttons */}
           <div class="carousel-text absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-1 lg:gap-10">
             <h2 class="text-white text-center text-xl lg:text-4xl">AFILIATE</h2>
             <p class="text-white text-xs lg:text-2xl text-center max-w-[80%] lg:max-w-5xl">Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación, adaptado a tus necesidades.</p>
             <TertiaryButton text="CUIDÁ LO QUE MÁS NECESITAS" href="/servicios" class="text-xs lg:text-2xl"/>
             <div id="gradient-carousel" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent to-80% pointer-events-none"></div>
           </div>
-
         </div>
-      ))
-    }
   </div>
   <div class="swiper-pagination-carousel"></div>
   <div class="swiper-button-prev transform rotate-180 hover:scale-125 transition-transform duration-300 ease-in-out">
-    <img class="size-6 lg:size-28" src="/icons/swiperBenefits.svg" alt="Icono siguiente imagen">
+    <img class="size-6 lg:size-28" src="/icons/swiperCarousel.svg" alt="Icono siguiente imagen">
   </div>
   <div class="swiper-button-next hover:scale-125 transition-transform duration-300 ease-in-out">
-    <img class="size-6 lg:size-28" src="/icons/swiperBenefits.svg" alt="Icono anterior imagen">
+    <img class="size-6 lg:size-28" src="/icons/swiperCarousel.svg" alt="Icono anterior imagen">
   </div>
 
 </section>

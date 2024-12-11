@@ -7,7 +7,7 @@ import SpecialistsList from "../../components/specialists/SpecialistsList";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-    <main class="mt-[135px]">
+    <main class="mt-[135px] min-h-screen min-h-screen">
         <SectionBanner backgroundImage={banner.image} title={banner.title} quote={banner.quote} />
         <SpecialistsList data={search} client:only="react" />
     </main>

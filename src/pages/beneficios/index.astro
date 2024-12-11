@@ -11,7 +11,7 @@ import MasBeneficios from "../../components/benefits/MasBeneficios.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-    <main class="mt-[135px] relative">
+    <main class="mt-[135px] min-h-screen relative">
         <SectionBanner backgroundImage={banner.image} title={banner.title} subtitle={banner.subtitle} />
         <AdvertisingBanner image={{src: "", alt: ""}} />
         <MembershipSelector membership_selector={membership_selector} />

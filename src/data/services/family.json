@@ -63,7 +63,7 @@
             "title": "Vehículo Protegido",
             "details": "Destinado a la atención médica pre hospitalaria que pudieran sufrir los ocupantes de un vehículo protegido y los terceros no transportados involucrados, en ocasión de un accidente de tránsito vehicular.",
             "icon": {
-                "src": "/icons/services/traslado.svg",
+                "src": "/icons/services/vehiculo.svg",
                 "alt": "Vehículo Protegido"
             }
         }

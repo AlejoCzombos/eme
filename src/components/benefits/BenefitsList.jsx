@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import BenefitCard from "./BenefitCard";
 import BenefitModal from "./BenefitModal";
 import Loader from "../UI/Loader";
+import EmptyState from "../UI/EmptyState";
+import Dropdown from "../UI/Dropdown";
 
 export default function BenefitsList() {
   const [benefits, setBenefits] = useState([]);
@@ -67,31 +69,21 @@ export default function BenefitsList() {
   return (
     <>
       {/* Formulario de búsqueda */}
-      <div className="mb-6 flex flex-col md:flex-row gap-4 lg:gap-8 max-w-3xl mx-auto">
-        <select
+      <div className="grid grid-cols-2 gap-4 lg:gap-8 max-w-3xl mx-auto pb-8">
+        <Dropdown
+          label="Seleccionar localidad"
+          options={localities}
           value={selectedLocality}
-          onChange={(e) => setSelectedLocality(e.target.value)}
-          className="border border-gray-300 rounded-lg p-2 w-full md:w-1/2 bg-white"
-        >
-          <option value="">Todas las localidades</option>
-          {localities.map((locality) => (
-            <option key={locality.id} value={locality.id}>
-              {locality.name}
-            </option>
-          ))}
-        </select>
-        <select
+          onChange={setSelectedLocality}
+          placeholder="Todas las localidades"
+          />
+        <Dropdown
+          label="Seleccionar categoría"
+          options={categories}
           value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="border border-gray-300 rounded-lg p-2 w-full md:w-1/2 bg-white"
-        >
-          <option value="">Todas las categorías</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
+          onChange={setSelectedCategory}
+          placeholder="Todas las categorías"
+          />
       </div>
 
       {/* Listado de beneficios */}
@@ -101,6 +93,12 @@ export default function BenefitsList() {
             <Loader />
           </div>
         ) : (
+
+          filteredBenefits.length === 0 ? (
+            <div className="col-span-full flex items-center justify-center h-full">
+              <EmptyState text={"Pronto tendremos más beneficios."} />
+          </div>
+          ) :
           filteredBenefits.map((benefit) => (
             <BenefitCard
               key={benefit.id}
