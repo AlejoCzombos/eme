@@ -3,7 +3,10 @@ import Feature from "../services/Feature.astro";
 
 interface Props {
     politics: {
-        title: string;
+        title: {
+            text: string;
+            icon: Image;
+        }
         features: {
             title: string;
             details: string;
@@ -21,17 +24,19 @@ const { title, features } = politics;
 ---
 
 
-<section class="relative px-10 my-5 lg:px-0 lg:my-16">
-    <div class="relative w-full z-10">
-        <h2 class="max-w-6xl mx-auto py-6 text-white relative z-10">{title.toLocaleUpperCase()}</h2>
-        <div slot="background" id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-[#0075D7]"></div>
-    </div>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 relative z-10">
+<section class="relative my-10">
+    <header class="relative w-full px-10 lg:px-0 z-10 bg-[#0075D7]">
+        <div class="max-w-6xl mx-auto py-4 flex justify-start items-center gap-5">
+            <h2 class="text-white relative z-10 text-start">{title.text.toLocaleUpperCase()}</h2>
+            <img src={title.icon.src} alt={title.icon.alt} class="size-10 relative z-10">
+        </div>
+    </header>
+    <footer class="max-w-6xl mx-auto px-6 py-4 lg:py-0 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-2 relative z-10">
         {
             features.map((item) => (
                 <Feature icon={item.icon} title={item.title} details={item.details}/>
             ))
         }
-    </div>
-    <div slot="background" id="gradient" class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-primary-100/60 z-0"></div>
+    </footer>
+    <div class="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-primary-100/60 z-0"></div>
 </section>

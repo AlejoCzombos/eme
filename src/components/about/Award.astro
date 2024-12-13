@@ -1,0 +1,39 @@
+---
+import WhiteFeature from '../benefits/WhiteFeature.astro';
+import H2Title from '../UI/H2Title.astro';
+import Section from '../UI/Section.astro';
+
+interface Props {
+    data: {
+        title: string;
+        features: {
+            title: string;
+            details: string;
+            list?: string[];
+            icon: Image;
+        }[];
+    }
+}
+interface Image {
+    src: string;
+    alt: string;
+}
+
+const { data } = Astro.props as Props;
+---
+<script>
+import Observer from 'tailwindcss-intersect';
+
+Observer.start();
+</script>
+
+<Section>
+    <H2Title text={data.title} line={false} />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {
+            data.features.map(({ title, details, icon, list }) => (
+                <WhiteFeature title={title} details={details} icon={icon} list={list} />
+            ))
+        }
+    </div>
+</Section>

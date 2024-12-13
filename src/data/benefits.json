@@ -7,7 +7,7 @@
         "title": "Beneficios",
         "subtitle": "Beneficios exclusivos para nuestros afiliados",
         "image": {
-            "src": "/images/benefits/banner.png",
+            "src": "/images/benefits/banner.webp",
             "alt": "Beneficios"
         }
     },
@@ -16,7 +16,7 @@
         "id": "eme_club",
         "description": "<strong>Todo un mundo de experiencias nuevas que le permitirá disfrutar de privilegios exclusivos y aprovechar los mejores beneficios cuando realice sus compras diarias en los distintos comercios adheridos que lo integran.</strong>\nA través de su <strong>credencial digital de Beneficios</strong>, el afiliado goza de importantes descuentos especiales en los más variados productos y servicios, desde indumentarias y artículos del hogar, hasta viajes, cenas, regalos y mucho más.",
         "image": {
-          "src": "/images/home/membership/eme_club.png",
+          "src": "/images/home/membership/eme_club.webp",
           "alt": "Eme Club"
         }
       },
@@ -24,7 +24,7 @@
         "id": "eme_salud",
         "description": "La optima relación <strong>costo-beneficio</strong> queda demostrada totalmente con este novedoso sistema ya que el socio EME abona cualquier consulta, estudio o práctica, solo en la medida que la utilice y con aranceles muy convenientes.",
         "image": {
-          "src": "/images/home/membership/eme_salud.png",
+          "src": "/images/home/membership/eme_salud.webp",
           "alt": "Eme Salud"
         }
       },
@@ -94,21 +94,21 @@
           {
             "description": "Adquiera la Orden de Consulta en las oficinas de EME o a su cobrador.",
             "image": {
-              "src": "/images/benefits/paso_1.png",
+              "src": "/images/benefits/paso_1.webp",
               "alt": "Orden de Consulta"
             }
           },
           {
             "description": "Concurra con dicha orden al especialista elegido.",
             "image": {
-              "src": "/images/benefits/paso_2.png",
+              "src": "/images/benefits/paso_2.webp",
               "alt": "Turno en consultorio"
             }
           },
           {
             "description": "Si el médico especialista le indicara algún estudio complementario  consulte en las oficinas de EME cuáles son los Institutos de Prácticas conveniados.",
             "image": {
-              "src": "/images/benefits/paso_3.png",
+              "src": "/images/benefits/paso_3.webp",
               "alt": "Estudio complementario"
             }
           }

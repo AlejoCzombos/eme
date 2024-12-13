@@ -7,7 +7,7 @@
         "title": "Nosotros",
         "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
         "image": {
-            "src": "/images/services/servicios.png",
+            "src": "/images/services/servicios.webp",
             "alt": "Nosotros"
         }
     },
@@ -16,14 +16,14 @@
         "resume": "EQUIPO MÉDICO DE EMERGENCIAS es una Empresa de  Asistencia Medica Extrahospitalaria dirigida a grupos familiares,  empresas públicas y privadas, entidades intermedias y gubernamentales.",
         "description": "Fundada en el año 1986 en la ciudad de Resistencia, se convierte en el  primer servicio privado de Emergencias de la Provincia del Chaco. En la  época, adopta características similares a los avanzados sistemas que  operaban en las ciudades más importantes del país con el objeto de  brindar cobertura extrahospitalaria en las localidades de Resistencia,  Barranqueras, Puerto Vilelas y Fontana. El espíritu dinámico, creativo y de constante superación de los socios  fundadores, los doctores Jorge Ángel Yaya y Jorge Rodríguez Revigliono,  se incorpora desde el inicio a la Organización determinando hitos en el  desarrollo institucional.",
         "image": {
-            "src": "/images/about/historia.png",
+            "src": "/images/about/historia.webp",
             "alt": "Nuestra Historia"
         }
     },
     "mision_vision": {
         "mision": {
             "title": "Misión",
-            "description": "Familias y personas individuales que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar.",
+            "description": "Como empresa de salud, nos comprometemos a ofrecer servicios innovadores que satisfagan y superen las expectativas de los clientes y  beneficiarios, cumpliendo con las normas legales y reglamentarias  vigentes y los estándares de calidad establecidos, haciendo un uso  eficiente de los recursos en un marco estrictamente ético y que estimule la mejora continua y el desarrollo de nuestro personal.",
             "icon": {
                 "src": "/icons/about/mision.svg",
                 "alt": "Misión"
@@ -31,7 +31,7 @@
         },
         "vision": {
             "title": "Visión",
-            "description": "Familias y personas individuales que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar.",
+            "description": "Ser una empresa modelo, líder y referente en el campo de la salud en los mercados que deba desempeñarse, proporcionando servicios que mejoren la calidad de vida de la población asistida.",
             "icon": {
                 "src": "/icons/about/vision.svg",
                 "alt": "Visión"
@@ -86,7 +86,13 @@
         ]
     },
     "politics": {
-        "title": "Políticas de Calidad",
+        "title": {
+            "text": "Política de Calidad",
+            "icon": {
+                "src": "/icons/about/politica_calidad.svg",
+                "alt": "Política de Calidad"
+            }
+        },
         "features": [
             {
                 "title": "Calidad",
@@ -126,6 +132,34 @@
                 "icon": {
                     "src": "/icons/about/urgencias_medicas.svg",
                     "alt": "Responsabilidad"
+                }
+            }
+        ]
+    },
+    "award": {
+        "title": "Reconocimientos a EME",
+        "features": [
+            {
+                "title": "Certificación ISO",
+                "details": "<strong>EQUIPO MEDICO DE EMERGENCIAS S.R.L., (EME)</strong>, desarrolló y  mantiene implementado de manera ininterrumpida desde el año 2002, un  <strong>Sistema de Gestión de Calidad (S.G.C) basado en la Norma Internacional  “ISO 9001”</strong>, con el objeto de tener bajo control los servicios de  asistencia extrahospitalaria, para grupos familiares y empresas, en las  sucursales de las ciudades de Resistencia y Corrientes. Contar con una certificación conforme a esta norma es de  suma importancia ya que, en ella, se consideran todos los <strong>elementos con  los que debe cumplir una empresa para tener un sistema efectivo que le  permita administrar y mejorar la calidad de los servicios.</strong><br>Implementar y mantener un SGC permite a la organización disponer de:<br><br>",
+                "list": [
+                    "Una política que define su compromiso con la calidad.",
+                    "Objetivos claros a lograr.",
+                    "Documentación para controlar y mejorar los procesos críticos.",
+                    "La capacitación y calificación de los empleados.",
+                    "Prevenir y detectar fallas y actuar de forma apropiada."
+                ],
+                "icon": {
+                    "src": "/icons/about/certificado_iso.svg",
+                    "alt": "Premio a la Excelencia"
+                }
+            },
+            {
+                "title": "Premio a la Calidad",
+                "details": "<strong>EQUIPO MEDICO DE EMERGENCIAS</strong> (Sucursales Resistencia y Corrientes) recibió el <strong>Premio Provincial a la Calidad para el Sector Público y Privado</strong>, Edición 2014, ganador en la Categoría IV, Sector Privado  (Prestadores de Servicio) por su destacado desempeño conforme al Modelo  para una Gestión de Calidad. El premio tiene como antecedente al Premio Nacional a la Calidad y fue instituido en la Provincia del Chaco por Decreto Nº  2787/12. Es un reconocimiento público a Organizaciones Públicas y  Privadas cuyo desempeño merece ser valorado y tomado como referencia  para el mejoramiento de todas las actividades que se desarrollen en la  Provincia, estimulando la modernización e innovación de los procesos  organizacionales logrando con ello elevar el nivel de la sociedad en su  conjunto.",
+                "icon": {
+                    "src": "/icons/about/premio_calidad.svg",
+                    "alt": "Premio a la Excelencia"
                 }
             }
         ]

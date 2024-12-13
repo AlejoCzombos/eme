@@ -1,6 +1,6 @@
 {
     "logo": {
-      "src": "/images/footer/logo_footer.png",
+      "src": "/images/footer/logo_footer.webp",
       "alt": "Logo eme"
     },
     "services": {
@@ -92,7 +92,7 @@
       }
     ],
     "softwareLogo": {
-      "src": "/images/footer/lav_logo.png",
+      "src": "/images/footer/lav_logo.webp",
       "alt": "Logo de Software",
       "url": "https://www.linkedin.com/company/lav-ux/" 
     }

@@ -21,14 +21,14 @@ const { company_values } = Astro.props as Props;
 const { title, values } = company_values;
 ---
 
-<section class="px-10 py-12 lg:px-0 lg:py-16 max-w-7xl m-auto">
-    <H2Title text={title} line={false} class="text-primary-500" />
-    <div class="flex flex-wrap justify-center gap-12">
+<section class="px-10 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto">
+    <H2Title text={title} line={false} />
+    <div class="flex flex-wrap justify-center gap-10 lg:gap-14">
         {
             values.map((value) => (
-                <div class="flex flex-col items-center w-full max-w-[10.8rem] gap-8 group">
-                <img class="size-28 group-hover:-translate-y-5 transition-transform duration-300 ease-in-out" src={value.icon.src} alt={value.icon.alt} />
-                <p class="text-center font-bold text-2xl group-hover:scale-105 transition-transform duration-300 ease-in-out">{value.title}</p>
+            <div class="flex flex-col items-center w-full max-w-32 lg:max-w-[8rem] gap-4 lg:gap-8 group">
+                <img class="size-20 lg:size-28 group-hover:-translate-y-5 transition-transform duration-300 ease-in-out" src={value.icon.src} alt={value.icon.alt} />
+                <h3 class="text-center font-bold group-hover:scale-105 transition-transform duration-300 ease-in-out">{value.title}</h3>
             </div>
             ))
         }

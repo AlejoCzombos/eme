@@ -7,7 +7,7 @@
         "title": "Policonsultorios",
         "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
         "image": {
-            "src": "/images/policonsultorios/banner.png",
+            "src": "/images/policonsultorios/banner.webp",
             "alt": "Policonsultorios"
         }
     },
@@ -21,7 +21,7 @@
             }
         },
         "logo": {
-            "src": "/images/policonsultorios/logo.png",
+            "src": "/images/policonsultorios/logo.webp",
             "alt": "Policonsultorios"
         }
 

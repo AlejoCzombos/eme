@@ -3,13 +3,14 @@ interface FeatureItem {
   icon: Icon;
   title: string;
   details: string;
+  list?: string[];
 }
 interface Icon {
   src: string;
   alt: string;
 }
 
-const { icon, title, details } = Astro.props as FeatureItem
+const { icon, title, details, list} = Astro.props as FeatureItem
 ---
 <details id="question" class="group p-5 px-5 xl:px-10 rounded-3xl bg-white">
     <summary class="flex items-center justify-around cursor-pointer">
@@ -17,9 +18,8 @@ const { icon, title, details } = Astro.props as FeatureItem
         <span class="font-bold flex-grow text-lg xl:text-xl text-[#545F71]">{title.toLocaleUpperCase()}</span>
         <img src="/icons/benefits/flecha.svg" alt="flecha apertura" class="size-10 transition-all group-open:rotate-180 duration-300 ease-in-out" />
     </summary>
-    <p class="mt-2 text-lg xl:text-xl group-open:animate-fade-down animate-duration-300">
-        {details}
-    </p>
+    <p class="mt-2 text-lg xl:text-xl group-open:animate-fade-down animate-duration-300" set:html={details}></p>
+    { list && <ol class="list-decimal list-inside text-lg xl:text-xl">{ list.map((text) => <li>{text}</li>) }</ol> }
 </details>
 
 <style>

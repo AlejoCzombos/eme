@@ -1,9 +1,7 @@
 ---
-import data from "../../data/home.json";
-import PrimaryButton from "../UI/PrimaryButton.astro";
-
 interface Props {
     plans : Plan[];
+    class : String;
 }
 
 interface Plan {
@@ -17,10 +15,10 @@ interface Image {
     alt: string;
 }
 
-const { plans } = Astro.props as Props;
+const { plans, class : className } = Astro.props as Props;
 ---
 
-<section class="grid md:grid-cols-4 grid-cols-1">
+<section class:list={["grid md:grid-cols-4 grid-cols-1", className]}>
     {
         plans.map((plan) => (
             <a href={plan.href} class="plan relative h-36 xl:h-[22rem] w-full group overflow-hidden">

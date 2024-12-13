@@ -1,12 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-import { SEO, banner, company_values, history, mision_vision, politics } from "../../data/about.json";
+import { SEO, banner, company_values, history, mision_vision, politics, award } from "../../data/about.json";
 import SectionBanner from "../../components/services/SectionBanner.astro";
 import Hisotry from "../../components/about/Hisotry.astro";
 import MisionVision from "../../components/about/MisionVision.astro";
 import CompanyValues from "../../components/about/CompanyValues.astro";
 import Politics from "../../components/about/Politics.astro";
+import Award from "../../components/about/Award.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -16,5 +17,6 @@ import Politics from "../../components/about/Politics.astro";
         <MisionVision mision_vision={mision_vision} />
         <CompanyValues company_values={company_values} />
         <Politics politics={politics} />
+        <Award data={award} />
     </main>
 </Layout>

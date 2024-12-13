@@ -7,7 +7,7 @@
         "title": "Servicios",
         "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
         "image": {
-            "src": "/images/services/servicios.png",
+            "src": "/images/services/servicios.webp",
             "alt": "Servicios"
         }
     },
@@ -83,7 +83,7 @@
             {
                 "title": "Servicios familiares",
                 "image": {
-                    "src": "/images/home/services/servicios-familiares.png",
+                    "src": "/images/home/services/servicios-familiares.webp",
                     "alt": "Servicios<br/>familiares"
                 },
                 "href": "/servicios/familiares",
@@ -93,7 +93,7 @@
             {
                 "title": "Servicios empresariales",
                 "image": {
-                    "src": "/images/home/services/servicios-empresariales.png",
+                    "src": "/images/home/services/servicios-empresariales.webp",
                     "alt": "Servicios<br>empresariales"
                 },
                 "href": "/servicios/empresariales",
@@ -103,7 +103,7 @@
             {
                 "title": "Servicios corporativos",
                 "image": {
-                    "src": "/images/home/services/servicios-corporativos.png",
+                    "src": "/images/home/services/servicios-corporativos.webp",
                     "alt": "Servicios<br>corporativos"
                 },
                 "href": "/servicios/corporativos",

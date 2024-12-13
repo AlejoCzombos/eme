@@ -4,15 +4,19 @@ import Layout from "../../layouts/Layout.astro";
 import { SEO, banner, features, service_list } from "../../data/services/index.json";
 import SectionBanner from "../../components/services/SectionBanner.astro";
 import ServiceList from "../../components/services/ServiceList.astro";
+import Plans from "../../components/home/Plans.astro";
 import AdvertisingBanner from "../../components/services/AdvertisingBanner.astro";
 import FeaturesListWhite from "../../components/services/FeaturesListWhite.astro";
+
+import data from "../../data/home.json";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
     <main class="mt-[135px] min-h-screen relative">
         <SectionBanner backgroundImage={banner.image} title={banner.title} quote={banner.quote} />
         <FeaturesListWhite features={features}/>
-        <ServiceList services={service_list.services}/>
-        <AdvertisingBanner image={{src:"/images/publicidad.png", alt:"publicidad aplicacion EME para teléfonos"}} />
+        <Plans plans={data.plans} class="lg:hidden"/>
+        <ServiceList data={service_list}/>
+        <AdvertisingBanner image={{src:"/images/publicidad.webp", alt:"publicidad aplicacion EME para teléfonos"}} />
     </main>
 </Layout>

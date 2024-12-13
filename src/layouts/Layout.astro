@@ -20,7 +20,7 @@ const { title, description } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preload" as="image" href="/logo.png" />
+		<link rel="preload" as="image" href="/logo.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
@@ -41,10 +41,10 @@ const { title, description } = Astro.props;
 			@apply text-4xl xl:text-6xl
 		}
 		h2 {
-			@apply text-xl xl:text-2xl
+			@apply text-2xl lg:text-3xl
 		}
 		h3 {
-			@apply text-2xl xl:text-xl
+			@apply text-lg xl:text-xl
 		}
 		h1, h2, h3, h4, h5, h6 {
 			@apply text-[#505050] font-bold text-center xl:text-start
