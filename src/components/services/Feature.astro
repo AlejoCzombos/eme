@@ -3,6 +3,7 @@ interface FeatureItem {
   icon: Icon;
   title: string;
   details: string;
+  list?: string[];
   whiteTheme?: boolean;
 }
 interface Icon {
@@ -10,7 +11,7 @@ interface Icon {
   alt: string;
 }
 
-const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
+const { icon, title, details, list, whiteTheme } = Astro.props as FeatureItem
 ---
 <details id="question" class={`group w-full p-3 lg:p-5 rounded-2xl ${whiteTheme ? "white" : ""} `}>
     <summary class="flex items-center cursor-pointer">
@@ -18,8 +19,8 @@ const { icon, title, details, whiteTheme } = Astro.props as FeatureItem
         <img src={whiteTheme ? "/icons/acordeon-arrow-white.svg" : "/icons/acordeon-arrow.svg"} alt="flecha apertura" class={`size-6 lg:size-10 transition-all group-open:rotate-180 duration-300 ease-in-out`} />
         <span class={`font-semibold text-pretty text-lg xl:text-xl ${whiteTheme ? "text-white" : "text-[#505050]"}`}>{title}</span>
     </summary>
-    <p class={`mt-2 text-sm xl:text-xl group-open:animate-fade-down animate-duration-300 ${whiteTheme ? "text-white" : "text-gray-600"}`} set:html={details}>
-    </p>
+    <p class={`mt-2 text-sm xl:text-xl group-open:animate-fade-down animate-duration-300 ${whiteTheme ? "text-white" : "text-gray-600"}`} set:html={details}></p>
+    { list && <ol class="list-disc list-inside mt-4 text-gray-600 text-sm xl:text-xl group-open:animate-fade-down animate-duration-300">{ list.map((text) => <li>{text}</li>) }</ol> }
 </details>
 
 <style>

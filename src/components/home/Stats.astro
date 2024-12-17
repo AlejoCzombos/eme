@@ -14,6 +14,11 @@ interface Item {
 }
 
 const { stats } = Astro.props as Props;
+
+const formatNumber = (number: number) => {
+  const numberFormat = new Intl.NumberFormat('es-ES');
+  return numberFormat.format(number);
+};
 ---
 
 <section class="py-10 lg:px-0 lg:pt-24 lg:pb-12">
@@ -23,8 +28,9 @@ const { stats } = Astro.props as Props;
         <div class="flex justify-center items-center gap-3">
           <img src={item.icon.src} alt={item.icon.alt} class="size-10 lg:size-12" />
           <span 
-            class="counter text-3xl lg:text-5xl text-primary-600" 
-            style={`--final-num: ${item.number}; min-width: ${item.number.toString().length}ch;`}
+            class="counter text-3xl lg:text-5xl text-primary-600"
+            data-number={item.number}
+            style={`min-width: ${formatNumber(item.number).toString().length}ch;`}
           ></span>
         </div>
         <p class="text-sm text-center">{item.title}</p>
@@ -33,7 +39,58 @@ const { stats } = Astro.props as Props;
   </div>
 </section>
 
-<style>
+<script>
+  // Función para animar un número con formato
+  function animateNumber(counter) {
+    const finalValue = parseInt(counter.getAttribute('data-number'), 10); // Obtén el valor final desde `data-number`
+    const baseDuration = 1000; // Duración base en milisegundos para números pequeños
+    const maxDuration = 4000; // Máxima duración para números grandes
+    const duration = Math.min(maxDuration, baseDuration + Math.log10(finalValue) * 400); // Ajusta duración según el número
+    const frameRate = 1000 / 40; // 60 fps
+    const steps = duration / frameRate; // Total de pasos en la animación
+    const increment = finalValue / steps; // Incremento por paso
+    let currentValue = 0;
+
+    const numberFormatter = new Intl.NumberFormat('es-ES'); // Formato con separadores de miles
+
+    const updateCounter = () => {
+      currentValue += increment;
+      if (currentValue >= finalValue) {
+        currentValue = finalValue; // Asegúrate de no exceder el valor final
+        clearInterval(timer); // Detén la animación
+      }
+      counter.textContent = numberFormatter.format(Math.floor(currentValue)); // Formatea el número
+    };
+
+    const timer = setInterval(updateCounter, frameRate); // Actualiza cada frame
+  }
+
+  // Configurar Intersection Observer
+  function setupIntersectionObserver() {
+    const counters = document.querySelectorAll('.counter');
+    const observerOptions = {
+      root: null, // Observa dentro de la ventana del navegador
+      threshold: 0.5 // Al menos el 50% de un contador debe ser visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      // Si al menos uno es visible, animar todos los contadores
+      const isAnyVisible = entries.some(entry => entry.isIntersecting);
+      if (isAnyVisible) {
+        counters.forEach((counter) => animateNumber(counter)); // Inicia la animación para todos
+        observer.disconnect(); // Detén la observación una vez que se activa
+      }
+    }, observerOptions);
+
+    // Observa el primer contador (con suficiente para detectar visibilidad)
+    counters.forEach((counter) => observer.observe(counter));
+  }
+
+  // Inicializa cuando la página cargue
+  window.addEventListener('DOMContentLoaded', setupIntersectionObserver);
+</script>
+
+<!-- <style>
   @property --num {
     syntax: "<integer>";
     initial-value: 0;
@@ -59,4 +116,4 @@ const { stats } = Astro.props as Props;
       --num: var(--final-num);
     }
   }
-</style>
+</style> -->

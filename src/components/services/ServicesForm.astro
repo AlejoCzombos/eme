@@ -1,0 +1,10 @@
+---
+import Section from "../UI/Section.astro";
+import ServiceContactForm from "./ServiceContactForm";
+
+const {services} = Astro.props
+---
+
+<Section>
+    <ServiceContactForm client:only="react" servicesOptions={services} />
+</Section>

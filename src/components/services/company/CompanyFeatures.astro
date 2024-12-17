@@ -1,7 +1,7 @@
 ---
-import H2Title from "../UI/H2Title.astro";
-import Section from "../UI/Section.astro";
-import SelectableFeatures from "./SelectableFeatures";
+import H2Title from "../../UI/H2Title.astro";
+import Section from "../../UI/Section.astro";
+import SelectableFeatures from "../company/SelectableFeatures";
 
 interface FeatureItem {
   id: string;
@@ -29,7 +29,7 @@ const { feature_selector } = Astro.props as { feature_selector: FeatureItem[] };
                     data-target={id}
                 >
                     <img src={icon.src} alt={icon.alt} class="mr-3 size-16" />
-                    <h2 class="font-semibold text-pretty">{title}</h2>
+                    <h3 class="font-semibold text-pretty">{title}</h3>
                 </button>
             ))
         }

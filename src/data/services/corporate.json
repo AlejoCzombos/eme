@@ -31,7 +31,7 @@
         {
             "id": 2,
             "title": "Cumplir con normativas",
-            "details": "Ajustado a los requerimientos sanitarios y normativos vigentes de cada provincia donde actúa la Empresa.",
+            "details": "Ajustado a los requerimientos sanitarios y normativos vigentes de cada provincia donde actúa la Empresa.",
             "icon": {
                 "src": "/icons/services/complir_normas.svg",
                 "alt": "Cumplir con normativas"

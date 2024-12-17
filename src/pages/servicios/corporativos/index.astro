@@ -2,10 +2,13 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import { SEO, banner, features, card_overlay } from "../../../data//services/corporate.json";
-import CorporateFeatures from "../../../components/services/CorporateFeatures.astro";
+import CorporateFeatures from "../../../components/services/corporate/CorporateFeatures.astro";
 import SectionBanner from "../../../components/services/SectionBanner.astro";
 import BannerCard from "../../../components/services/BannerCard.astro";
 import BannerCardMobile from "../../../components/services/BannerCardMobile.astro";
+import ServicesForm from "../../../components/services/ServicesForm.astro";
+
+const services = ["Plan Corporativo"]
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -15,5 +18,6 @@ import BannerCardMobile from "../../../components/services/BannerCardMobile.astr
         </SectionBanner>
         <BannerCardMobile data={card_overlay} />
         <CorporateFeatures features={features} />
+        <ServicesForm services={services} />
     </main>
 </Layout>

@@ -6,11 +6,10 @@
     "buttons": [
         {
             "text": "Afiliate",
-            "link": "#"
+            "href": "/servicios/familiares"
         },
         {
-            "text": "Emergencias",
-            "link": "#"
+            "text": "Emergencias"
         }
     ],
     "navigation": [

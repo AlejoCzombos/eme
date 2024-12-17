@@ -21,7 +21,14 @@
     "features": [
         {
             "title": "Emergencias y urgencias médicas",
-            "details": "La atención de Emergencias que pongan en riesgo la vida del paciente, exige recursos humanos altamente entrenados, una infraestructura acorde y los procesos especialmente diseñados para tal fin. En éste sentido EME llena un importante vacío de atención que no está cubierto adecuadamente por ninguna Obra Social, Prepagas, ni sistema de salud existente. EME no compite con las Obras Sociales ni con los Institutos Asistenciales, ni con los profesionales médicos en general muy por el contrario complementa su accionar.",
+            "details": "Las emergencias que ponen en riesgo la vida del paciente, exigen personal altamente capacitado, una infraestructura que acompañe y los procesos especialmente diseñados para tal fin. En EME, dichos recursos nos vuelven la mejor opción, con un sistema que cubre áreas que no cubren demás instituciones.",
+            "list":[
+                "Personal altamente capacitado",
+                "Infraestructura acorde que acompaña",
+                "Sistemas actualizados e innovadores",
+                "Trayectoria + calidad de servicio (NORMAS ISO 9009)",
+                "Servicio complementario"
+            ],
             "icon": {
                 "src": "/icons/services/emergencia.svg",
                 "alt": "Emergencias y urgencias médicas"
@@ -29,7 +36,14 @@
         },
         {
             "title": "Traslados de pacientes de alto y bajo riesgo",
-            "details": "Es un programa específico complementario destinado a la movilización de pacientes imposibilitados de deambular en aquellos casos no relacionados con un cuadro de emergencias. Opera exclusivamente con cargo, en el área urbana local de cobertura o, desde y hacia cualquier punto del país. Las atenciones son brindadas los 365 días del año, las 24 hs. del día con asignación de turnos.",
+            "details": "Servicio complementario destinado a la movilización de pacientes imposibilitados de deambular, en aquellos casos no relacionados con un cuadro de emergencias. Opera con cargo, en el área urbana local de cobertura o, desde y hacia cualquier punto del país. Las atenciones son brindadas los 365 días del año, las 24 hs. del día con asignación de turnos.",
+            "list":[
+                "Movilización de pacientes imposibilitados en casos no relacionados con cuadros de emergencia",
+                "Opera CON cargo",
+                "Opera en área urbana local de cobertura o desde y hacia cualquier punto del país.",
+                "Opera con asignación de turnos. Los traslados son PROGRAMADOS.",
+                "Atención los 365 días las 24 hs. "
+            ],
             "icon": {
                 "src": "/icons/services/traslado.svg",
                 "alt": "Traslados de pacientes de alto y bajo riesgo"
@@ -37,34 +51,28 @@
         },
         {
             "title": "Consultas domiciliarias",
-            "details": "Comprende todos aquellos cuadros clínicos que, aùn sin poner en riesgo la vida del paciente, requieren la atención de un profesional médico, sin movilizar al paciente de su domicilio o lugar en que se encuentre, eliminando una serie de inconvenientes derivados de la situación misma y del traslado del enfermo. La atención es permanente (24 hs. los 365 días del año) con o sin costos adicionales, según el plan de su elección.",
+            "details": "Todos aquellos cuadros clínicos que, aún sin riesgo de vida, requieren la atención de un médico, sin movilizar al paciente de su domicilio o lugar en que se encuentre. La atención es permanente (24 hs. los 365 días del año) con o sin costos adicionales, según el plan de su elección.",
+            "list":[
+                "Cuadros clínicos que, aunque no signifiquen un riesgo de vida, requieren de la atención de un médico.",
+                "Atención sin necesidad de movilizar al paciente, desde su propia casa o donde se encuentre. ",
+                "Atención permanente (24 hs 365 días) con o sin costos, dependiendo del plan de su elección. "
+            ],
             "icon": {
                 "src": "/icons/services/domiciliaria.svg",
                 "alt": "Consultas domiciliarias"
             }
         },
         {
-            "title": "Urgencias Odontológicas",
-            "details": "Programa destinado a la atención domiciliaria de cuadros odontológicos agudos mediante la modalidad de abono o prepago. El servicio es brindado por un profesional con el equipamiento necesario para la resolucion del cuadro critico.",
-            "icon": {
-                "src": "/icons/services/urgencia-odontogica.svg",
-                "alt": "Urgencias Odontológicas"
-            }
-        },
-        {
             "title": "Enfermería domiciliaria",
-            "details": "Servicio programado destinado a proveer la prestación domiciliaria de prácticas de enfermería que tengan su correspondiente indicacion medica. El abono mensual da acceso a un cupo de prestaciones no acumulativos.",
+            "details": "Servicio programado de prácticas de enfermería con su correspondiente indicación médica. El abono mensual da acceso a un cupo de prestaciones no acumulativos.",
+            "list":[
+                "Servicio de enfermería con correspondiente indicación médica.",
+                "Servicio brindado en el domicilio del afiliado o donde se encuentre",
+                "Cupo de prestaciones no acumulativas (abono mensual)"
+            ],
             "icon": {
                 "src": "/icons/services/domiciliaria.svg",
                 "alt": "Enfermería domiciliaria"
-            }
-        },
-        {
-            "title": "Vehículo Protegido",
-            "details": "Destinado a la atención médica pre hospitalaria que pudieran sufrir los ocupantes de un vehículo protegido y los terceros no transportados involucrados, en ocasión de un accidente de tránsito vehicular.",
-            "icon": {
-                "src": "/icons/services/vehiculo.svg",
-                "alt": "Vehículo Protegido"
             }
         }
     ]

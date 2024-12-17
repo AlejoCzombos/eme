@@ -1,11 +1,12 @@
 ---
-import Section from "../UI/Section.astro";
-import Feature from "./Feature.astro";
+import Section from "../../UI/Section.astro";
+import Feature from "../Feature.astro";
 
 interface FeatureItem {
   icon: Icon;
   title: string;
   details: string;
+  list?: string[];
 }
 interface Icon {
   src: string;
@@ -21,7 +22,7 @@ const { features } = Astro.props as { features: FeatureItem[] };
   <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
     {
         features.map((item) => (
-            <Feature icon={item.icon} title={item.title} details={item.details} />
+            <Feature icon={item.icon} title={item.title} details={item.details} list={item.list} />
         ))
     }
   </div>

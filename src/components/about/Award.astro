@@ -21,12 +21,6 @@ interface Image {
 
 const { data } = Astro.props as Props;
 ---
-<script>
-import Observer from 'tailwindcss-intersect';
-
-Observer.start();
-</script>
-
 <Section>
     <H2Title text={data.title} line={false} />
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
