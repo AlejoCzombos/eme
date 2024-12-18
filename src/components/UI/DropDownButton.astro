@@ -23,7 +23,8 @@ const {phones, text, class: className, ...props} = Astro.props;
             href={`tel:${phone}`}
             class="block py-2 px-4 hover:bg-gray-100 text-gray-800"
             >
-            {phone}
+              <span class="text-primary-600 font-bold">{phone.text}</span>
+              {phone.number}
             </a>
         </li>
         ))

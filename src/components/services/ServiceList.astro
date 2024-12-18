@@ -17,7 +17,7 @@ const { data } = Astro.props;
                         <a href={service.href} class="relative h-[22rem] w-full group overflow-hidden">
                             <div class="card absolute h-full flex flex-row w-full justify-between items-end p-8">
                                 <h2 set:html={service.title} class="font-bold text-3xl text-white max-w-52 z-10"></h2>
-                                <button class="bg-primary-500 text-white text-base font-semibold px-2 py-4 rounded-xl group-hover:opacity-0 transition-opacity ease-in-out duration-500 z-10">Ver más</button>
+                                <button class="bg-primary-500 text-white text-base font-semibold px-2 py-3 rounded-xl group-hover:-translate-y-4 transition-transform ease-in-out duration-500 z-10">Ver más</button>
                             </div>
                             <img src={service.image.src} alt={service.image.alt} 
                             class="h-full w-full object-cover object-top -z-10 transition-all duration-500 ease-in-out transform group-hover:object-right scale-100 group-hover:scale-110 group-hover:translate-x-5"

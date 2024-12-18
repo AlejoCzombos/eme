@@ -11,7 +11,10 @@ const {buttons} = data
 const button1 = buttons[0]
 const button2 = buttons[1]
 
-const phones = [contact.whatsapp.number.resistencia, contact.whatsapp.number.corrientes]
+const phones = [
+    {number: contact.whatsapp.number.resistencia, text: "Resistencia: "},
+    {number: contact.whatsapp.number.corrientes, text: "Corrientes: "},
+]
 ---
 
 <nav id="header" class="fixed top-0 left-0 shadow-lg w-full z-50 bg-white drop-shadow-xl transition-colors duration-500 ease-in p-9">

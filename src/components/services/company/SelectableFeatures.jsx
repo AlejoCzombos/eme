@@ -14,7 +14,7 @@ export default function SelectableFeatures({ features }) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center content-center p-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center content-center p-4 lg:p-10">
         {features.map((feature, index) => (
           <div
             key={index}
@@ -23,14 +23,13 @@ export default function SelectableFeatures({ features }) {
           >
             <div className="size-28 bg-gray-200 rounded-full p-5 group-hover:-translate-y-5 transition-transform duration-300 ease-in-out">
               <img
-                className=""
                 src={feature.icon.src}
                 alt={feature.icon.alt}
               />
             </div>
-            <p className="text-center font-semibold text-sm lg:text-base group-hover:scale-105 transition-transform duration-300 ease-in-out">
+            <h3 className="text-center font-semibold text-xs lg:text-base group-hover:scale-105 transition-transform duration-300 ease-in-out">
               {feature.title.toLocaleUpperCase()}
-            </p>
+            </h3>
           </div>
         ))}
       </div>
@@ -58,8 +57,8 @@ function FeatureModal({ feature, onClose }) {
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" /></svg>
         </button>
-        <h3 className="text-xl lg:text-2xl font-semibold text-center max-w-60 lg:max-w-md mx-auto">{feature.title.toLocaleUpperCase()}</h3>
-        <p className="text-gray-600 mt-2">{feature.description}</p>
+        <h3 className="text-base lg:text-2xl font-semibold text-center max-w-60 lg:max-w-md mx-auto">{feature.title.toLocaleUpperCase()}</h3>
+        <p className="text-gray-600 text-sm lg:text-lg mt-2">{feature.description}</p>
       </div>
     </div>,
     document.getElementById("modal-feature-root")

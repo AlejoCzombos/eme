@@ -39,11 +39,11 @@ const { feature_selector } = Astro.props as { feature_selector: FeatureItem[] };
     {
         // Area protegida
         <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={feature_selector[0].id}>
-            <div class="flex px-8 py-6">
-                <div class="flex flex-col justify-center text-xl">
+            <div class="flex px-5 lg:px-8 py-6">
+                <div class="flex flex-col justify-center text-base lg:text-xl">
                     {
                         feature_selector[0].description.split("\n").map((paragraph) => (
-                            <p set:html={paragraph}></p>
+                            <p class="text-base lg:text-xl" set:html={paragraph}></p>
                         ))
                     }
                 </div>
@@ -54,11 +54,11 @@ const { feature_selector } = Astro.props as { feature_selector: FeatureItem[] };
     {
         // control ausentismo
         <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={feature_selector[2].id}>
-            <div class="flex px-8 py-6">
-                <div class="flex flex-col justify-center text-xl">
+            <div class="flex px-5 lg:px-8 py-6">
+                <div class="flex flex-col justify-center">
                     {
                         feature_selector[2].description.split("\n").map((paragraph) => (
-                            <p set:html={paragraph}></p>
+                            <p class="text-base lg:text-xl" set:html={paragraph}></p>
                         ))
                     }
                 </div>
