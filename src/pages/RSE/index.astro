@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { SEO, banner, foundation, feature_selector, enviroment } from "../../data/RSE.json";
+import SectionBanner from "../../components/services/SectionBanner.astro";
+import Hisotry from "../../components/about/Hisotry.astro";
+import SocialCompromise from "../../components/RSE/SocialCompromise.astro";
+import EnviromentComprimise from "../../components/RSE/EnviromentComprimise.astro";
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+    <main class="mt-[135px] min-h-screen">
+        <SectionBanner backgroundImage={banner.image} title={banner.title} quote={banner.quote} />
+        <Hisotry data={foundation} />
+        <SocialCompromise feature_selector={feature_selector} />
+        <EnviromentComprimise enviroment_compromise={enviroment}  />
+    </main>
+</Layout>

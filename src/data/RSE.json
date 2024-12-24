@@ -12,12 +12,96 @@
         }
     },
     "foundation": {
-        "title": "COMPROMISO SOCIAL FUNDACIÓN EME",
-        "detail": "En el añ0 1989",
+        "title": "Compromiso social Fundación EME",
+        "detail": "En el año 1989",
         "description": "Por iniciativa de los socios fundadores y  directivos de la empresa, nace la Fundación EME, institución civil sin  fines de lucro de carácter privado que se origina con el fin de  retribuir a la sociedad en su conjunto el apoyo dispensado. Sustentada  económicamente y de forma exclusiva con los aportes de EME , esta  entidad es el brazo social de la empresa a través del cual se canalizan  las actividades asistenciales y de capacitación que se proveen con  carácter gratuito y aportes donaciones o apoyo a iniciativas personales, grupales o institucionales en el medio donde la empresa opera.",
         "image": {
             "src": "/images/about/historia.webp",
             "alt": "Nuestra Historia"
         }
+    },
+    "feature_selector": [
+        {
+            "id": "actividades_asistenciales",
+            "title": "Actividades asistenciales",
+            "description": "Ofrece servicios médicos extrahospitalarios gratuitos a grupos específicos y a entidades sin fines de lucro, incluyendo cobertura en eventos sociales, deportivos, religiosos o políticos. También amplía horarios y áreas de cobertura sin costo adicional para entidades asociadas.",
+            "icon": {
+                "src": "/icons/RSE/actividades.svg",
+                "alt": "Actividades asistenciales"
+            }
+        },
+        {
+            "id": "actividades_capacitacion",
+            "title": "Actividades de capacitación e interacción",
+            "description": "Promueve la educación sanitaria mediante cursos de primeros auxilios y reanimación cardiopulmonar. Instala cartelería pública con instrucciones de primeros auxilios y facilita la interacción con instituciones educativas, permitiendo a estudiantes conocer su modelo de gestión de calidad.",
+            "icon": {
+                "src": "/icons/RSE/capacitaciones.svg",
+                "alt": "Actividades de capacitación e interacción"
+            }
+        },
+        {
+            "id": "aportes_donaciones_apoyo",
+            "title": "Aportes / Donaciones / Apoyo",
+            "description": "Colabora económicamente con proyectos especiales y dona elementos a organismos gubernamentales y entidades intermedias. Apoya iniciativas deportivas locales, patrocinando actividades como fútbol, automovilismo y motociclismo.",
+            "icon": {
+                "src": "/icons/RSE/actividades.svg",
+                "alt": "Aportes / Donaciones / Apoyo"
+            }
+        }
+    ],
+    "enviroment": {
+        "title": "Compromiso de la empresa con el medio ambiente",
+        "description": "Implementamos acciones para minimizar el impacto ambiental, como racionalizar el consumo de agua y energía eléctrica, utilizar vehículos con tecnología que reduce emisiones contaminantes y promover el ahorro de papel mediante la reutilización y digitalización de documentos.<br>Estas iniciativas reflejan la dedicación de EME hacia el bienestar de la comunidad y la protección del medio ambiente en su área de operación.",
+        "comprimises": [
+            {
+                "title": "Agua",
+                "icon": {
+                    "src": "/icons/RSE/agua.svg",
+                    "alt": "Agua"
+                }
+            },
+            {
+                "title": "Energía eléctrica",
+                "icon": {
+                    "src": "/icons/RSE/energia.svg",
+                    "alt": "Energía eléctrica"
+                }
+            },
+            {
+                "title": "Aire",
+                "icon": {
+                    "src": "/icons/RSE/aire.svg",
+                    "alt": "Aire"
+                }
+            },
+            {
+                "title": "Pilas",
+                "icon": {
+                    "src": "/icons/RSE/pilas.svg",
+                    "alt": "Pilas"
+                }
+            },
+            {
+                "title": "Residuos patológicos",
+                "icon": {
+                    "src": "/icons/RSE/residuos.svg",
+                    "alt": "Residuos patológicos"
+                }
+            },
+            {
+                "title": "Papel",
+                "icon": {
+                    "src": "/icons/RSE/papel.svg",
+                    "alt": "Papel"
+                }
+            },
+            {
+                "title": "Cartuchos de tinta",
+                "icon": {
+                    "src": "/icons/RSE/cartuchos.svg",
+                    "alt": "Cartuchos de tinta"
+                }
+            }
+        ]
     }
 }
