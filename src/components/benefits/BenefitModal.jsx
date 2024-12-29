@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 
-export default function BenefitModal({ benefit, onClose, isOpen }) {
+export default function BenefitModal({ benefit, onClose, isOpen, api_url }) {
   return ReactDOM.createPortal(
     <div
       onClick={onClose}
@@ -18,7 +18,7 @@ export default function BenefitModal({ benefit, onClose, isOpen }) {
         </button>
         <div className="flex flex-col lg:flex-row items-center justify-start gap-6 xl:gap-12 w-full">
           <img
-            src={"http://localhost:7000" + benefit.imagen_url} 
+            src={api_url + benefit.imagen_url} 
             alt={benefit.title}
             className="min-h-80 max-h-80 object-contain h-full max-w-md rounded-2xl "
           />

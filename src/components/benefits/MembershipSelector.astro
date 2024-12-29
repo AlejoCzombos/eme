@@ -32,7 +32,7 @@ const { membership_selector } = Astro.props as Props;
                   <img src={membership.image.src} alt={membership.image.alt} class="max-h-24 p-3 object-contain ">
                 </div>
                 :
-                <div class="w-full h-full flex justify-center items-center gap-3 hover:scale-110 transition-transform duration-300 ease-in-out">
+                <div class="w-full h-full flex justify-center items-center gap-2 hover:scale-110 transition-transform duration-300 ease-in-out">
                   <img src={membership.image.src} alt={membership.image.alt} class="p-3 max-h-24 object-contain">
                   <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3>
                 </div>
@@ -46,9 +46,9 @@ const { membership_selector } = Astro.props as Props;
     {
         membership_selector.map((membership) => (
             <div class={`description animate-fade-up animate-duration-700 animate-ease-in-out hidden`} id={membership.id}>
-                <div class="flex flex-col lg:flex-row px-5 lg:px-8 py-6">
-                    <div class={`flex justify-center items-center gap-3 mx-auto lg:max-w-56 ${membership.title ? "flex-row lg:flex-col" : "flex-col lg:flex-row"}`}>
-                        <img class={`max-h-16  lg:h-48 object-contain ${membership.title ? "lg:max-h-24" : "lg:max-h-48"}`} src={membership.image.src} alt={membership.image.alt}>
+                <div class="flex flex-col lg:flex-row lg:min-h-52 px-5 lg:px-8 py-6">
+                    <div class="flex justify-center items-center gap-3 w-full max-w-60">
+                        <img class="max-h-16 lg:max-h-24 object-contain" src={membership.image.src} alt={membership.image.alt}>
                         {  membership.title && <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3> }
                     </div>
                     <span class="flex border-b lg:border-r border-primary-600 my-6 lg:mx-6"></span>

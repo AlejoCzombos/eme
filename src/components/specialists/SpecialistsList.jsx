@@ -3,6 +3,7 @@ import Loader from "../UI/Loader";
 import SpecialistsTable from "./SpecialistsTable";
 import Dropdown from "../UI/Dropdown";
 import EmptyState from "../UI/EmptyState";
+import { fetchSpecialists as fetchSpecialistsAPI } from "../../api/specialists";
 
 export default function SpecialistsList({ data }) {
   const [specialists, setSpecialists] = useState([]);
@@ -28,8 +29,7 @@ export default function SpecialistsList({ data }) {
 
   const fetchSpecialists = async () => {
     setLoading(true);
-    const response = await fetch("http://localhost:7000/api/especialistas");
-    const data = await response.json();
+    const data = await fetchSpecialistsAPI();
     setSpecialists(data);
     setFilteredSpecialists(data);
 

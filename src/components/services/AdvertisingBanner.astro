@@ -11,7 +11,7 @@ const { image } = Astro.props as Props;
 ---
 
 <section class="max-w-7xl mx-auto py-10 lg:py-10 relative flex items-center">
-    <a href="https://play.google.com/store/apps/details?id=com.emesistemas.EmeEquipoMedicoDeEmergencia&pcampaignid=web_share" class="hover:scale-105 hover:shadow-xl transition-all ease-in-out duration-500">
+    <a href="https://play.google.com/store/apps/details?id=com.emesistemas.EmeEquipoMedicoDeEmergencia&pcampaignid=web_share">
         <img class="h-full w-full object-cover" src="/images/banner_publicidad.webp" alt={image.alt}>
     </a>
 </section>
@@ -19,5 +19,12 @@ const { image } = Astro.props as Props;
 <style>
     .img {
         aspect-ratio: 16/9;
+    }
+    a {
+        @apply transition-all ease-in-out duration-300;
+    }
+    a:hover {
+        transform: scale(1.01);
+        @apply shadow-xl;
     }
 </style>
