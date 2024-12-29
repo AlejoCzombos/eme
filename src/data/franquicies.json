@@ -1,0 +1,78 @@
+{
+    "SEO": {
+        "title": "EME - Franquicias",
+        "description": "EQUIPO MÉDICO DE EMERGENCIAS es una Empresa de  Asistencia Medica Extrahospitalaria dirigida a grupos familiares,  empresas públicas y privadas, entidades intermedias y gubernamentales."
+    },
+    "banner": {
+        "title": "Franquicias",
+        "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
+        "image": {
+            "src": "/images/franquicies/banner.webp",
+            "alt": "Nosotros"
+        }
+    },
+    "hero": {
+        "title": "Franquicias EME",
+        "description": "<strong>EME</strong> ofrece oportunidades de franquicia para expandir su reconocida marca en servicios médicos de emergencia. Los franquiciados reciben <strong>apoyo integral antes y después del inicio de operaciones</strong>, incluyendo:",
+        "icon": {
+            "src": "/icons/franquicies/contrato.svg",
+            "alt": "Franquicias EME"
+        }
+    },
+    "cards": [
+        {
+            "title": "Antes del inicio",
+            "features": [
+                "Selección del local comercial.",
+                "Elección de unidades móviles.",
+                "Equipamiento",
+                "Formación del recurso humano.",
+                "Asesoramiento en inversión."
+            ]
+        },
+        {
+            "title": "Después del comienzo",
+            "features": [
+                "Formación continua del personal.",
+                "Asistencia en administración y gestión.",
+                "Actualización de equipamiento.",
+                "Soporte informativo.",
+                "Apoyo publicitario y comercial."
+            ]
+        }
+    ],
+    "reasons": [
+        {
+            "title": "Reconocimiento regional",
+            "description": "EME es una marca registrada y ampliamente reconocida por la alta calidad de sus productos y servicios."
+        },
+        {
+            "title": "29 años de experiencia:",
+            "description": "Una trayectoria sólida en servicios médicos de emergencia, con presencia en Resistencia, Corrientes, Presidencia Roque Sáenz Peña y Asunción del Paraguay."
+        },
+        {
+            "title": "Liderazgo en la industria:",
+            "description": "Miembro fundador del SIEM, la red que agrupa a las empresas de emergencias más prestigiosas de Latinoamérica."
+        },
+        {
+            "title": "Recurso humano capacitado:",
+            "description": "Contamos con equipos especializados en investigación y desarrollo, enfocados en el crecimiento del negocio."
+        },
+        {
+            "title": "Organización eficiente:",
+            "description": "Operamos bajo procedimientos claros, con un know-how probado para apoyar a nuestros franquiciados."
+        },
+        {
+            "title": "Calidad certificada:",
+            "description": "Desde 2002, implementamos un Sistema de Gestión de Calidad certificado por normas ISO 9001."
+        },
+        {
+            "title": "Exclusividad territorial:",
+            "description": "Ofrecemos a los franquiciados derechos exclusivos en sus zonas, junto con el respaldo necesario para garantizar el éxito."
+        },
+        {
+            "title": "Reconocimiento a la excelencia:",
+            "description": "Ganadores del Premio Provincial a la Calidad Chaco 2014, otorgado por el Gobierno Provincial."
+        }
+    ]
+}

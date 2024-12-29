@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { SEO, banner, cards, hero, reasons } from "../../data/franquicies.json";
+import H2Title from "../../components/UI/H2Title.astro";
+import SectionBanner from "../../components/services/SectionBanner.astro";
+import Section from "../../components/UI/Section.astro";
+
+---
+<script>
+import Observer from 'tailwindcss-intersect';
+
+Observer.start();
+</script>
+<Layout title={SEO.title} description={SEO.description}>
+    <main class="mt-[135px] min-h-screen">
+        <SectionBanner backgroundImage={banner.image} title={banner.title} quote={banner.quote} />
+        <Section>
+            <H2Title text={hero.title} line={false} class="animate-fade-up animate-ease-in-out"/>
+            <article class="flex flex-col lg:flex-row items-center gap-5 lg:gap-10 animate-fade-up animate-ease-in-out lg:border-y border-primary-600 py-6 lg:py-12 px-0 lg:px-24">
+                <img src={hero.icon.src} alt={hero.icon.alt} class="size-40" />
+                <p class="text-center text-[#505050] text-lg lg:text-2xl text-balance" set:html={hero.description}></p>
+            </article>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6 py-10">
+                {
+                    cards.map((card, index) => (
+                        <div class={`w-full h-full space-y-4 intersect-once ${index % 2 === 0 ? 'intersect:animate-fade-right' : 'intersect:animate-fade-left'}`}>
+                            <header class="flex items-center gap-6">
+                                <span class="flex justify-center items-center size-10 bg-primary-600 text-white text-xl lg:text-2xl p-1.5 rounded-full">{index + 1}</span>
+                                <h3 class="text-2xl lg:text-3xl">{card.title}</h3>
+                            </header>
+                            <footer class="bg-[#00B2AD]/30 rounded-2xl px-8 lg:px-16 py-8 lg:py-12 lg:pb-20 shadow-xl">
+                                <ul class="list-disc list-inside text-base lg:text-xl space-y-2">
+                                    {
+                                        card.features.map((item) => (
+                                            <li>{item}</li>
+                                        ))
+                                    }
+                                </ul>
+                            </footer>
+                        </div>
+                    ))
+                }
+            </div>
+            <div class="space-y-8 py-6">
+                <h3 class="text-3xl">¿Por qué franquiciar?</h3>
+                <div class="flex flex-col gap-8 px-0 lg:px-10">
+                    {
+                        reasons.map(({description, title}) => (
+                            <article class="space-y-4 intersect:animate-shake intersect-once animate-delay-100 animate-ease-in-out">
+                                <span class="bg-primary-600 rounded-md text-sm lg:text-lg py-1.5 px-5 text-white">{title}</span>
+                                <p>{description}</p>
+                            </article>
+                        ))
+                    }
+                </div>
+            </div>
+        </Section>
+    </main>
+</Layout>
