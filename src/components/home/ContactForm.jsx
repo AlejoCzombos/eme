@@ -1,9 +1,10 @@
 import { FormProvider, useForm } from "react-hook-form"
 import InputField from "../UI/InputField"
-import data from '../../data/home.json'
-import { branches } from '../../data/general-info.json'
 import SelectField from "../UI/SelectField"
 import TextareaField from "../UI/TextAreaField"
+
+import { branches } from '../../data/general-info.json'
+import data from '../../data/home.json'
 const {contact} = data.contact
 
 export default function ContactForm() {
@@ -30,12 +31,33 @@ export default function ContactForm() {
                     <SelectField name="asunto" label="Asunto" placeholder="Seleccione un Asunto" options={subjectsOptions} required="El asunto es requerido" />
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <InputField name="email" label="Correo electrónico" placeholder="Correo electrónico" required="El correo electrónico es requerido" />
-                    <SelectField name="sucursal" label="Localidad" placeholder="Localidad" options={branchesOptions} required="La localidad es requerida" />
+                    <InputField name="email" label="Correo electrónico" placeholder="Correo electrónico" required="El correo electrónico es requerido" rules={{
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                            message: "Correo electrónico inválido"
+                        }
+                        }}
+                    />
+                    <SelectField name="sucursal" label="Localidad" placeholder="Seleccione una Localidad" options={branchesOptions} required="La localidad es requerida" />
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <TextareaField name="message" label="Mensaje" placeholder="Mensaje" required="El mensaje es requerido" />
-                    <InputField type="number" name="phone" label="Teléfono" placeholder="Teléfono" required="El teléfono es requerido" rules={{ minLength: 3 }} />
+                    <InputField type="number" name="phone" label="Teléfono" placeholder="Teléfono" required="El teléfono es requerido" rules={
+                        { 
+                            min: {
+                                value: 0,
+                                message: "El teléfono no puede ser negativo"
+                            }, 
+                            minLength: {
+                                value: 8,
+                                message: "El teléfono debe tener al menos 8 caracteres"
+                            },
+                            maxLength: {
+                                value: 12,
+                                message: "El teléfono debe tener como máximo 12 caracteres"
+                            } 
+                        }} 
+                    />
                 </div>
                 <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
             </form>

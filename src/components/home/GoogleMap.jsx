@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { contact } from '../../data/home.json';
 
-const GoogleMapComponent = ({ branches }) => {
+export default function GoogleMapComponent({ branches }) {
   const [selectedBranch, setSelectedBranch] = useState(branches[0]);
 
   const handleSelectChange = (e) => {
@@ -15,7 +15,7 @@ const GoogleMapComponent = ({ branches }) => {
         <h2 className="w-full xl:w-auto">{contact.map.title.toLocaleUpperCase()}</h2>
         <span className="w-full xl:w-auto">
           <label htmlFor="branchSelect" className="block font-normal text-sm text-slate-400">Seleccionar Localidad</label>
-          <select id="branchSelect" onChange={handleSelectChange} className="mb-4 p-2 border font-normal text-slate-600 border-gray-300 rounded min-w-60 w-full">
+          <select id="branchSelect" onChange={handleSelectChange} className="mb-4 p-2 border font-normal text-slate-600 border-gray-300 rounded min-w-72 w-full">
             {
               branches.map((branch) => (
                 <option key={branch.id} value={branch.id}>{branch.location}</option>
@@ -24,16 +24,16 @@ const GoogleMapComponent = ({ branches }) => {
           </select>
         </span>
       </header>
-
-      <iframe
-        src={selectedBranch.mapUrl}
-        width="100%"
-        allowFullScreen
-        loading="lazy"
-        className="border rounded h-[27rem]"
-      ></iframe>
+      <footer className="min-h-[30rem] h-full relative pb-36 lg:pb-20">
+        <iframe
+          src={selectedBranch.mapUrl}
+          loading="lazy"
+          width="100%"
+          height="100%"
+          allowFullScreen
+          className="border h-full w-full block"
+        ></iframe>
+      </footer>
     </div>
   );
 };
-
-export default GoogleMapComponent;

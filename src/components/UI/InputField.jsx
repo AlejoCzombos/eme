@@ -1,6 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 
-export default function InputField({ name, label, type, required, ...rest }) {
+export default function InputField({ name, label, type, required, rules, ...rest }) {
   const { register, formState: { errors } } = useFormContext();
   const error = errors[name]?.message;
   return (
@@ -10,7 +10,7 @@ export default function InputField({ name, label, type, required, ...rest }) {
         </label>
       <input
         type={type || 'text'}
-        {...register(name, { required: required, ...rest })}
+        {...register(name, { required: required, ...rules })}
         {...rest}
         className={`border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary-700 transition ${error ? 'border-red-600' : ''}`}
       />
