@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MultiSelectDropdown from "../UI/MultiSelectDropdown";
-import InputField from "../UI/InputFiled";
+import InputField from "../UI/Input";
 
 export default function ContactForm({servicesOptions}) {
   const [formData, setFormData] = useState({

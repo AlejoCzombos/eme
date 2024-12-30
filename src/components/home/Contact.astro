@@ -1,6 +1,7 @@
 ---
 import GoogleMap from './GoogleMap';
 import ContactForm from './ContactForm.astro';
+import ContactFormJs from './ContactForm';
 
 import { branches } from '../../data/general-info.json';
 ---
@@ -9,5 +10,6 @@ import { branches } from '../../data/general-info.json';
 px-6 py-12 lg:px-0 lg:py-16 max-w-[100rem] m-auto
 grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-5">
   <GoogleMap branches={branches} client:only="react" />
-  <ContactForm />
+  <!-- <ContactForm /> -->
+  <ContactFormJs client:only="react"/>
 </section>
