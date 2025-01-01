@@ -6,6 +6,9 @@ import BannerCard from "../../../components/services/BannerCard.astro";
 import SectionBanner from "../../../components/services/SectionBanner.astro";
 import FamilyFeatures from "../../../components/services/family/FamilyFeatures.astro";
 import BannerCardMobile from "../../../components/services/BannerCardMobile.astro";
+import ServicesForm from "../../../components/services/ServicesForm.astro";
+
+const services = [{id: "servicio_familiar", title: "Plan Familiar", contact_type: "Afiliado"}]
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -15,5 +18,6 @@ import BannerCardMobile from "../../../components/services/BannerCardMobile.astr
         </SectionBanner>
         <BannerCardMobile data={card_overlay} />
         <FamilyFeatures features={features} />
+        <ServicesForm services={services} />
     </main>
 </Layout>

@@ -6,19 +6,35 @@ import SelectField from "../UI/SelectField";
 import InputField from "../UI/InputField";
 
 import { branches } from '../../data/general-info.json'
+import { sendFormServices } from "../../api/form";
 
 export default function ContactForm({servicesOptions}) {
   const methods = useForm()
-  const [servicesSelected, setServicesSelected] = useState([]);
+  const [servicesSelected, setServicesSelected] = useState(servicesOptions.length === 1 ? servicesOptions : []);
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data)
-    console.log(servicesSelected)
+  const onSubmit = async (data) => {
+    // setLoading(true)
+
+    const services = servicesSelected.map(service => service.id)
+    
+    const body = {
+      ...data, 
+      services: services, 
+      contact_type: servicesOptions[0].contact_type ? servicesOptions[0].contact_type : "Cliente", 
+    }
+    const response = await sendFormServices(body)
+
+    if (response.status === 201) {
+        methods.reset()
+    } else {
+        methods.reset()
+    }
+    setLoading(false)
   }
   
   const branchesOptions = branches.map(branch => {
-    return {value: branch.location, label: branch.location}
+    return {value: branch.name, label: branch.location}
   })
   const handleServicesChange = (selectedServices) => {
     setServicesSelected(selectedServices);
@@ -50,7 +66,7 @@ export default function ContactForm({servicesOptions}) {
                 message: "Correo electrónico inválido"
               }
             }}/>
-            <SelectField name="sucursal" label="Localidad"placeholder="Seleccione una Localidad" options={branchesOptions} required="La localidad es requerida" />
+            <SelectField name="branch" label="Localidad"placeholder="Seleccione una Localidad" options={branchesOptions} required="La localidad es requerida" />
             <InputField type="number" name="phone" label="Teléfono" placeholder="Teléfono" required="El teléfono es requerido" rules={
               { 
                     min: {

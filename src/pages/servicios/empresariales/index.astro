@@ -8,7 +8,9 @@ import CompanyFeatures from "../../../components/services/company/CompanyFeature
 import BannerCardMobile from "../../../components/services/BannerCardMobile.astro";
 import ServicesForm from "../../../components/services/ServicesForm.astro";
 
-const services = feature_selector.map((feature) => feature.title);
+const services = feature_selector.map((feature) => {
+    return { id: feature.id, title: feature.title };
+});
 ---
 
 <Layout title={SEO.title} description={SEO.description}>

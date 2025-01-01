@@ -5,7 +5,6 @@ import Loader from "../UI/Loader";
 import EmptyState from "../UI/EmptyState";
 import Dropdown from "../UI/Dropdown";
 import { fetchBenefits as fetchBenefitsAPI } from "../../api/benefits";
-import { API_URL } from "../../api/config";
 
 export default function BenefitsList() {
   const [benefits, setBenefits] = useState([]);
@@ -15,7 +14,6 @@ export default function BenefitsList() {
   const [categories, setCategories] = useState([]);
   const [selectedLocality, setSelectedLocality] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const api_url = API_URL;
 
   const localities = [
     { id: 1, name: "Resistencia" },
@@ -105,7 +103,6 @@ export default function BenefitsList() {
             <BenefitCard
               key={benefit.id}
               benefit={benefit}
-              api_url={api_url}
               onSelect={handleSelect}
             />
           ))
@@ -114,7 +111,7 @@ export default function BenefitsList() {
 
       {/* Modal */}
       {selectedBenefit && (
-        <BenefitModal benefit={selectedBenefit} onClose={handleClose} isOpen={isOpen} api_url={api_url} />
+        <BenefitModal benefit={selectedBenefit} onClose={handleClose} isOpen={isOpen} />
       )}
     </>
   );

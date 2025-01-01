@@ -20,7 +20,7 @@
     "branches": [
         {
             "id": 1,
-            "name": "Sucursal Resistencia",
+            "name": "Resistencia",
             "location": "Resistencia, Chaco",
             "direction": "Av. 9 de Julio 1577 (C.P. H3508AZH)",
             "number": "Tel: (0362)-4456200",
@@ -28,7 +28,7 @@
         },
         {
             "id": 2,
-            "name": "Sucursal Sáenz Peña",
+            "name": "Sáenz Peña",
             "location": "Sáenz Peña, Chaco",
             "direction": "Avellaneda 357 (C.P. H3700 BJK)",
             "number": "Tel: (0364)-4420941",
@@ -36,7 +36,7 @@
         },
         {
             "id": 3,
-            "name": "Sucursal Corrientes",
+            "name": "Corrientes",
             "location": "Corrientes, Capital",
             "direction": "Av. Maipú 675 (C.P. W3410KBG)",
             "number": "Tel: (0379)-4420251",

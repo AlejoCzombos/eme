@@ -1,13 +1,11 @@
-import { API_URL } from "../../api/config"
-
-export default function BenefitCard({ benefit, onSelect, api_url }) {
+export default function BenefitCard({ benefit, onSelect }) {
   return (
     <div 
     onClick={() => onSelect(benefit)}
     className="mx-auto bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-sm md:max-w-xl hover:shadow-2xl hover:transform hover:scale-105 duration-300 transition-all cursor-pointer">
       <div className="flex justify-center items-center px-4 pt-4">
         <img 
-          src={api_url + benefit.imagen_url} 
+          src={benefit.imagen_url} 
           alt={benefit.title}
           className="object-contain h-full rounded-xl w-full max-w-full aspect-square" 
         />
