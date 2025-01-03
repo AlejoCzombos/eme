@@ -1,5 +1,6 @@
 ---
 import PrimaryButton from '../UI/PrimaryButton.astro';
+import SponsorsList from './SponsorsList';
 
 interface Props {
   title: string;
@@ -55,13 +56,19 @@ const swiper = new Swiper('.swiper-beneficts', {
   <h2 class="p-2 mb-16">{title.toLocaleUpperCase()}</h2>
   <div class="swiper-beneficts max-w-6xl m-auto relative overflow-hidden">
     <div class="swiper-wrapper" id="my-slider">
-      {
-        images.map(image => (
-          <div class="swiper-slide flex justify-center items-center">
-            <img src={image.default.src} alt="" class="w-full h-full max-h-44 object-cover">
-          </div>
-        ))
-      }
+      <SponsorsList client:only="react" />
+      <div class="swiper-slide flex justify-center items-center">
+        <img src="/images/home/benefits/sponsor_skeleton.png" alt="skeleton" class="w-full h-full max-h-44 object-cover" />
+      </div>
+      <div class="swiper-slide flex justify-center items-center">
+        <img src="/images/home/benefits/sponsor_skeleton.png" alt="skeleton" class="w-full h-full max-h-44 object-cover" />
+      </div>
+      <div class="swiper-slide flex justify-center items-center">
+        <img src="/images/home/benefits/sponsor_skeleton.png" alt="skeleton" class="w-full h-full max-h-44 object-cover" />
+      </div>
+      <div class="swiper-slide flex justify-center items-center">
+        <img src="/images/home/benefits/sponsor_skeleton.png" alt="skeleton" class="w-full h-full max-h-44 object-cover" />
+      </div>
     </div>
   </div>
   <div class="swiper-pagination"></div>

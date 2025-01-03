@@ -1,0 +1,66 @@
+.swiper-pagination {
+  bottom: 30% !important;
+}
+
+.swiper-pagination-bullet{
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-600 !important;
+}
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: '';
+  }
+  .swiper-button-next,
+  .swiper-button-prev{
+    top: 45%;
+  }
+
+   #swiper-slide-banner {
+    aspect-ratio: 16/7;
+  }
+  @screen lg {
+    #swiper-slide-banner {
+      aspect-ratio: 16/5;
+    }
+  }
+
+  .swiper-pagination-carousel {
+      position: absolute;
+      display: none;
+    }
+  @screen lg {
+    .swiper-pagination-carousel {
+      position: absolute;
+      bottom: 1rem !important;
+      z-index: 30;
+    }
+  }
+
+  .swiper-pagination-carousel .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.8;
+    margin: 0px 8px !important;
+  }
+
+  .swiper-pagination-carousel .swiper-pagination-bullet-active {
+    background: #636363 !important;
+    opacity: 1;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: '';
+  }
+
+  #gradient-carousel {
+    z-index: 10;
+  }
+  
+  .carousel-text h2 , .carousel-text p, .carousel-text a {
+    z-index: 20;
+  }

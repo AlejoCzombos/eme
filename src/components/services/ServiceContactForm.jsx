@@ -14,7 +14,7 @@ export default function ContactForm({servicesOptions}) {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
-    // setLoading(true)
+    setLoading(true)
 
     const services = servicesSelected.map(service => service.id)
     

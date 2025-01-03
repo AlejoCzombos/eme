@@ -1,10 +1,12 @@
 ---
-import Carrousel from '../components/home/Carrousel.astro';
+import CarrouselSkeleton from '../components/home/CarrouselSkeleton.astro';
+import CarrouselBanners from '../components/home/CarrouselBanners';
 import Plans from '../components/home/Plans.astro';
 import Membership from '../components/home/Membership.astro';
 import Layout from '../layouts/Layout.astro';
 import Stats from '../components/home/Stats.astro';
 import Benefits from '../components/home/Benefits.astro';
+import SponsorsCarrousel from '../components/home/SponsorsCarrousel';
 import Contact from '../components/home/Contact.astro';
 
 import data from "../data/home.json";
@@ -13,12 +15,16 @@ import AdvertisingBanner from '../components/services/AdvertisingBanner.astro';
 
 <Layout title={data.SEO.title} description={data.SEO.description}>
 	<main class="mt-[135px] min-h-screen">
-		<Carrousel />
+		<!-- <Carrousel /> -->
+		<CarrouselBanners client:load>
+			<CarrouselSkeleton />
+		</CarrouselBanners>
 		<Plans plans={data.plans} />
 		<Stats stats={data.stats} />
 		<AdvertisingBanner image={{src:"", alt:""}}/>
 		<Membership membership={data.membership} />
-		<Benefits title={data.benefits.title} />
+		<!-- <Benefits title={data.benefits.title} /> -->
+		<SponsorsCarrousel client:only="react" />
 		<Contact />
 	</main>
 </Layout>
