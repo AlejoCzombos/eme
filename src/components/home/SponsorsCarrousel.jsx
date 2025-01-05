@@ -16,6 +16,7 @@ export default function BenefitsCarousel() {
         setImages(data);
       } catch (error) {
         console.error('Error fetching images:', error);
+        setLoading(false);
       } finally {
         setLoading(false);
       }
@@ -61,13 +62,13 @@ export default function BenefitsCarousel() {
       <h2 className="p-2 mb-16">BENEFICIOS EXCLUSIVOS</h2>
       <div className="swiper-beneficts max-w-6xl m-auto relative overflow-hidden">
         <div className="swiper-wrapper">
-          {loading
+          {loading || images.length == 0
             ? Array(5)
                 .fill(null)
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="swiper-slide flex justify-center items-center bg-gray-200 animate-pulse h-44 w-full"
+                    className="swiper-slide flex justify-center items-center animate-pulse h-44 w-full"
                   >
                     <img
                       src="/images/home/benefits/sponsor_skeleton.png"

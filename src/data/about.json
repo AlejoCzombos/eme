@@ -95,44 +95,44 @@
         },
         "features": [
             {
-                "title": "Calidad",
-                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
-                "icon": {
-                    "src": "/icons/about/urgencias_medicas.svg",
-                    "alt": "Calidad"
-                }
+            "title": "Compromiso con la Satisfacción del Cliente",
+            "details": "Superar las expectativas de los clientes en relación a nuestros servicios a través del cumplimiento de los requisitos legales y reglamentarios y la mejora continua del sistema de gestión de calidad.",
+            "icon": {
+                "src": "/icons/about/politica_calidad_azul.svg",
+                "alt": "Compromiso con la Satisfacción del Cliente"
+            }
             },
             {
-                "title": "Seguridad",
-                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
-                "icon": {
-                    "src": "/icons/about/urgencias_medicas.svg",
-                    "alt": "Seguridad"
-                }
+            "title": "Desarrollo y Crecimiento del Personal",
+            "details": "Basar el progreso y crecimiento de la Empresa en el desempeño de su personal, promoviendo el desarrollo individual y profesional en un adecuado ambiente de trabajo que propicie el compromiso y la participación de los empleados.",
+            "icon": {
+                "src": "/icons/about/politica_calidad_azul.svg",
+                "alt": "Desarrollo y Crecimiento del Personal"
+            }
             },
             {
-                "title": "Confianza",
-                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
-                "icon": {
-                    "src": "/icons/about/urgencias_medicas.svg",
-                    "alt": "Confianza"
-                }
+            "title": "Relaciones Estratégicas con Proveedores",
+            "details": "Mantener proveedores idóneos que satisfagan los requisitos de insumos y servicios, fortaleciendo y expandiendo nuestras asociaciones con ellos.",
+            "icon": {
+                "src": "/icons/about/politica_calidad_azul.svg",
+                "alt": "Relaciones Estratégicas con Proveedores"
+            }
             },
             {
-                "title": "Compromiso",
-                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
-                "icon": {
-                    "src": "/icons/about/urgencias_medicas.svg",
-                    "alt": "Compromiso"
-                }
+            "title": "Innovación y Sostenibilidad Empresarial",
+            "details": "Crecer, desarrollar e innovar nuestros servicios para lograr una Empresa que perdure en el tiempo en condiciones de rentabilidad e inversión adecuadas, incremente continuamente su valor y consolide el liderazgo en los mercados en los que opera.",
+            "icon": {
+                "src": "/icons/about/politica_calidad_azul.svg",
+                "alt": "Innovación y Sostenibilidad Empresarial"
+            }
             },
             {
-                "title": "Responsabilidad",
-                "details": "Brindar servicios de salud prehospitalaria de calidad, seguros y accesibles, que satisfagan las necesidades y expectativas de nuestros clientes.",
-                "icon": {
-                    "src": "/icons/about/urgencias_medicas.svg",
-                    "alt": "Responsabilidad"
-                }
+            "title": "Compromiso Social y Ambiental",
+            "details": "Propiciar desde la Dirección el compromiso social promoviendo acciones que contemplen los impactos económicos, sociales y ambientales derivados de la actividad.",
+            "icon": {
+                "src": "/icons/about/politica_calidad_azul.svg",
+                "alt": "Compromiso Social y Ambiental"
+            }
             }
         ]
     },

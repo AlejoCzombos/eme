@@ -17,7 +17,6 @@ export default function BenefitsCarousel() {
       try {
         const data = await getAllBanners();
         setSlides(data);
-        console.log(data);
       } catch (error) {
         console.error('Error fetching slides:', error);
       }

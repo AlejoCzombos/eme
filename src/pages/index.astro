@@ -16,7 +16,7 @@ import AdvertisingBanner from '../components/services/AdvertisingBanner.astro';
 <Layout title={data.SEO.title} description={data.SEO.description}>
 	<main class="mt-[135px] min-h-screen">
 		<!-- <Carrousel /> -->
-		<CarrouselBanners client:only="react">
+		<CarrouselBanners client:load>
 			<CarrouselSkeleton />
 		</CarrouselBanners>
 		<Plans plans={data.plans} />

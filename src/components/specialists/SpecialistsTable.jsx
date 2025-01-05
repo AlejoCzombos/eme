@@ -1,5 +1,4 @@
 export default function SpecialistsTable({ specialists }) {
-  console.log(specialists);
   return (
     <div className="overflow-x-auto py-6 animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out">
       <table className="min-w-full border-collapse border border-gray-100">

@@ -21,14 +21,6 @@
             }
         },
         {
-            "title": "Plan materno infantil",
-            "details": "Destinado a la atención prehospitalaria del hijo de una afiliada al Sistema quién gozará durante el primer año de los mismos servicios a los que se encuentra suscripta su madre.",
-            "icon": {
-                "src": "/icons/services/plan_materno.svg",
-                "alt": "Plan materno infantil"
-            }
-        },
-        {
             "title": "Urgencias médicas",
             "details": "La atención de Emergencias que pongan en riesgo la vida del paciente, exige recursos humanos altamente entrenados, una infraestructura acorde y los procesos especialmente diseñados para tal fin. En éste sentido EME llena un importante vacío de atención que no está cubierto adecuadamente por ninguna Obra Social, Prepagas, ni sistema de salud existente. EME no compite con las Obras Sociales ni con los Institutos Asistenciales, ni con los profesionales médicos en general muy por el contrario complementa su accionar.",
             "icon": {
@@ -50,14 +42,6 @@
             "icon": {
                 "src": "/icons/services/enfermeria_domiciliaria.svg",
                 "alt": "Enfermería domiciliaria"
-            }
-        },
-        {
-            "title": "Vehículo Protegido",
-            "details": "Destinado a la atención médica pre hospitalaria que pudieran sufrir los ocupantes de un vehículo protegido y los terceros no transportados involucrados, en ocasión de un accidente de tránsito vehicular.",
-            "icon": {
-                "src": "/icons/services/vehiculo_protegido.svg",
-                "alt": "Vehículo Protegido"
             }
         },
         {

@@ -54,13 +54,13 @@ export default function SpecialistsList({ data }) {
   return (
     <section className="px-5 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto">
       <h2 class="text-[#505050] pb-10">{data.title}</h2>
-        <div className="grid grid-cols-2 pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 lg:pb-8">
             <div className="flex flex-col gap-8">
                 <div className="bg-primary-600 rounded-2xl p-2 px-4 flex items-center gap-10">
                     <img src={data.subtitle.icon.src} alt={data.subtitle.icon.alt} className="size-10" />
                     <h3 className="text-white text-2xl">{data.subtitle.text}</h3>
                 </div>
-                <div className="px-4 grid grid-cols-2 gap-4 lg:gap-8">
+                <div className="px-0 lg:px-4 grid grid-cols-2 gap-4 lg:gap-8">
                     <Dropdown
                     label="Seleccionar localidad"
                     options={localities}
@@ -78,7 +78,7 @@ export default function SpecialistsList({ data }) {
                 </div>
             </div>
             <div className="flex justify-center items-center">
-                <img src={data.logo.src} alt={data.logo.alt} className="object-contain max-h-40" />
+                <img src={data.logo.src} alt={data.logo.alt} className="object-contain max-h-32 lg:max-h-40" />
             </div>
         </div>
 

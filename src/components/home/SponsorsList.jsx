@@ -23,14 +23,14 @@ export default function Carousel() {
 
   return (
       <>
-        {loading ? (
+        {loading || images.length == 0 ? (
           // Skeleton Loader
           Array(5).fill(null).map((_, index) => (
             <div
               key={index}
               className="swiper-slide flex justify-center items-center"
             >
-              <img src="/images/home/benefits/sponsor_skeleton.png" alt="skeleton" className="w-full h-full max-h-44 object-cover" />
+              <img src="/images/home/benefits/sponsor_skeleton.png" alt="skeleton" className="w-full h-full max-h-44 max-w-44 object-cover" />
             </div>
           ))
         ) : (
