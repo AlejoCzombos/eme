@@ -59,16 +59,6 @@ export default function BenefitsCarousel() {
       <div className="swiper-wrapper relative" id="my-slider">
         {/* Slide 1 */}
         <div id="swiper-slide-banner" className="swiper-slide h-auto rounded overflow-hidden relative">
-          <a href="https://tify.cc/xt8oQ" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/images/home/carousel/slider_sorteo.webp"
-              alt="Sorteo"
-              className="w-full h-full object-cover"
-            />
-          </a>
-        </div>
-        {/* Slide 2 */}
-        <div id="swiper-slide-banner" className="swiper-slide h-auto rounded overflow-hidden relative">
           <img
             src="/images/home/carousel/slider_afiliate.webp"
             alt="Afiliate a EME club"
@@ -82,7 +72,7 @@ export default function BenefitsCarousel() {
               Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación,
               adaptado a tus necesidades.
             </p>
-            <a className='py-2 px-4 md:px-6 text-center text-white cursor-pointer font-semibold bg-secondary-600 hover:scale-105 transition-all duration-300 ease-in-out'>CUIDÁ LO QUE MÁS NECESITAS</a>
+            <a href='/servicios/familiares' className='mt-2 py-1 lg:py-2 px-3 lg:px-6 text-center text-sm lg:text-2xl text-white cursor-pointer font-semibold bg-secondary-600 hover:scale-105 transition-all duration-300 ease-in-out'>CUIDÁ LO QUE MÁS NECESITAS</a>
             <div
               id="gradient-carousel"
               className="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent to-80% pointer-events-none"

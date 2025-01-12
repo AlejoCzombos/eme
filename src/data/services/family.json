@@ -1,6 +1,6 @@
 {
     "SEO": {
-        "title": "EME - Planes familiares",
+        "title": "EME - Servicios familiares",
         "description": "Para familias y personas que buscan servicios de salud prehospitalaria confiables y accesibles. Este segmento valora la seguridad y tranquilidad de contar con atención médica inmediata y de calidad en situaciones emergencia, así como servicios adicionales como consultas y enfermería domiciliaria."
     },
     "banner": {
@@ -52,11 +52,6 @@
         {
             "title": "Consultas domiciliarias",
             "details": "Todos aquellos cuadros clínicos que, aún sin riesgo de vida, requieren la atención de un médico, sin movilizar al paciente de su domicilio o lugar en que se encuentre. La atención es permanente (24 hs. los 365 días del año) con o sin costos adicionales, según el plan de su elección.",
-            "list":[
-                "Cuadros clínicos que, aunque no signifiquen un riesgo de vida, requieren de la atención de un médico.",
-                "Atención sin necesidad de movilizar al paciente, desde su propia casa o donde se encuentre. ",
-                "Atención permanente (24 hs 365 días) con o sin costos, dependiendo del plan de su elección. "
-            ],
             "icon": {
                 "src": "/icons/services/domiciliaria.svg",
                 "alt": "Consultas domiciliarias"

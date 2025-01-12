@@ -13,27 +13,11 @@
     },
     "features": [
         {
-            "title": "Cobertura nacional e internacional",
-            "details": "A través de la Red SIEM (Sistema Integrado de Emergencias Médicas): en más de 1000 localidades del país y en más de 17 países en 180 empresas donde el afiliado con la sola presentación de su carnet EME podrá atenderse ante cualquier Emergencia o Consulta Médica SIN CARGO.",
-            "icon": {
-                "src": "/icons/services/cobertura.svg",
-                "alt": "Cobertura nacional e internacional"
-            }
-        },
-        {
-            "title": "Urgencias médicas",
+            "title": "Emergencias y urgencias médicas",
             "details": "La atención de Emergencias que pongan en riesgo la vida del paciente, exige recursos humanos altamente entrenados, una infraestructura acorde y los procesos especialmente diseñados para tal fin. En éste sentido EME llena un importante vacío de atención que no está cubierto adecuadamente por ninguna Obra Social, Prepagas, ni sistema de salud existente. EME no compite con las Obras Sociales ni con los Institutos Asistenciales, ni con los profesionales médicos en general muy por el contrario complementa su accionar.",
             "icon": {
                 "src": "/icons/services/urgencias_medicas.svg",
-                "alt": "Urgencias médicas"
-            }
-        },
-        {
-            "title": "Policonsultorios",
-            "details": "Consultas médicas en diferentes especialidades.",
-            "icon": {
-                    "src": "/icons/services/policonsultorios.svg",
-                "alt": "Policonsultorios"
+                "alt": "Emergencias y urgencias médicas"
             }
         },
         {

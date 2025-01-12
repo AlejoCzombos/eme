@@ -32,6 +32,7 @@ export default function SpecialistsList({ data }) {
     const data = await fetchSpecialistsAPI();
     setSpecialists(data);
     setFilteredSpecialists(data);
+    console.log(data);
 
     // Extraer categorías únicas
     const uniqueSpecialties = Array.from(new Set(data.map((b) => b.specialty)));
@@ -60,7 +61,7 @@ export default function SpecialistsList({ data }) {
                     <img src={data.subtitle.icon.src} alt={data.subtitle.icon.alt} className="size-10" />
                     <h3 className="text-white text-2xl">{data.subtitle.text}</h3>
                 </div>
-                <div className="px-0 lg:px-4 grid grid-cols-2 gap-4 lg:gap-8">
+                <div className="px-0 lg:px-4 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
                     <Dropdown
                     label="Seleccionar localidad"
                     options={localities}

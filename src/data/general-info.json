@@ -12,8 +12,8 @@
     "contact": {
         "whatsapp": {
             "number": {
-                "resistencia": "3624456200",
-                "corrientes": "3794420251"
+                "resistencia": "3624431110",
+                "corrientes": "3794430110"
             }
         }
     },
@@ -22,7 +22,7 @@
             "id": 1,
             "name": "Resistencia",
             "location": "Resistencia, Chaco",
-            "direction": "Av. 9 de Julio 1577 (C.P. H3508AZH)",
+            "direction": "Av. 9 de Julio 1577<br>(C.P. H3508AZH)",
             "number": "Tel: (0362)-4456200",
             "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.1891044896865!2d-58.975061623663095!3d-27.463371516438286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450ce74a5cf8af%3A0x93c058ed93baeca9!2sEME%20-%20Equipo%20M%C3%A9dico%20de%20Emergencias%20Chaco%20S.A.!5e0!3m2!1ses!2sar!4v1731449653112!5m2!1ses!2sar"
         },
@@ -30,7 +30,7 @@
             "id": 2,
             "name": "Sáenz Peña",
             "location": "Sáenz Peña, Chaco",
-            "direction": "Avellaneda 357 (C.P. H3700 BJK)",
+            "direction": "Avellaneda 357<br>(C.P. H3700 BJK)",
             "number": "Tel: (0364)-4420941",
             "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.0450331913114!2d-60.43764219027215!3d-26.78499095904311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94412d21888ea67d%3A0x8a815e22d34aec93!2sEME%20-%20Equipo%20Medico%20de%20Emergencias!5e0!3m2!1ses!2sar!4v1732311260022!5m2!1ses!2sar"
         },
@@ -38,7 +38,7 @@
             "id": 3,
             "name": "Corrientes",
             "location": "Corrientes, Capital",
-            "direction": "Av. Maipú 675 (C.P. W3410KBG)",
+            "direction": "Av. Maipú 675<br>(C.P. W3410KBG)",
             "number": "Tel: (0379)-4420251",
             "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.5248149368217!2d-58.82744532366243!3d-27.48404931731929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b970c2937c9%3A0x7a289c5a7ea2966!2sEME%20-%20Equipo%20M%C3%A9dico%20de%20Emergencias%20Corrientes%20S.A.!5e0!3m2!1ses!2sar!4v1731450072206!5m2!1ses!2sar"
         }

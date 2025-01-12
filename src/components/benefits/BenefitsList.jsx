@@ -34,6 +34,7 @@ export default function BenefitsList() {
     const data = await fetchBenefitsAPI();
     setBenefits(data);
     setFilteredBenefits(data);
+    console.log(data);
 
     // Extraer categorías únicas
     const uniqueCategories = Array.from(new Set(data.map((b) => b.category)));

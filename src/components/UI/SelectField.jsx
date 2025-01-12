@@ -12,6 +12,7 @@ export default function SelectField({ name, label, options, placeholder, require
       <select
         {...register(name, { required: required, ...rules })}
         {...rest}
+        aria-label={name}
         className={`border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary-700 transition ${error ? 'border-red-600' : ''}`}
       >
         <option value="">

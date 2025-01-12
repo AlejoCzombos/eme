@@ -6,73 +6,82 @@ import NavigationItem from '../UI/NavigationItem.astro'
 ---
 
 <footer class="px-8 lg:px-0 lg:py-16 bg-gradient-to-r from-primary-500 to-primary-800 text-white py-10 relative">
-  <div class="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start max-w-[90rem] mx-auto gap-8">
-    <div class="flex flex-col lg:flex-row gap-8 mx-auto">
-        <div class="max-w-60 mx-auto lg:mx-0">
-            <img src={logo.src} alt={logo.alt} class="w-64">
-        </div>
-        <div class="max-w-lg space-y-4">
-        {
-            branches.map(branch => (
-                <div>
-                    <p class="font-bold text-white text-base">{branch.location + ": "}
-                        <span class="text-white text-base font-normal">{branch.direction}</span>
-                    </p>
-                    <p class="text-white text-base">{"" + branch.number}</p>
-                </div>
-            ))
-        }
-        </div>
-    </div>
-
-    <div class="flex flex-wrap justify-end gap-4 lg:gap-0 w-full">
-        <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
-            <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={services.title} href={services.href} />
-            <ul class="flex flex-col gap-0.5 lg:gap-1">
-            {
-                services.items.map(item => (
-                    <NavigationItem class="text-sm lg:text-base" text={item.name} href={item.href} white="true" />
-                ))
-            }
-            </ul>
-        </div>
-        
-        <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
-            <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={benefits.title} href={benefits.href} />
-            <ul class="flex flex-col gap-0.5 lg:gap-1">
-            {
-                benefits.items.map(item => (
-                    <NavigationItem class="text-sm lg:text-base" text={item.name} href={item.href} white="true" />
-                ))
-            }
-            </ul>
-        </div>
-
-        <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
-            <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={company.title} href={company.href} />
-            <ul class="flex flex-col gap-0.5 lg:gap-1">
-            {
-                company.items.map(item => (
-                    <NavigationItem text={item.name} href={item.href} class="font-bold text-sm lg:text-base" white="true" />
-                ))
-            }
-            </ul>
-        </div>
-
-        <div class="flex flex-col col-span-2 lg:col-span-1 justify-between items-center lg:items-end lg:max-w-64 w-full gap-4 h-full">
-            <div class="flex space-x-4">
-                {
-                    socialMedia.map(item => (
-                        <a target='_blank' href={item.url} class="size-11 transition-transform hover:scale-125">
-                            <img src={item.image.src} alt={item.image.alt}>
-                        </a>
-                    ))
-                }
+    <div class="flex flex-col lg:flex-row lg:justify-between items-center lg:items-start max-w-[90rem] mx-auto gap-20">
+        <div class="flex flex-col lg:flex-row gap-8 mx-auto">
+            <div class="min-w-44 mx-auto lg:mx-0">
+                <img src={logo.src} alt={logo.alt} class="w-64">
             </div>
-            <a target='_blank' href={softwareLogo.url}>
-                <img src={softwareLogo.src} alt={softwareLogo.alt} class="w-24">
-            </a>
+            <div class="min-w-80 space-y-4">
+            {
+                branches.map(branch => (
+                    <div>
+                        <p class="font-bold text-white text-base">{branch.location + ": "}
+                            <span class="text-white text-base font-normal" set:html={branch.direction}></span>
+                        </p>
+                        <p class="text-white text-base">{"" + branch.number}</p>
+                    </div>
+                ))
+            }
+            </div>
         </div>
-    </div>
+
+        <div class="flex flex-col gap-4 justify-between items-center lg:items-start w-full">
+            <div class="flex flex-wrap justify-start gap-4 lg:gap-0 w-full">
+                <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
+                    <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={services.title} href={services.href} />
+                    <div class="flex flex-col gap-0.5 lg:gap-1">
+                    {
+                        services.items.map(item => (
+                            <NavigationItem class="text-sm lg:text-base" text={item.name} href={item.href} white="true" />
+                        ))
+                    }
+                    </div>
+                </div>
+                
+                <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
+                    <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={benefits.title} href={benefits.href} />
+                    <div class="flex flex-col gap-0.5 lg:gap-1">
+                    {
+                        benefits.items.map(item => (
+                            <NavigationItem class="text-sm lg:text-base" text={item.name} href={item.href} white="true" />
+                        ))
+                    }
+                    </div>
+                </div>
+
+                <div class="space-y-1 lg:space-y-2 max-w-20 lg:max-w-48 w-full mx-auto lg:mx-0">
+                    <NavigationItem class="font-bold text-sm lg:text-base" white="true" text={company.title} href={company.href} />
+                    <div class="flex flex-col gap-0.5 lg:gap-1">
+                    {
+                        company.items.map(item => (
+                            <NavigationItem text={item.name} href={item.href} class="font-bold text-sm lg:text-base" white="true" />
+                        ))
+                    }
+                    </div>
+                </div>
+
+                <div class="flex flex-col col-span-2 lg:col-span-1 justify-between items-center lg:items-end lg:max-w-64 w-full gap-4 h-full">
+                    <div class="flex space-x-4">
+                        {
+                            socialMedia.map(item => (
+                                <a target='_blank' href={item.url} class="size-11 transition-transform hover:scale-125">
+                                    <img src={item.image.src} alt={item.image.alt}>
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-4 justify-between items-center w-full">
+                <div class="flex flex-wrap justify-center gap-2 lg:gap-6">
+                    <img src="/images/footer/ISO.png" alt="ISO 9001" class="w-32 lg:w-48 object-contain">
+                    <img src="/images/footer/SSS.png" alt="Superintendencia de sistemas de salud" class="w-32 lg:w-48 object-contain"> 
+                    <img src="/images/footer/siem.png" alt="Sistema Integrado de Emergencia Medica" class="w-16 lg:w-28 object-contain"> 
+                </div>
+                <a target='_blank' href={softwareLogo.url}>
+                    <img src={softwareLogo.src} alt={softwareLogo.alt} class="w-24">
+                </a>
+            </div>
+        </div>
     </div>
 </footer>

@@ -41,19 +41,15 @@
     },
     "company": {
       "title": "Empresa",
-      "href": "#",
+      "href": "/Nosotros",
       "items": [
         {
           "name": "RSE",
-          "href": "#"
+          "href": "/RSE"
         },
         {
           "name": "Franquicias",
-          "href": "#"
-        },
-        {
-          "name": "Contacto",
-          "href": "#"
+          "href": "/Franquicias"
         }
       ]   
     },
@@ -92,7 +88,7 @@
       }
     ],
     "softwareLogo": {
-      "src": "/images/footer/lav_logo.webp",
+      "src": "/images/footer/lav_logo.png",
       "alt": "Logo de Software",
       "url": "https://www.linkedin.com/company/lav-ux/" 
     }

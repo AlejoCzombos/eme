@@ -26,7 +26,7 @@
             "description": "Como empresa de salud, nos comprometemos a ofrecer servicios innovadores que satisfagan y superen las expectativas de los clientes y  beneficiarios, cumpliendo con las normas legales y reglamentarias  vigentes y los estándares de calidad establecidos, haciendo un uso  eficiente de los recursos en un marco estrictamente ético y que estimule la mejora continua y el desarrollo de nuestro personal.",
             "icon": {
                 "src": "/icons/about/mision.svg",
-                "alt": "Misión"
+                "alt": "Icono Misión"
             }
         },
         "vision": {
@@ -34,7 +34,7 @@
             "description": "Ser una empresa modelo, líder y referente en el campo de la salud en los mercados que deba desempeñarse, proporcionando servicios que mejoren la calidad de vida de la población asistida.",
             "icon": {
                 "src": "/icons/about/vision.svg",
-                "alt": "Visión"
+                "alt": "Icono Visión"
             }
         }
     },
@@ -45,42 +45,42 @@
                 "title": "Vocación de servicio",
                 "icon": {
                     "src": "/icons/about/vocacion_servicio.svg",
-                    "alt": "Vocación de servicio"
+                    "alt": "Icono Vocación de servicio"
                 }
             },
             {
                 "title": "Transparencia en la gestión",
                 "icon": {
                     "src": "/icons/about/transparencia.svg",
-                    "alt": "Transparencia en la gestión"
+                    "alt": "Icono Transparencia en la gestión"
                 }
             },
             {
                 "title": "Desempeño ético del trabajo",
                 "icon": {
                     "src": "/icons/about/desempeno_etico.svg",
-                    "alt": "Desempeño ético del trabajo"
+                    "alt": "Icono Desempeño ético del trabajo"
                 }
             },
             {
                 "title": "Pertenencia a la Organización",
                 "icon": {
                     "src": "/icons/about/pertenencia.svg",
-                    "alt": "Pertenencia a la Organización"
+                    "alt": "Icono Pertenencia a la Organización"
                 }
             },
             {
                 "title": "Búsqueda de la excelencia",
                 "icon": {
                     "src": "/icons/about/busqueda_excelencia.svg",
-                    "alt": "Búsqueda de la excelencia"
+                    "alt": "Icono Búsqueda de la excelencia"
                 }
             },
             {
                 "title": "Imagen de prestigio institucional",
                 "icon": {
                     "src": "/icons/about/prestigio.svg",
-                    "alt": "Imagen de prestigio institucional"
+                    "alt": "Icono Imagen de prestigio institucional"
                 }
             }
         ]
@@ -90,7 +90,7 @@
             "text": "Política de Calidad",
             "icon": {
                 "src": "/icons/about/politica_calidad.svg",
-                "alt": "Política de Calidad"
+                "alt": "Icono Política de Calidad"
             }
         },
         "features": [
@@ -99,7 +99,7 @@
             "details": "Superar las expectativas de los clientes en relación a nuestros servicios a través del cumplimiento de los requisitos legales y reglamentarios y la mejora continua del sistema de gestión de calidad.",
             "icon": {
                 "src": "/icons/about/politica_calidad_azul.svg",
-                "alt": "Compromiso con la Satisfacción del Cliente"
+                "alt": "Icono Compromiso con la Satisfacción del Cliente"
             }
             },
             {
@@ -107,7 +107,7 @@
             "details": "Basar el progreso y crecimiento de la Empresa en el desempeño de su personal, promoviendo el desarrollo individual y profesional en un adecuado ambiente de trabajo que propicie el compromiso y la participación de los empleados.",
             "icon": {
                 "src": "/icons/about/politica_calidad_azul.svg",
-                "alt": "Desarrollo y Crecimiento del Personal"
+                "alt": "Icono Desarrollo y Crecimiento del Personal"
             }
             },
             {
@@ -115,7 +115,7 @@
             "details": "Mantener proveedores idóneos que satisfagan los requisitos de insumos y servicios, fortaleciendo y expandiendo nuestras asociaciones con ellos.",
             "icon": {
                 "src": "/icons/about/politica_calidad_azul.svg",
-                "alt": "Relaciones Estratégicas con Proveedores"
+                "alt": "Icono Relaciones Estratégicas con Proveedores"
             }
             },
             {
@@ -123,7 +123,7 @@
             "details": "Crecer, desarrollar e innovar nuestros servicios para lograr una Empresa que perdure en el tiempo en condiciones de rentabilidad e inversión adecuadas, incremente continuamente su valor y consolide el liderazgo en los mercados en los que opera.",
             "icon": {
                 "src": "/icons/about/politica_calidad_azul.svg",
-                "alt": "Innovación y Sostenibilidad Empresarial"
+                "alt": "Icono Innovación y Sostenibilidad Empresarial"
             }
             },
             {
@@ -131,7 +131,7 @@
             "details": "Propiciar desde la Dirección el compromiso social promoviendo acciones que contemplen los impactos económicos, sociales y ambientales derivados de la actividad.",
             "icon": {
                 "src": "/icons/about/politica_calidad_azul.svg",
-                "alt": "Compromiso Social y Ambiental"
+                "alt": "Icono Compromiso Social y Ambiental"
             }
             }
         ]
@@ -151,7 +151,7 @@
                 ],
                 "icon": {
                     "src": "/icons/about/certificado_iso.svg",
-                    "alt": "Premio a la Excelencia"
+                    "alt": "Icono Premio a la Excelencia"
                 }
             },
             {
@@ -159,7 +159,7 @@
                 "details": "<strong>EQUIPO MEDICO DE EMERGENCIAS</strong> (Sucursales Resistencia y Corrientes) recibió el <strong>Premio Provincial a la Calidad para el Sector Público y Privado</strong>, Edición 2014, ganador en la Categoría IV, Sector Privado  (Prestadores de Servicio) por su destacado desempeño conforme al Modelo  para una Gestión de Calidad. El premio tiene como antecedente al Premio Nacional a la Calidad y fue instituido en la Provincia del Chaco por Decreto Nº  2787/12. Es un reconocimiento público a Organizaciones Públicas y  Privadas cuyo desempeño merece ser valorado y tomado como referencia  para el mejoramiento de todas las actividades que se desarrollen en la  Provincia, estimulando la modernización e innovación de los procesos  organizacionales logrando con ello elevar el nivel de la sociedad en su  conjunto.",
                 "icon": {
                     "src": "/icons/about/premio_calidad.svg",
-                    "alt": "Premio a la Excelencia"
+                    "alt": "Icono Premio a la Excelencia"
                 }
             }
         ]

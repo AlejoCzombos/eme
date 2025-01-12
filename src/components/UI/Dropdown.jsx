@@ -11,6 +11,7 @@ export default function Dropdown({
         {label}
       </label>
       <select
+        aria-label={label}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="border border-gray-300 rounded-lg p-2 w-full bg-white"

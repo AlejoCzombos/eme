@@ -34,7 +34,7 @@ const { membership_selector } = Astro.props as Props;
                 :
                 <div class="w-full h-full flex justify-center items-center gap-2 hover:scale-110 transition-transform duration-300 ease-in-out">
                   <img src={membership.image.src} alt={membership.image.alt} class="p-3 max-h-24 object-contain">
-                  <h3 class="font-bold text-primary-600 text-center">{membership.title.toLocaleUpperCase()}</h3>
+                  <h2 class="font-bold text-primary-600 text-center text-lg xl:text-xl">{membership.title.toLocaleUpperCase()}</h2>
                 </div>
               }
             </button>
