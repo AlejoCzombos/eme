@@ -32,7 +32,6 @@ export default function SpecialistsList({ data }) {
     const data = await fetchSpecialistsAPI();
     setSpecialists(data);
     setFilteredSpecialists(data);
-    console.log(data);
 
     // Extraer categorías únicas
     const uniqueSpecialties = Array.from(new Set(data.map((b) => b.specialty)));
