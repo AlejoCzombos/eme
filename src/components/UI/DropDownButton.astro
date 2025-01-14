@@ -20,7 +20,7 @@ const {phones, text, class: className, ...props} = Astro.props;
         phones.map((phone) => (
         <li>
             <a
-            href={`tel:${phone}`}
+            href={`tel:${phone.number}`}
             class="block py-2 px-4 hover:bg-gray-100 text-gray-800"
             >
               <span class="text-primary-600 font-bold">{phone.text}</span>

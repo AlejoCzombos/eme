@@ -22,11 +22,12 @@ export default function BenefitModal({ benefit, onClose, isOpen }) {
             alt={benefit.title}
             className="min-h-80 max-h-80 object-contain h-full max-w-md rounded-2xl "
           />
-          <div className="flex flex-col gap-0 xl:gap-2">
-            <h2 className="font-bold text-gray-700 text-start">{benefit.title}</h2>
-            <p className="mt-1 lg:mt-2 text-gray-500">{benefit.category}</p>
-            <p className="mt-2 lg:mt-4 text-xl font-bold text-gray-800">
-                {benefit.discount + " % off"}
+          <div className="flex flex-col gap-4">
+            <p className="text-lg text-[#505050]">{benefit.category}</p>
+            <h2 className="text-xl font-bold text-[#505050] text-start">{benefit.title}</h2>
+            <p className="text-lg text-[#545F71]">{benefit.description}</p>
+            <p className="text-xl font-bold text-[#545F71]">
+                {benefit.discount + "% off"}
             </p>
           </div>
         </div>
