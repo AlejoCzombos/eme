@@ -27,7 +27,7 @@ export default function BenefitsCarousel() {
 
   const swiper = new Swiper('.swiper-beneficts', {
   modules: [Navigation, Pagination, Autoplay],
-  loop: true,
+  loop: loading || images.length < 6 ? false : true,
   centeredSlides: true,
   centeredSlidesBounds: true,
   centerInsufficientSlides: true,

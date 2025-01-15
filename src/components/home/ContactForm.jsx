@@ -1,16 +1,29 @@
+import { useState } from "react"
 import { FormProvider, useForm } from "react-hook-form"
 import InputField from "../UI/InputField"
 import SelectField from "../UI/SelectField"
 import TextareaField from "../UI/TextAreaField"
+import ReCAPTCHA from "react-google-recaptcha"
 
 import { branches } from '../../data/general-info.json'
 import data from '../../data/home.json'
 const {contact} = data.contact
 
 export default function ContactForm() {
+    const [loading, setLoading] = useState(false)
+    const [captchaAcepted, setCaptchaAcepted] = useState(false)
+    const [error, setError] = useState(false)
     const methods = useForm()
+    
     const onSubmit = async (data) => {
-        const response = await fetch("https://formsubmit.co/ajax/sistemas@eme.com.ar", {
+        if (!captchaAcepted) {
+            setError(true)
+            return
+        }
+        setError(false)
+
+        setLoading(true)
+        const response = await fetch("https://formsubmit.co/ajax/38cf86c31a283a370043a85f3c07ed24", {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json',
@@ -22,9 +35,20 @@ export default function ContactForm() {
                 email: data.email,
                 sucursal: data.sucursal,
                 mensaje: data.message,
-                telefono: data.phone
+                telefono: data.phone,
+                _subject: "Nuevo mensaje de contacto desde el sitio web"
             })
         })
+        if (response.ok) {
+            methods.reset()
+        } else {
+            methods.reset()
+        }
+        setLoading(false)
+    }
+
+    const OnChangeCaptcha = () => {
+        setCaptchaAcepted(true)
     }
 
     const subjectsOptions = contact.subjects.map(subject => {
@@ -58,24 +82,39 @@ export default function ContactForm() {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <TextareaField name="message" label="Mensaje" placeholder="Mensaje" required="El mensaje es requerido" />
-                    <InputField type="number" name="phone" label="Teléfono" placeholder="Teléfono" required="El teléfono es requerido" rules={
-                        { 
-                            min: {
-                                value: 0,
-                                message: "El teléfono no puede ser negativo"
-                            }, 
-                            minLength: {
-                                value: 8,
-                                message: "El teléfono debe tener al menos 8 caracteres"
-                            },
-                            maxLength: {
-                                value: 12,
-                                message: "El teléfono debe tener como máximo 12 caracteres"
-                            } 
-                        }} 
-                    />
+                    <div className="flex flex-col gap-4">
+                        <InputField type="number" name="phone" label="Teléfono" placeholder="Teléfono" required="El teléfono es requerido" rules={
+                            { 
+                                min: {
+                                    value: 0,
+                                    message: "El teléfono no puede ser negativo"
+                                }, 
+                                minLength: {
+                                    value: 8,
+                                    message: "El teléfono debe tener al menos 8 caracteres"
+                                },
+                                maxLength: {
+                                    value: 12,
+                                    message: "El teléfono debe tener como máximo 12 caracteres"
+                                } 
+                            }} 
+                        />
+                        <ReCAPTCHA 
+                            sitekey="6LeTZbgqAAAAAIAtE1nxcFBfr7Er6dE51X2cpPph"
+                            onChange={OnChangeCaptcha}
+                            hl="es"
+                            className="pb-1"
+                        />
+                        {error && <p className="text-red-600 text-sm">Por favor, completa el CAPTCHA para enviar el formulario.</p>}
+                    </div>
                 </div>
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
+                <button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200"
+                    disabled={loading}
+                >
+                    {loading ? "Enviando..." : "Enviar"}
+                </button>
             </form>
         </FormProvider>
     </div>

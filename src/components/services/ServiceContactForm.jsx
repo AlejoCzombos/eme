@@ -1,7 +1,7 @@
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha"
 import { FormProvider, useForm } from "react-hook-form"
 import MultiSelectDropdown from "../UI/MultiSelectDropdown";
-// import InputField from "../UI/Input";
 import SelectField from "../UI/SelectField";
 import InputField from "../UI/InputField";
 
@@ -9,11 +9,20 @@ import { branches } from '../../data/general-info.json'
 import { sendFormServices } from "../../api/form";
 
 export default function ContactForm({servicesOptions}) {
+  const [captchaAcepted, setCaptchaAcepted] = useState(false)
+  const [error, setError] = useState(false)
+
   const methods = useForm()
   const [servicesSelected, setServicesSelected] = useState(servicesOptions.length === 1 ? servicesOptions : []);
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
+    if (!captchaAcepted) {
+        setError(true)
+        return
+    }
+    setError(false)
+
     setLoading(true)
 
     const services = servicesSelected.map(service => service.id)
@@ -31,6 +40,10 @@ export default function ContactForm({servicesOptions}) {
         methods.reset()
     }
     setLoading(false)
+  }
+
+  const OnChangeCaptcha = () => {
+      setCaptchaAcepted(true)
   }
   
   const branchesOptions = branches.map(branch => {
@@ -97,6 +110,15 @@ export default function ContactForm({servicesOptions}) {
                 </fieldset>
               )
             }
+            <div>
+              <ReCAPTCHA 
+                  sitekey="6LeTZbgqAAAAAIAtE1nxcFBfr7Er6dE51X2cpPph"
+                  onChange={OnChangeCaptcha}
+                  hl="es"
+                  className="pb-1"
+              />
+              {error && <p className="text-red-600 text-sm">Por favor, completa el CAPTCHA para enviar el formulario.</p>}
+            </div>
           </div>
         <button
           type="submit"

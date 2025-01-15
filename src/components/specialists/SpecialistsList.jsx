@@ -53,7 +53,7 @@ export default function SpecialistsList({ data }) {
 
   return (
     <section className="px-5 py-12 lg:px-0 lg:py-16 max-w-6xl m-auto">
-      <h2 class="text-[#505050] pb-10">{data.title}</h2>
+      <h2 className="text-[#505050] pb-10">{data.title}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 lg:pb-8">
             <div className="flex flex-col gap-8">
                 <div className="bg-primary-600 rounded-2xl p-2 px-4 flex items-center gap-10">
