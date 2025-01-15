@@ -12,7 +12,7 @@ export default function TextareaField({ name, label, required, rules, ...rest })
       <textarea
         {...register(name, { required: required, ...rules })}
         {...rest}
-        className={`min-h-40 max-h-44 border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary-700 transition ${error ? 'border-red-600' : ''}`}
+        className={`min-h-36 max-h-44 border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-secondary-700 transition ${error ? 'border-red-600' : ''}`}
       ></textarea>
       {error && <p className="text-red-600 text-sm">{error}</p>}
     </fieldset>
