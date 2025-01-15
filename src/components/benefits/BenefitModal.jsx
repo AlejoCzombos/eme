@@ -1,14 +1,26 @@
 import ReactDOM from "react-dom";
+import { useEffect } from "react";
 
 export default function BenefitModal({ benefit, onClose, isOpen }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
   return ReactDOM.createPortal(
     <div
       onClick={onClose}
-      className={`fixed inset-0 flex justify-center items-center z-30 backdrop-blur-sm transition-colors duration-300 ${isOpen ? "visible bg-black/40" : "invisible"}`}
+      className={`fixed inset-0 flex justify-center items-center z-30 backdrop-blur-sm transition-colors duration-300 overflow-y-auto mt-[135px] ${isOpen ? "visible bg-black/40" : "invisible"}`}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`bg-white rounded-3xl shadow-xl w-[90%] max-w-3xl p-6 relative ${isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
+        className={`bg-white rounded-3xl shadow-xl w-[90%] max-w-3xl p-6 relative max-h-[calc(100vh-170px)] overflow-y-auto ${isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}
       >
         <button
           onClick={onClose}

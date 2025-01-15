@@ -9,7 +9,23 @@ const {contact} = data.contact
 
 export default function ContactForm() {
     const methods = useForm()
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = async (data) => {
+        const response = await fetch("https://formsubmit.co/ajax/sistemas@eme.com.ar", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: data.full_name,
+                asunto: data.asunto,
+                email: data.email,
+                sucursal: data.sucursal,
+                mensaje: data.message,
+                telefono: data.phone
+            })
+        })
+    }
 
     const subjectsOptions = contact.subjects.map(subject => {
         return {value: subject, label: subject}
