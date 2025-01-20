@@ -39,7 +39,7 @@ export default function BenefitModal({ benefit, onClose, isOpen }) {
             <h2 className="text-xl font-bold text-[#505050] text-start">{benefit.title}</h2>
             <p className="text-lg text-[#545F71]">{benefit.description}</p>
             <p className="text-xl font-bold text-[#545F71]">
-                {benefit.discount + "% off"}
+                {benefit.text_discount ? benefit.text_discount : benefit.discount + " % off"}
             </p>
           </div>
         </div>
