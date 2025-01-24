@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { FormProvider, useForm } from "react-hook-form"
 import InputField from "../UI/InputField"
 import SelectField from "../UI/SelectField"
@@ -12,6 +12,7 @@ const {contact} = data.contact
 export default function ContactForm() {
     const [loading, setLoading] = useState(false)
     const [captchaAcepted, setCaptchaAcepted] = useState(false)
+    const captchaRef = useRef(null)
     const [error, setError] = useState(false)
     const methods = useForm()
     
@@ -41,8 +42,10 @@ export default function ContactForm() {
         })
         if (response.ok) {
             methods.reset()
+            captchaRef.current.reset()
         } else {
             methods.reset()
+            captchaRef.current.reset()
         }
         setLoading(false)
     }
@@ -103,6 +106,7 @@ export default function ContactForm() {
                             sitekey="6LeTZbgqAAAAAIAtE1nxcFBfr7Er6dE51X2cpPph"
                             onChange={OnChangeCaptcha}
                             hl="es"
+                            ref={captchaRef}
                             className="pb-1"
                         />
                         {error && <p className="text-red-600 text-sm">Por favor, completa el CAPTCHA para enviar el formulario.</p>}

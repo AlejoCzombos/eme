@@ -67,10 +67,9 @@ export default function BenefitsCarousel() {
 
           {/* Text and buttons */}
           <div className="carousel-text absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-1 lg:gap-10">
-            <h2 className="text-white text-center text-xl lg:text-4xl">AFILIATE</h2>
+            <h2 className="text-white text-center text-xl lg:text-6xl">AFILIATE</h2>
             <p className="text-white text-xs lg:text-2xl text-center max-w-[80%] lg:max-w-5xl">
-              Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación,
-              adaptado a tus necesidades.
+              Tu tranquilidad es nuestra prioridad. Con EME, contás con un servicio de emergencias de última generación, adaptado a tus necesidades.
             </p>
             <a href='/servicios/familiares' className='mt-2 py-1 lg:py-2 px-3 lg:px-6 text-center text-sm lg:text-2xl text-white cursor-pointer font-semibold bg-secondary-600 hover:scale-105 transition-all duration-300 ease-in-out'>CUIDÁ LO QUE MÁS NECESITAS</a>
             <div
@@ -79,20 +78,31 @@ export default function BenefitsCarousel() {
               ></div>
             </div>
           </div>
-          {
-          slides.map((slide, index) => (
-            <div
-              key={index}
-              id="swiper-slide-banner"
-              className="swiper-slide h-auto rounded overflow-hidden relative"
-            >
-              <img
-                src={slide.url}
-                alt={slide.alt || `Slide ${index}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+        {
+        slides.map(({url, title, description, button_text, button_url, id}) => (
+          <div key={id} id="swiper-slide-banner" className="swiper-slide h-auto rounded overflow-hidden relative">
+            <img
+              src={url}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+
+            {/* Text and buttons */}
+            { title && description && button_text && button_url &&
+              <div className="carousel-text absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-1 lg:gap-10">
+              <h2 className="text-white text-center text-xl lg:text-6xl">{title}</h2>
+              <p className="text-white text-xs lg:text-2xl text-center max-w-[80%] lg:max-w-5xl">
+                {description}
+              </p>
+              <a href={button_url} className='mt-2 py-1 lg:py-2 px-3 lg:px-6 text-center text-sm lg:text-2xl text-white cursor-pointer font-semibold bg-secondary-600 hover:scale-105 transition-all duration-300 ease-in-out'>{button_text}</a>
+              <div
+                id="gradient-carousel"
+                className="absolute top-0 left-0 w-full h-full min-w-full min-h-full bg-gradient-to-t from-primary-600 to-transparent to-80% pointer-events-none"
+                ></div>
+              </div>
+              }
+          </div>
+        ))}
       </div>
 
       <div className="swiper-pagination-carousel"></div>

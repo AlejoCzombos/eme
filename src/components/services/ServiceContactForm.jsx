@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha"
 import { FormProvider, useForm } from "react-hook-form"
 import MultiSelectDropdown from "../UI/MultiSelectDropdown";
@@ -11,6 +11,7 @@ import { sendFormServices } from "../../api/form";
 export default function ContactForm({servicesOptions}) {
   const [captchaAcepted, setCaptchaAcepted] = useState(false)
   const [error, setError] = useState(false)
+  const captchaRef = useRef(null)
 
   const methods = useForm()
   const [servicesSelected, setServicesSelected] = useState(servicesOptions.length === 1 ? servicesOptions : []);
@@ -36,8 +37,10 @@ export default function ContactForm({servicesOptions}) {
 
     if (response.status === 201) {
         methods.reset()
-    } else {
+        captchaRef.current.reset()
+      } else {
         methods.reset()
+        captchaRef.current.reset()
     }
     setLoading(false)
   }
@@ -115,6 +118,7 @@ export default function ContactForm({servicesOptions}) {
                   sitekey="6LeTZbgqAAAAAIAtE1nxcFBfr7Er6dE51X2cpPph"
                   onChange={OnChangeCaptcha}
                   hl="es"
+                  ref={captchaRef}
                   className="pb-1"
               />
               {error && <p className="text-red-600 text-sm">Por favor, completa el CAPTCHA para enviar el formulario.</p>}

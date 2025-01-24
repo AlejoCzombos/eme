@@ -55,14 +55,6 @@
     },
     "socialMedia": [
       {
-        "platform": "WhatsApp",
-        "image": {
-            "src": "/icons/whatsapp.svg",
-            "alt": "WhatsApp"
-        },
-        "url": "#"
-      },
-      {
         "platform": "Instagram",
         "image": {
             "src": "/icons/instagram.svg",
