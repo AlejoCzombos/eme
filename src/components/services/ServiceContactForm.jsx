@@ -115,7 +115,7 @@ export default function ContactForm({servicesOptions}) {
             }
             <div>
               <ReCAPTCHA 
-                  sitekey="6LeTZbgqAAAAAIAtE1nxcFBfr7Er6dE51X2cpPph"
+                  sitekey="6LfHqcsqAAAAAJc3hxbtN4adrTGc_mT0YsTtYPlx"
                   onChange={OnChangeCaptcha}
                   hl="es"
                   ref={captchaRef}
