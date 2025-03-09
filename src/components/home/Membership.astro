@@ -1,4 +1,6 @@
 ---
+import Section from '../UI/Section.astro';
+
 interface Props {
     membership : Membership;
 }
@@ -20,7 +22,7 @@ interface Image {
 
 const { membership } = Astro.props as Props;
 ---
-<section class="flex flex-col xl:flex-row justify-between items-center gap-5 w-full px-10 py-12 lg:px-0 lg:py-12 max-w-7xl mx-auto">
+<Section class="flex flex-col xl:flex-row justify-between items-center gap-5 w-full max-w-7xl">
     <h2 class="max-w-xs">{membership.title}</h2>
     <div class="flex flex-wrap xl:flex-nowrap max-w-4xl gap-8 justify-center">
         <a href={membership.items[0].href}>
@@ -32,8 +34,8 @@ const { membership } = Astro.props as Props;
         </a>
         <span class="hidden xl:block border border-primary-600"></span>
         <a href={membership.items[2].href} class="flex justify-center items-center gap-3 hover:scale-110 transition-transform duration-300 ease-in-out">
-            <img src={membership.items[2].image.src} alt={membership.items[2].image.alt} class="min-h-20" />
+            <img src={membership.items[2].image.src} alt={membership.items[2].image.alt} class="min-h-16" />
             <h3 class="font-bold text-primary-600 text-center">{membership.items[2].title.toLocaleUpperCase()}</h3>
         </a>
     </div>
-</section>
+</Section>

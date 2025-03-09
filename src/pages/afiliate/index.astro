@@ -1,0 +1,15 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { banner, SEO } from "../../data/afiliate.json";
+import SectionBanner from "../../components/services/SectionBanner.astro";
+import ServiceContactForm from "../../components/afiliacion/ServicesContactForm";
+import PrimaryButton from "../../components/UI/PrimaryButton.astro";
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+    <main class="mt-[135px] min-h-screen relative">
+        <SectionBanner backgroundImage={banner.image} title={banner.title} subtitle={banner.subtitle} />
+        <ServiceContactForm client:only="react" />
+    </main>
+</Layout>

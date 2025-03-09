@@ -6,6 +6,7 @@ import SectionBanner from "../../components/services/SectionBanner.astro";
 import Hisotry from "../../components/about/Hisotry.astro";
 import SocialCompromise from "../../components/RSE/SocialCompromise.astro";
 import EnviromentComprimise from "../../components/RSE/EnviromentComprimise.astro";
+import WorkWithUs from "../../components/about/WorkWithUs.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -14,5 +15,6 @@ import EnviromentComprimise from "../../components/RSE/EnviromentComprimise.astr
         <Hisotry data={foundation} />
         <SocialCompromise feature_selector={feature_selector} />
         <EnviromentComprimise enviroment_compromise={enviroment}  />
+        <WorkWithUs />
     </main>
 </Layout>

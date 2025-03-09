@@ -8,14 +8,26 @@ import InputField from "../UI/InputField";
 import { branches } from '../../data/general-info.json'
 import { sendFormServices } from "../../api/form";
 
-export default function ContactForm({servicesOptions}) {
+export default function ContactForm() {
   const [captchaAcepted, setCaptchaAcepted] = useState(false)
   const [error, setError] = useState(false)
   const captchaRef = useRef(null)
 
   const methods = useForm()
-  const [servicesSelected, setServicesSelected] = useState(servicesOptions.length === 1 ? servicesOptions : []);
+  const [servicesSelected, setServicesSelected] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const services = [
+    { id: "servicio_familiar", title: "Plan Familiar", contact_type: "Afiliado" },
+    { id: "servicio_corporativo", title: "Servicio Corporativo", contact_type: "Cliente" },
+    { id: "servicio_empresarial", title: "Servicio Empresarial", contact_type: "Cliente" },
+  ]
+
+  const companyServices = [
+    { id: "control_ausentismo", title: "Control de Ausentismo" },
+    { id: "area_protegida", title: "Área Protegida" },
+    { id: "medicina_laboral", title: "Medicina Laboral" }
+  ]
 
   const onSubmit = async (data) => {
     if (!captchaAcepted) {
@@ -26,13 +38,14 @@ export default function ContactForm({servicesOptions}) {
 
     setLoading(true)
 
-    const services = servicesSelected.map(service => service.id)
+    const selectedServices = servicesSelected.map(service => service.id)
     
     const body = {
       ...data, 
-      services: services, 
+      services: selectedServices, 
       contact_type: servicesOptions[0].contact_type ? servicesOptions[0].contact_type : "Cliente", 
     }
+
     console.log(body)
     const response = await sendFormServices(body)
 
@@ -53,12 +66,20 @@ export default function ContactForm({servicesOptions}) {
   const branchesOptions = branches.map(branch => {
     return {value: branch.name, label: branch.location}
   })
+
+  const servicesOptions = services.map(service => {
+    return {value: service.id, label: service.title}
+  })
+
   const handleServicesChange = (selectedServices) => {
     setServicesSelected(selectedServices);
   };
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
+    <div className="max-w-5xl mx-auto space-y-6 px-4 lg:px-0 py-12 lg:py-16">
+        <div>
+            <h2 className="lg:py-4 lg:px-10">¿Qué plan te gustaría?</h2>
+        </div>
       <h2 className="text-2xl text-white bg-[#0075D7] py-4 px-10">CONTRATÁ ESTE PLAN</h2>
       <p>Completá tus datos para que podamos contactarte.</p>
       <FormProvider {...methods}>
@@ -83,7 +104,7 @@ export default function ContactForm({servicesOptions}) {
                 message: "Correo electrónico inválido"
               }
             }}/>
-            <SelectField name="branch" label="Localidad"placeholder="Seleccione una Localidad" options={branchesOptions} required="La localidad es requerida" />
+            <SelectField name="branch" label="Localidad" placeholder="Seleccione una Localidad" options={branchesOptions} required="La localidad es requerida" />
             <InputField type="number" name="phone" label="Teléfono" placeholder="Teléfono" required="El teléfono es requerido" rules={
               { 
                     min: {
@@ -100,18 +121,21 @@ export default function ContactForm({servicesOptions}) {
                       } 
                     }} 
             />
+            <SelectField name="plan" label="Plan" placeholder="Seleccione el plan a contratar" options={servicesOptions} required="El plan es requerido" />
             {
-              servicesOptions.length > 1 && (
-                <fieldset>
+              methods.watch().plan === "servicio_empresarial" ? (
+                <fieldset className="animate-fade animate-duration-500">
                     <label htmlFor="services" className="block text-sm font-medium text-gray-700">Servicios a contratar:</label>
                     <MultiSelectDropdown
                     name="services"
-                    options={servicesOptions}
+                    options={companyServices}
                     onChange={handleServicesChange}
                     selectedOptions={servicesSelected}
                     placeholder="Seleccione los servicios"
                   />
                 </fieldset>
+              ) : (
+                <fieldset></fieldset>
               )
             }
             <div>
@@ -134,6 +158,12 @@ export default function ContactForm({servicesOptions}) {
         </button>
         </form>
       </FormProvider>
+        <div className="flex justify-center pt-8">
+        <a href="/servicios" className="py-2 px-4 md:px-6 text-center text-white cursor-pointer font-semibold bg-primary-600 hover:scale-105 transition-transform duration-300 ease-in-out">
+            Conocer todos los planes
+        </a>
+
+        </div>
     </div>
   )
 

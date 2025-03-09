@@ -36,7 +36,6 @@
         },
         {
             "title": "Traslados de pacientes de alto y bajo riesgo",
-            "details": "Servicio complementario destinado a la movilización de pacientes imposibilitados de deambular, en aquellos casos no relacionados con un cuadro de emergencias. Opera con cargo, en el área urbana local de cobertura o, desde y hacia cualquier punto del país. Las atenciones son brindadas los 365 días del año, las 24 hs. del día con asignación de turnos.",
             "list":[
                 "Movilización de pacientes imposibilitados en casos no relacionados con cuadros de emergencia",
                 "Opera CON cargo",
@@ -59,7 +58,6 @@
         },
         {
             "title": "Enfermería domiciliaria",
-            "details": "Servicio programado de prácticas de enfermería con su correspondiente indicación médica. El abono mensual da acceso a un cupo de prestaciones no acumulativos.",
             "list":[
                 "Servicio de enfermería con correspondiente indicación médica.",
                 "Servicio brindado en el domicilio del afiliado o donde se encuentre",

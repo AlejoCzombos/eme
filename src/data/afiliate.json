@@ -1,0 +1,14 @@
+{
+    "SEO": {
+        "title": "EME - Afiliate",
+        "description": "Afiliate a EME y disfruta de los beneficios exclusivos para nuestros afiliados"
+    },
+    "banner": {
+        "title": "ARMÁ TU PLAN A MEDIDA",
+        "subtitle": "Afiliate a cualquiera de nuestros planes y disfruta de los beneficios exclusivos para nuestros afiliados",
+        "image": {
+            "src": "/images/services/servicios-familiares.webp",
+            "alt": "Afiliate a EME"
+        }
+    }
+}
