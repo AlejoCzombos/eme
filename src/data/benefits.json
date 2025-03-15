@@ -13,6 +13,15 @@
     },
     "membership_selector": [
       {
+        "id": "policonsultorios",
+        "title": "Policonsultorios",
+        "description": "El socio EME podrá acceder a consultas médicas en consultorios externos de distintas especialidades, sin cargo adicional.",
+        "image": {
+          "src": "/icons/home/membership/policonsultorios.svg",
+          "alt": "Icono de Policonsultorios"
+        }
+      },
+      {
         "id": "eme_club",
         "description": "<strong>Todo un mundo de experiencias nuevas que le permitirá disfrutar de privilegios exclusivos y aprovechar los mejores beneficios cuando realice sus compras diarias en los distintos comercios adheridos que lo integran.</strong>\nA través de su <strong>credencial digital de Beneficios</strong>, el afiliado goza de importantes descuentos especiales en los más variados productos y servicios, desde indumentarias y artículos del hogar, hasta viajes, cenas, regalos y mucho más.",
         "image": {
@@ -38,6 +47,82 @@
         }
       }
     ],
+    "policonsultorios": {
+        "id": "policonsultorios",
+        "title": "Accedé a este beneficio con 40% de descuento para afiliados.",
+        "specialties": [
+            {
+                "name": "Cardiología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Cardiología"
+                }
+            },
+            {
+                "name": "Clínica Médica",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Clínica Médica"
+                }
+            },
+            {
+                "name": "Dermatología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Dermatología"
+                }
+            },
+            {
+                "name": "Ginecología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Ginecología"
+                }
+            },
+            {
+                "name": "Kinesiología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Kinesiología"
+                }
+            },
+            {
+                "name": "Neumonología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Neumonología"
+                }
+            },
+            {
+                "name": "Nutrición",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Nutrición"
+                }
+            },
+            {
+                "name": "Oftalmología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Oftalmología"
+                }
+            },
+            {
+                "name": "Pediatría",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Pediatría"
+                }
+            },
+            {
+                "name": "Traumatología",
+                "image": {
+                    "src": "/icons/benefits/farmacias.svg",
+                    "alt": "Traumatología"
+                }
+            }
+        ]
+    },
     "eme_club": {
       "id": "eme_club"
     },

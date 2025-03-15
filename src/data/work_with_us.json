@@ -1,0 +1,14 @@
+{
+    "SEO": {
+        "title": "EME - Trabaja con Nosotros",
+        "description": "Únete a nuestro equipo de trabajo y ayuda a salvar vidas. Conoce nuestras vacantes y postúlate."
+    },
+    "banner": {
+        "title": "Trabaja con Nosotros",
+        "quote": "Si nuestro esfuerzo sirve para salvar vidas, estará plenamente justificado.",
+        "image": {
+            "src": "/images/about/banner.webp",
+            "alt": "Trabaja con Nosotros"
+        }
+    }
+}

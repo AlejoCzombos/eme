@@ -1,13 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-import { banner, SEO, membership_selector, eme_club, eme_salud, mas_beneficios } from "../../data/benefits.json";
+import { banner, SEO, membership_selector, eme_club, eme_salud, mas_beneficios, policonsultorios } from "../../data/benefits.json";
 import SectionBanner from "../../components/services/SectionBanner.astro";
 import AdvertisingBanner from "../../components/services/AdvertisingBanner.astro";
 import MembershipSelector from "../../components/benefits/MembershipSelector.astro";
 import EmeSalud from "../../components/benefits/EmeSalud.astro";
 import EmeClub from "../../components/benefits/EmeClub.astro";
 import MasBeneficios from "../../components/benefits/MasBeneficios.astro";
+import Policonsultorios from "../../components/benefits/Policonsultorios.astro";
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
@@ -15,6 +16,7 @@ import MasBeneficios from "../../components/benefits/MasBeneficios.astro";
         <SectionBanner backgroundImage={banner.image} title={banner.title} subtitle={banner.subtitle} />
         <AdvertisingBanner image={{src: "", alt: ""}} />
         <MembershipSelector membership_selector={membership_selector} />
+        <Policonsultorios policonsultorios={policonsultorios}/>
         <EmeClub eme_club={eme_club}/>
         <EmeSalud eme_salud={eme_salud} />
         <MasBeneficios mas_beneficios={mas_beneficios} />

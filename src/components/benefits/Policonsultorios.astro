@@ -1,0 +1,29 @@
+---
+import H2Title from "../UI/H2Title.astro";
+import Section from "../UI/Section.astro";
+import ThreeColumnsGrid from "../UI/ThreeColumnsGrid.astro";
+import PrimatyButton from "../UI/PrimaryButton.astro";
+
+const { policonsultorios } = Astro.props;
+
+const { specialties, title } = policonsultorios;
+
+const id = policonsultorios.id + "_content";
+---
+
+<Section id={id} class="content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
+    <H2Title text={title} line={false} class="text-center"></H2Title>
+    <ThreeColumnsGrid class="flex justify-center items-center max-w-4xl m-auto">
+        {
+            specialties.map((specialty) => (
+                <div class="flex flex-col items-center justify-center w-full gap-2 lg:gap-4 group">
+                    <img class="size-20 lg:size-28 group-hover:-translate-y-5 transition-transform duration-300 ease-in-out" src={specialty.image.src} alt={specialty.image.alt} />
+                    <h3 class="text-center font-bold group-hover:scale-110 transition-transform duration-300 ease-in-out">{specialty.name}</h3>
+                </div>
+            ))
+        }
+    </ThreeColumnsGrid>
+    <div class="flex justify-center">
+        <PrimatyButton text="Conocé más" href="/policonsultorios" class="mt-10" />
+    </div>
+</Section>

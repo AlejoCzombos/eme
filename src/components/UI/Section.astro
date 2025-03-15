@@ -1,7 +1,7 @@
 ---
-const { px, py, class : className, ...props } = Astro.props;
+const { px, py, p, class : className, ...props } = Astro.props;
 ---
 
-<section class:list={["max-w-6xl m-auto", className, `${px ? "" : "px-10 lg:px-0" }`, `${py ? "" : "py-12 lg:py-16" }`]} {...props}>
+<section class:list={["max-w-6xl m-auto", className, `${px ? "" : "px-10 lg:px-0" }`, `${py ? "" : "py-12 lg:py-16" }`, p]} {...props}>
     <slot/>
 </section> 

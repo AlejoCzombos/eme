@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { banner, SEO } from "../../data/work_with_us.json";
+import SectionBanner from "../../components/services/SectionBanner.astro";
+import WorkWithUsContactForm from "../../components/about/WorkWithUsContactForm";
+import Section from "../../components/UI/Section.astro";
+import H2Title from "../../components/UI/H2Title.astro";
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+    <main class="mt-[135px] min-h-screen relative">
+        <SectionBanner backgroundImage={banner.image} title={banner.title} quote={banner.quote} />
+        <Section>
+            <H2Title text="Queremos conocerte" line={false} />
+            <WorkWithUsContactForm client:only="react" />
+        </Section>
+    </main>
+</Layout>
