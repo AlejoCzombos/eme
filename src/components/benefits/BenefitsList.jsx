@@ -69,7 +69,7 @@ export default function BenefitsList() {
   return (
     <>
       {/* Formulario de búsqueda */}
-      <div className="grid grid-cols-2 gap-4 lg:gap-8 max-w-3xl mx-auto pb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 max-w-3xl mx-auto pb-8">
         <Dropdown
           label="Seleccionar localidad"
           options={localities}

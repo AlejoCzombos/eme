@@ -23,7 +23,44 @@
       },
       {
         "id": "eme_club",
-        "description": "<strong>Todo un mundo de experiencias nuevas que le permitirá disfrutar de privilegios exclusivos y aprovechar los mejores beneficios cuando realice sus compras diarias en los distintos comercios adheridos que lo integran.</strong>\nA través de su <strong>credencial digital de Beneficios</strong>, el afiliado goza de importantes descuentos especiales en los más variados productos y servicios, desde indumentarias y artículos del hogar, hasta viajes, cenas, regalos y mucho más.",
+        "description": "<strong>Todo un mundo de experiencias nuevas que le permitirá disfrutar de privilegios exclusivos y aprovechar los mejores beneficios cuando realice sus compras diarias en los distintos comercios adheridos que lo integran.</strong>\nA través de tu <strong>credencial digital de Beneficios</strong>, el afiliado goza de importantes descuentos y promos:<br>",
+        "features":[
+          {
+            "title": "FARMACIAS,",
+            "icon": {
+              "src": "/icons/benefits/farmacia.svg",
+              "alt": "Farmacias"
+            }
+          },
+          {
+            "title": "ÓPTICAS,",
+            "icon": {
+              "src": "/icons/benefits/optica.svg",
+              "alt": "Ópticas"
+            }
+          },
+          {
+            "title": "2 X 1 EN CINES,",
+            "icon": {
+              "src": "/icons/benefits/cine.svg",
+              "alt": "2x1 en cines"
+            }
+          },
+          {
+            "title": "TURISMO,",
+            "icon": {
+              "src": "/icons/benefits/turismo.svg",
+              "alt": "Turismo"
+            }
+          },
+          {
+            "title": "GASTRONOMÍA",
+            "icon": {
+              "src": "/icons/benefits/gastronomia.svg",
+              "alt": "Gastronomía"
+            }
+          }
+        ],
         "image": {
           "src": "/images/home/membership/eme_club.webp",
           "alt": "Eme Club"
@@ -52,74 +89,49 @@
         "title": "Accedé a este beneficio con 40% de descuento para afiliados.",
         "specialties": [
             {
-                "name": "Cardiología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Cardiología"
-                }
+              "name": "Ginecología"
             },
             {
-                "name": "Clínica Médica",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Clínica Médica"
-                }
+              "name": "Nutrición"
             },
             {
-                "name": "Dermatología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Dermatología"
-                }
+              "name": "Traumatología"
             },
             {
-                "name": "Ginecología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Ginecología"
-                }
+              "name": "Cardiología"
             },
             {
-                "name": "Kinesiología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Kinesiología"
-                }
+              "name": "Pediatría"
             },
             {
-                "name": "Neumonología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Neumonología"
-                }
+              "name": "Kinesiología"
             },
             {
-                "name": "Nutrición",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Nutrición"
-                }
+              "name": "Psicología"
             },
             {
-                "name": "Oftalmología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Oftalmología"
-                }
+              "name": "Dermatología"
             },
             {
-                "name": "Pediatría",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Pediatría"
-                }
+              "name": "Médica clínica"
             },
             {
-                "name": "Traumatología",
-                "image": {
-                    "src": "/icons/benefits/farmacias.svg",
-                    "alt": "Traumatología"
-                }
+              "name": "Oftalmologia"
+            },
+            {
+              "name": "Odontología"
+            },
+            {
+              "name": "Psiquiatria"
+            },
+            {
+              "name": "Radiología"
+            },
+            {
+              "name": "Mamografía"
+            },
+            {
+              "name": "Ecografía"
             }
         ]
     },
