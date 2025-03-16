@@ -6,18 +6,47 @@ import WhiteFeature from "./WhiteFeature.astro";
 
 const { mas_beneficios } = Astro.props;
 
+const { we_offer } = mas_beneficios;
+const { title, features, other_feature } = we_offer;
+
 const id = mas_beneficios.id + "_content";
 ---
 
 <Section id={id} class="content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
     <div>
-        <H2Title text={mas_beneficios.we_offer.title} line={false} />
+        <H2Title text={title} line={false} />
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
             {
-                mas_beneficios.we_offer.features.map((item) => (
+                features.map((item) => (
                     <WhiteFeature icon={item.icon} title={item.title} details={item.details} />
                 ))
             }
+            <details id="question" class="group p-5 px-5 xl:px-10 rounded-3xl bg-white">
+                <summary class="flex items-center justify-around cursor-pointer">
+                    <img src={other_feature.icon.src} alt={other_feature.icon.alt} class="size-12 xl:size-16 mr-6" />
+                    <span class="font-bold flex-grow text-lg xl:text-xl text-[#545F71]">{title.toLocaleUpperCase()}</span>
+                    <img src="/icons/benefits/flecha.svg" alt="flecha apertura" class="size-10 transition-all group-open:rotate-180 duration-300 ease-in-out" />
+                </summary>
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
+                    <p class="mt-2 text-sm xl:text-xl group-open:animate-fade-down animate-duration-300" set:html={other_feature.details}></p>
+                    <img class="max-w-44" src={other_feature.image.src} alt={other_feature.image.alt}>
+                </div>
+            </details>
         </div>
     </div>
 </Section>
+
+<style>
+#question {
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.20));
+}
+
+#question[open] {
+  @apply bg-gray-100;
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.20));
+}
+#question:not([open]) {
+  transition: all 0.5s ease-in-out;
+}
+</style>

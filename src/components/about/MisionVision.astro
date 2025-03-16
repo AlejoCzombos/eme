@@ -30,23 +30,23 @@ import Observer from 'tailwindcss-intersect';
 Observer.start();
 </script>
 
-<Section py={true} class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <article class="w-full h-full bg-[#00B2AD] rounded-2xl shadow-xl intersect:animate-fade-right intersect-once">
-        <header class="flex items-center gap-6 bg-[#009F9B] rounded-2xl p-4 px-12">
-            <img src={mision.icon.src} alt={mision.icon.alt} class="size-12 lg:size-16"/>
+<Section py={true} class="grid grid-cols-1 lg:grid-cols-2 gap-1">
+    <article class="w-full h-full bg-[#00B2AD]/35 rounded-l-3xl shadow-sm intersect:animate-fade-right intersect-once">
+        <header class="flex items-center gap-6 bg-[#009F9B] rounded-l-3xl p-4 px-12">
+            <img src={mision.icon.src} alt={mision.icon.alt} class="size-12 lg:size-14"/>
             <h2 class="text-white text-2xl lg:text-3xl">{mision.title.toLocaleUpperCase()}</h2>
         </header>
-        <footer class="p-2 lg:p-4 px-4 lg:px-12 mb-16">
-            <p class="text-white lg:leading-7 text-justify">{mision.description}</p>
+        <footer class="p-2 lg:p-4 px-4 lg:px-12 mb-8 mt-6">
+            <p class="text-black lg:leading-7 text-justify">{mision.description}</p>
         </footer>
     </article>
-    <article class="w-full h-full bg-[#00B2AD] rounded-2xl shadow-xl intersect:animate-fade-left intersect-once">
-        <header class="flex items-center gap-6 bg-[#009F9B] rounded-2xl p-4 px-12">
-            <img src={vision.icon.src} alt={vision.icon.alt} class="size-12 lg:size-16"/>
+    <article class="w-full h-full bg-[#00B2AD]/35 rounded-r-3xl shadow-sm intersect:animate-fade-left intersect-once">
+        <header class="flex items-center gap-6 bg-[#009F9B] rounded-r-3xl p-4 px-12">
+            <img src={vision.icon.src} alt={vision.icon.alt} class="size-12 lg:size-14"/>
             <h2 class="text-white text-2xl lg:text-3xl">{vision.title.toLocaleUpperCase()}</h2>
         </header>
-        <footer class="p-4 px-4 lg:px-12 mb-16">
-            <p class="text-white lg:leading-7 text-justify">{vision.description}</p>
+        <footer class="p-4 px-4 lg:px-12 mb-8 mt-6">
+            <p class="text-black lg:leading-7 text-justify">{vision.description}</p>
         </footer>
     </article>
 </Section>

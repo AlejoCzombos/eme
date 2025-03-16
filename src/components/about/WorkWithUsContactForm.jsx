@@ -22,18 +22,22 @@ export default function ContactForm() {
         formData.append("telefono", data.telefono)
         formData.append("sucursal", data.sucursal)
         formData.append("presentacion", data.presentacion)
-        formData.append("cv", data.cv[0])
+        formData.append("_subject", "Nueva postulación de trabajo desde el sitio web")
+        formData.append("cv", data.cv[0].name)
         
         setLoading(true)
-        const response = await fetch("https://formsubmit.co/ajax/38cf86c31a283a370043a85f3c07ed24", {
+        const response = await fetch("https://formsubmit.co/38cf86c31a283a370043a85f3c07ed24", {
             method: "POST",
             body: formData
         })
         if (response.ok) {
             methods.reset()
+            setLoading(false)
         } else {
             methods.reset()
+            setLoading(false)
         }
+        console.log(response)
     }
 
     return (

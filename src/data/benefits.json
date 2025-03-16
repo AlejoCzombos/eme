@@ -182,14 +182,6 @@
         "title": "Qué te ofrecemos",
         "features": [
           {
-              "title": "Cobertura nacional e internacional",
-              "details": "A través de la Red SIEM (Sistema Integrado de Emergencias Médicas): en más de 1000 localidades del país y en más de 17 países en 180 empresas donde el afiliado con la sola presentación de su carnet EME podrá atenderse ante cualquier Emergencia o Consulta Médica SIN CARGO",
-              "icon": {
-                  "src": "/icons/benefits/cobertura_nacional.svg",
-                  "alt": "Cobertura nacional e internacional"
-              }
-          },
-          {
               "title": "Plan materno infantil",
               "details": "Destinado a la atención prehospitalaria del hijo de una afiliada al Sistema quién gozará durante el primer año de los mismos servicios a los que se encuentra suscripta su madre.",
               "icon": {
@@ -205,7 +197,19 @@
                   "alt": "Atención gratuita en consultorios externos"
               }
           }
-        ]
+        ],
+        "other_feature": {
+              "title": "Cobertura nacional e internacional",
+              "details": "Estás cubierto a cada paso. Nuestros afiliados tienen garantizados los diferentes beneficios que tienen a disposición las empresas de la Red SIEM. ",
+              "icon": {
+                  "src": "/icons/benefits/cobertura_nacional.svg",
+                  "alt": "Cobertura nacional e internacional"
+              },
+               "image": {
+                  "src": "/images/benefits/siem.png",
+                  "alt": "Cobertura nacional e internacional"
+               }
+          }
       }
     }
 }

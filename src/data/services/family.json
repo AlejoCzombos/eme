@@ -67,6 +67,14 @@
                 "src": "/icons/services/domiciliaria.svg",
                 "alt": "Enfermería domiciliaria"
             }
+        },
+        {
+            "title": "Guardia médica en base sin costo",
+            "details": "Guardia médica en base <strong>SIN COSTO</strong>, exclusivo para afiliados EME. De lunes a sábados de 8 a 13 y de 16 a 22 y domingos de 16 a 22",
+            "icon": {
+                "src": "/icons/services/guardia.svg",
+                "alt": "Guardia médica en base sin costo"
+            }
         }
     ]
 }
