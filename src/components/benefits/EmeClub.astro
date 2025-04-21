@@ -8,7 +8,7 @@ const { eme_club } = Astro.props;
 const id = eme_club.id + "_content";
 ---
 
-<Section id={id} class="content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
+<Section px="true" id={id} class="content hidden animate-fade-down animate-delay-300 animate-duration-500 animate-ease-in-out" >
     <H2Title text="Encontrá tus beneficios por categorías:" line={false}></H2Title>
     <BenefitsList client:only="react" />
 </Section>

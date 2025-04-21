@@ -12,7 +12,7 @@ export default function ContactForm() {
     const methods = useForm()
 
     const branchesOptions = branches.map(branch => {
-        return {value: branch.location, label: branch.location}
+        return {value: branch.name, label: branch.location}
     })
 
     const onSubmit = async (data) => {
@@ -24,12 +24,24 @@ export default function ContactForm() {
         formData.append("presentacion", data.presentacion)
         formData.append("_subject", "Nueva postulación de trabajo desde el sitio web")
         formData.append("cv", data.cv[0].name)
-        
+
         setLoading(true)
-        const response = await fetch("https://formsubmit.co/38cf86c31a283a370043a85f3c07ed24", {
-            method: "POST",
-            body: formData
-        })
+        let response = null
+        
+        if (data.sucursal === "Corrientes"){
+            response = await fetch("https://formsubmit.co/cc23a690ed380afa2de927799825f653", {
+                method: "POST",
+                body: formData
+            })
+
+        } else if (data.sucursal === "Resistencia" || data.sucursal === "Sáenz Peña") {
+            response = await fetch("https://formsubmit.co/612b8a6c9f42b566847a818334198934", {
+                method: "POST",
+                body: formData
+            })
+            
+        }
+
         if (response.ok) {
             methods.reset()
             setLoading(false)
@@ -37,7 +49,6 @@ export default function ContactForm() {
             methods.reset()
             setLoading(false)
         }
-        console.log(response)
     }
 
     return (

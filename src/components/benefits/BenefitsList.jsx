@@ -67,7 +67,7 @@ export default function BenefitsList() {
   }
 
   return (
-    <>
+    <div className="px-4">
       {/* Formulario de búsqueda */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 max-w-3xl mx-auto pb-8">
         <Dropdown
@@ -87,7 +87,7 @@ export default function BenefitsList() {
       </div>
 
       {/* Listado de beneficios */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6">
         {loading ? (
           <div className="col-span-full flex items-center justify-center h-full">
             <Loader />
@@ -113,6 +113,6 @@ export default function BenefitsList() {
       {selectedBenefit && (
         <BenefitModal benefit={selectedBenefit} onClose={handleClose} isOpen={isOpen} />
       )}
-    </>
+    </div>
   );
 }
