@@ -15,7 +15,7 @@
       {
         "id": "policonsultorios",
         "title": "Policonsultorios",
-        "description": "El socio EME podrá acceder a consultas médicas en consultorios externos de distintas especialidades, sin cargo adicional.",
+        "description": "<strong class='text-[#505050]'>40% DE DESCUENTO en atención de especialidades médicas para afiliados EME.</strong>",
         "image": {
           "src": "/icons/home/membership/policonsultorios.svg",
           "alt": "Icono de Policonsultorios"
@@ -68,7 +68,7 @@
       },
       {
         "id": "eme_salud",
-        "description": "La optima relación <strong>costo-beneficio</strong> queda demostrada totalmente con este novedoso sistema ya que el socio EME abona cualquier consulta, estudio o práctica, solo en la medida que la utilice y con aranceles muy convenientes.",
+        "description": "Médicos especialistas externos que prestan servicios a afiliados EME.",
         "image": {
           "src": "/images/home/membership/eme_salud.webp",
           "alt": "Eme Salud"
@@ -77,7 +77,7 @@
       {
         "id": "mas_beneficios",
         "title": "Más Beneficios",
-        "description": "Beneficios exclusivos para nuestros socios EME, sin costo adicional.",
+        "description": "Beneficios exclusivos para nuestros socios EME",
         "image": {
           "src": "/icons/home/membership/beneficios.svg",
           "alt": "Icono de beneficios"
@@ -86,7 +86,6 @@
     ],
     "policonsultorios": {
         "id": "policonsultorios",
-        "title": "Accedé a este beneficio con 40% de descuento para afiliados.",
         "specialties": [
             {
               "name": "Ginecología"
@@ -194,19 +193,19 @@
         "title": "Qué te ofrecemos",
         "features": [
           {
+              "title": "Atención en consultorios",
+              "details": "Atención de urgencia SIN COSTO por médico clínico EN BASE para afiliados. De 8:00 a 13:00 y de 16:00 a 22:00 de lunes a sábados, domingos por la tarde de 16:00 a 22:00.",
+              "icon": {
+                  "src": "/icons/benefits/atencion_gratuita.svg",
+                  "alt": "Atención gratuita en consultorios externos"
+              }
+          },
+          {
               "title": "Plan materno infantil",
               "details": "Destinado a la atención prehospitalaria del hijo de una afiliada al Sistema quién gozará durante el primer año de los mismos servicios a los que se encuentra suscripta su madre.",
               "icon": {
                   "src": "/icons/benefits/plan_materno.svg",
                   "alt": "Plan materno infantil"
-              }
-          },
-          {
-              "title": "Atención en consultorios",
-              "details": "En nuestra Base Operativa en el horario de Lunes a Viernes de 08:00 a 13:00 y de 16:00 a 22:00 hs. Sábados de 08:00 a 13:00 hs. Atención por orden de llegada.",
-              "icon": {
-                  "src": "/icons/benefits/atencion_gratuita.svg",
-                  "alt": "Atención gratuita en consultorios externos"
               }
           }
         ],
